@@ -1,0 +1,153 @@
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+  padding-right: 50px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 102px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button {
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 166px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: #323d66;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #2e3a8c;
+  }
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+
+  img {
+    width: 22px;
+  }
+}
+
+.icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.avatarBox {
+  position: relative;
+  cursor: pointer;
+  border-radius: 832px;
+
+  .avatar {
+    border: 0.83px solid #fff;
+    border-radius: 832px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 288px;
+  height: 562px;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 200%;
+  color: #3e424a;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #808080;
+  }
+}
+
+.menu {
+  list-style: none;
+  padding: 0.5rem 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 240px;
+    height: 56px;
+  
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 200%;
+    color: #3e424a;
+
+    &:hover {
+      color: #2e3a8c;
+    }
+  }
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e80000;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,48 @@
+.authLayout {
+  min-height: 100vh;
+  background-color: #f2f6fb;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 36px;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cardWrapper {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  width: 478px;
+  min-height: 457px;
+  height: 100%;
+  padding: 80px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}

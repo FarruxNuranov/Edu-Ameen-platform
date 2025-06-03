@@ -1,0 +1,65 @@
+.verify {
+  text-align: center;
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #6c6c6c;
+    margin-bottom: 1.5rem;
+  }
+
+  .codeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .codeInputs {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      width: 40px;
+      height: 50px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 18px;
+      text-align: center;
+
+      &:focus {
+        border-color: #2e3a8c;
+        outline: none;
+      }
+    }
+  }
+
+  .timer {
+    font-size: 13px;
+    color: #666;
+
+    span {
+      color: #2e3a8c;
+      font-weight: 500;
+    }
+  }
+
+  .submitBtn {
+    background: #2e3a8c;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: #1d2e70;
+    }
+  }
+}
