@@ -1,3 +1,5 @@
-export { default as navLogo } from '../assets/Image/Logo/AmeenLogo.svg'
-export { default as uz } from '../assets/Image/language/uz.svg'
-export { default as Avatar } from '../assets/Image/Navbar/Avatar.svg'
+export { default as Logo } from '../assets/Images/Logo/AmeenLogo.svg'
+export { default as system } from '../assets/Images/icons/system.svg'
+export { default as Communication } from '../assets/Images/icons/Communication.svg'
+export { default as home } from '../assets/Images/icons/Home.svg'
+export { default as TakenCourses } from '../assets/Images/icons/TakenCourses.svg'

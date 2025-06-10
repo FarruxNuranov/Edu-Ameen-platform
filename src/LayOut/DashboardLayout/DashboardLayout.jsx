@@ -7,13 +7,17 @@ import Sidebar from "../../Components/Header/Sidebar/Sidebar";
 
 const DashboardLayout = () => {
   return (
-   <div className={styles.dashboard}>
-  <Sidebar />
-  <div className={styles.main}>
-    <Navbar /> {/* ВАЖНО: должен быть здесь */}
-    <Outlet />
-  </div>
-</div>
+    <div className={styles.dashboard}>
+      {/* Navbar всегда сверху */}
+      <Navbar />
+      {/* Контейнер с Sidebar слева и основным контентом справа */}
+      <div className={styles.container}>
+        <Sidebar />
+        <main className={styles.content}>
+          <Outlet />
+        </main>
+      </div>
+    </div>
   );
 };
 

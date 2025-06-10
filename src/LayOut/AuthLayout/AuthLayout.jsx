@@ -2,8 +2,8 @@
 import React from 'react';
 import styles from './AuthLayout.module.scss';
 import { Outlet } from 'react-router-dom';
-import LanguageDropdown from '../../Components/LanguageDropdown/LanguageDropdown';
-import { navLogo } from '../../utils/getimage';
+
+import { Logo } from '../../utils/getimage';
 
 
 const AuthLayout = () => {
@@ -12,8 +12,8 @@ const AuthLayout = () => {
       <header className={styles.header}>
         <div className="container">
           <div className={styles.headerInner}>
-            <img src={navLogo} alt="Ameen Group" className={styles.logo} />
-            <LanguageDropdown />
+            <img src={Logo} alt="Ameen Group" className={styles.logo} />
+          
           </div>
         </div>
       </header>
