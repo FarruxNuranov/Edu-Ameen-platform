@@ -11,7 +11,8 @@
 }
 
 .collapsed {
-  width: 64px;
+  border-right: 1px solid #f1f3f5;
+  width: 48px;
 }
 
 /* Toggle-button */
@@ -23,7 +24,7 @@
   height: 24px;
   background: #fff;
   border: 1px solid #e4e7ec;
-  border-radius: 50%;
+  border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +60,9 @@
   max-width: 256px;
   width: 100%; /* по макету */
   height: 44px; /* по макету */
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #5c5f66;
-  text-decoration: none;
+  
 
   transition: background-color 0.2s;
-
-
 }
 
 /* Активная ссылка */
@@ -79,11 +73,8 @@
 }
 /* Иконка слева */
 .icon {
-  font-size: 18px;
-  color: #98a2b3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 18px;
+  height: 18px;
 }
 
 /* Текст рядом с иконкой */

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineHome, AiOutlinePlayCircle } from "react-icons/ai";
 import { FiHelpCircle, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Sidebar.module.scss";
-import { home, TakenCourses } from "../../../utils/getimage";
+import { help, home, leftChevron, rightChevron, TakenCourses } from "../../../utils/getimage";
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,7 +17,7 @@ export default function Sidebar() {
         onClick={() => setCollapsed(!collapsed)}
         aria-label="Toggle sidebar"
       >
-        {collapsed ? <FiChevronRight /> : <FiChevronLeft />}
+        {collapsed ? <img src={leftChevron} alt="" /> : <img src={rightChevron} alt="" />}
       </button>
 
       {/* Верхняя группа */}
@@ -54,7 +54,7 @@ export default function Sidebar() {
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
-          <FiHelpCircle className={styles.icon} />
+          <img className={styles.icon} src={help} alt="" />
           {!collapsed && <span className={styles.label}>Help</span>}
         </NavLink>
 

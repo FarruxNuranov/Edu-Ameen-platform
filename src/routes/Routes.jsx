@@ -11,7 +11,7 @@ import VerifyPage from '../pages/AuthPages/VerifyPage/VerifyPage';
 import ForgotPasswordPage from '../pages/AuthPages/ForgotPasswordPage/ForgotPasswordPage';
 import ResetPasswordPage from '../pages/AuthPages/ResetPasswordPage/ResetPasswordPage';
 import HomePage from '../pages/DashboardPages/Home/HomePage';
-import CoursesTaken from '../pages/CoursesTaken/CoursesTaken';
+import CoursesTaken from '../pages/DashboardPages/CoursesTaken/CoursesTaken';
 
 export const router = createBrowserRouter([
   {

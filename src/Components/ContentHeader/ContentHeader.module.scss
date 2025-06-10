@@ -1,0 +1,64 @@
+/* src/components/ContentHeader/ContentHeader.module.scss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #f1f3f5;
+  border-left: 1px solid #f1f3f5;
+  border-right: 1px solid #f1f3f5;
+  border-radius: 0 0 8px 8px;
+  padding: 24px 16px;
+
+  height: 92px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #101113;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #475467;
+}
+
+.value {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.01em;
+  color: #1a1a18;
+}
+
+.link {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--secondary);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
