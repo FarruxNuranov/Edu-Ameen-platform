@@ -62,3 +62,10 @@
     text-decoration: underline;
   }
 }
+
+
+@media (min-width: 375px)  {
+  .header {
+    display: none;
+  }
+}
