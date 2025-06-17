@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
+    transition: 500ms;
 
     &.open {
         left: 0;
@@ -23,6 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 32px 0;
 
     .logo {
         width: 109px;
@@ -39,7 +41,7 @@
     margin: 12px 0;
     border: none;
     height: 1px;
-    background-color: #dcdcdc;
+    background-color: #252525;
 }
 
 .menuContent {
@@ -58,6 +60,9 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.4);
+    transition: 500ms;
+
+
 }
 
 .menuItem {
@@ -111,8 +116,9 @@
 }
 
 .logout {
-    border-top: 1px solid #eee;
-    padding-top: 1rem;
+    padding: 32px 0;
+    border-top: 1px solid #252525;
+  
 
     button {
         display: flex;
