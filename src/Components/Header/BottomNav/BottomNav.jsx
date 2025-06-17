@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './BottomNav.module.scss';
-import { home, homework, quizz, TakenCourses } from '../../../utils/getimage';
+import { home, homework, quizz, TakenCourses, Takencurs } from '../../../utils/getimage';
 
 const navItems = [
-  { to: '/', label: 'Bosh sahifa', icon: home },
-  { to: '/', label: 'Kurslarim', icon: TakenCourses },
-  { to: '/', label: 'Quizlar', icon: quizz },
-  { to: '/', label: 'Uy vazifalar', icon: homework },
+  { to: '/ref', label: 'Bosh sahifa', icon: home },
+  { to: '/er', label: 'Kurslarim', icon: Takencurs },
+  { to: '/ss', label: 'Quizlar', icon: quizz },
+  { to: '/dd', label: 'Uy vazifalar', icon: homework },
 ];
 
 const BottomNav = () => {
