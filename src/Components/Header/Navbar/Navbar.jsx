@@ -10,7 +10,7 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 const Navbar = () => {
   const [notifications] = useState(4);
   const [messages] = useState(4);
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className={styles.navbar}>
       <div className={styles.burger}>
