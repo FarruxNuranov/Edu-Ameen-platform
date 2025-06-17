@@ -1,6 +1,6 @@
 export { default as Logo } from '../assets/Images/Logo/AmeenLogo2.svg'
 export { default as system } from '../assets/Images/icons/system.svg'
-export { default as burgerSystem } from '../assets/Images/icons/burgerSystem.svg'
+export { default as burgerSystem } from '../assets/Images/icons/BurgerSystem.svg'
 export { default as Communication } from '../assets/Images/icons/Communication.svg'
 export { default as home } from '../assets/Images/icons/Home.svg'
 export { default as TakenCourses } from '../assets/Images/icons/TakenCourses.svg'
