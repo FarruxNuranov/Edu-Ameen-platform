@@ -27,12 +27,31 @@
 .newsList {
     display: flex;
     gap: 12px;
-
+    overflow-x: auto;
     padding-bottom: 8px;
+    &::-webkit-scrollbar {
+        height: 8px;
+      }
+    
+      &::-webkit-scrollbar-track {
+        background: transparent; // фон трека (путь под ползунком)
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        background-color: #1A215B;   // сам ползунок (можно сделать любой цвет)
+        border-radius: 4px;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+      }
+    
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #3b4c84;
+      }
 }
 
 .newsList::-webkit-scrollbar {
     height: 6px;
+    
 }
 
 .newsList::-webkit-scrollbar-thumb {

@@ -21,7 +21,9 @@ const DashboardLayout = () => {
         </div>
 
         <main className={styles.content}>
+          <div className={styles.contentContainer}>
           <ContentHeader />
+          </div>
           <Outlet />
         </main>
       </div>

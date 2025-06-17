@@ -2,8 +2,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-
+import styles from './HomePage.module.scss'
 import News from "../News/News";
+import ProgressCards from "../ProgressCards/ProgressCards";
 
 
 
@@ -12,7 +13,11 @@ import News from "../News/News";
 export default function HomePage() {
   return (
   <>
-  <News/>
+<News/>
+<div className={styles.container}>
+<ProgressCards />
+</div>
+
   </>
   );
 }

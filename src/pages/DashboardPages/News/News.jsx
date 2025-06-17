@@ -7,6 +7,10 @@ const newsItems = [
     { image: news2, label: "Islom Moliya­si" },
     { image: news3, label: "HR kursi haqida fiklar" },
     { image: news4, label: "HR kursi haqida fiklar" },
+    { image: news1, label: "HR kurslari" },
+    { image: news2, label: "Islom Moliya­si" },
+    { image: news3, label: "HR kursi haqida fiklar" },
+
    
   ];
   

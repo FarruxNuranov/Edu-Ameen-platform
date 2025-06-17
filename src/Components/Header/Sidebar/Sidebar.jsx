@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineHome, AiOutlinePlayCircle } from "react-icons/ai";
 import { FiHelpCircle, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./Sidebar.module.scss";
-import { help, home, leftChevron, rightChevron, TakenCourses } from "../../../utils/getimage";
+import { help, home, leftChevron, rightChevron, sidebarCourses, sidebarData, sidebarHomework, sidebarQuizz, sidebarSertification, TakenCourses } from "../../../utils/getimage";
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState(false);
@@ -39,9 +39,53 @@ export default function Sidebar() {
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
-          <img className={styles.icon} src={TakenCourses} alt="" />
+          <img className={styles.icon} src={sidebarCourses} alt="" />
           {!collapsed && (
-            <span className={styles.label}>Qabul qilingan kurslar</span>
+            <span className={styles.label}>Mening kurslarim</span>
+          )}
+        </NavLink>
+        <NavLink
+          to="/coursestaken"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <img className={styles.icon} src={sidebarQuizz} alt="" />
+          {!collapsed && (
+            <span className={styles.label}>Quizlar</span>
+          )}
+        </NavLink>
+        <NavLink
+          to="/coursestaken"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <img className={styles.icon} src={sidebarHomework} alt="" />
+          {!collapsed && (
+            <span className={styles.label}>Uy vazifalar</span>
+          )}
+        </NavLink>
+        <NavLink
+          to="/coursestaken"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <img className={styles.icon} src={sidebarSertification} alt="" />
+          {!collapsed && (
+            <span className={styles.label}>Sertifikatlar</span>
+          )}
+        </NavLink>
+        <NavLink
+          to="/coursestaken"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.active}` : styles.link
+          }
+        >
+          <img className={styles.icon} src={sidebarData} alt="" />
+          {!collapsed && (
+            <span className={styles.label}>Ma‘lumotlar</span>
           )}
         </NavLink>
       </div>
@@ -49,7 +93,7 @@ export default function Sidebar() {
       {/* Нижняя группа */}
       <div className={styles.bottomGroup}>
         <NavLink
-          to="/help"
+          to="/"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
