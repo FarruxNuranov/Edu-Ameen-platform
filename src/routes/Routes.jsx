@@ -12,6 +12,7 @@ import ResetPasswordPage from "../pages/AuthPages/ResetPasswordPage/ResetPasswor
 import HomePage from "../pages/DashboardPages/Home/HomePage";
 import CoursesTaken from "../pages/DashboardPages/CoursesTaken/CoursesTaken";
 import CoursePage from "../pages/CoursePage/CoursePage";
+import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "/coursestaken", element: <CoursesTaken /> },
       { path: "/courses/:id", element: <CoursePage />,},
-      // Добавь другие страницы дашборда по желанию
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
   {

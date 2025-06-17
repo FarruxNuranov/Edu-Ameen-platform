@@ -1,0 +1,55 @@
+@keyframes glitch {
+  0%   { text-shadow: 2px 0 red, -2px 0 blue; }
+  20%  { text-shadow: -2px 0 red, 2px 0 blue; }
+  40%  { text-shadow: 2px 2px red, -2px -2px blue; }
+  60%  { text-shadow: -2px -2px red, 2px 2px blue; }
+  80%  { text-shadow: 0 0 red, 0 0 blue; }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
+
+.container {
+
+  font-family: 'Orbitron', 'Courier New', monospace;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+}
+
+.glitch {
+  font-size: 8rem;
+  animation: glitch 1s infinite;
+}
+
+.errorText {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.errorCode {
+  color: #ff0040;
+}
+
+.recovery {
+  font-size: 1.2rem;
+}
+
+.timer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.terminal {
+  margin-top: 2rem;
+  background: #000;
+  color: #0f0;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 500px;
+  font-size: 0.85rem;
+}

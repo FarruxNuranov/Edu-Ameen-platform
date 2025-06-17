@@ -34,7 +34,7 @@ export default function Sidebar() {
         </NavLink>
 
         <NavLink
-         to="#"
+         to="/coursestaken"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -45,7 +45,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="#"
+          to="/refresh"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -56,7 +56,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-         to="#"
+         to="/taken"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -67,7 +67,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="#"
+          to="slov"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -78,7 +78,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="#"
+          to="/mo"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
