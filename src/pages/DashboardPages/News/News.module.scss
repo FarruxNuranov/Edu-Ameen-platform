@@ -1,104 +1,106 @@
 /* src/pages/HomePage/HomePage.module.scss */
 
 .home {
-    padding: 24px;
+    // padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-  }
-  
-  .section {
+}
+
+.section {
     display: flex;
     flex-direction: column;
     gap: 16px;
-  }
-  
-  .sectionTitle {
+}
+
+.sectionTitle {
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 24px;
     line-height: 150%;
     color: #101113;
-  }
-  
-  /* Yangiliklar */
-  .newsList {
+    padding-left: 16px;
+    padding-top: 24px;
+}
+
+/* Yangiliklar */
+.newsList {
     display: flex;
     gap: 12px;
-   
+
     padding-bottom: 8px;
-  }
-  .newsList::-webkit-scrollbar {
+}
+
+.newsList::-webkit-scrollbar {
     height: 6px;
-  }
-  .newsList::-webkit-scrollbar-thumb {
+}
+
+.newsList::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 3px;
-  }
-  
-  .newsItem {
+}
+
+.newsItem {
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
     width: 160px;
-  }
-  
-  .newsImageWrapper {
+}
+
+.newsImageWrapper {
     border-radius: 100%;
-  
+
     width: 124px;
     height: 124px;
     overflow: hidden;
-    border: 3px solid #000000;
-    padding: 4px;
+    border: 3px solid rgba(33, 91, 131, 0.26);
     background: #fff;
-  }
-  
-  .newsImage {
+}
+
+.newsImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 100%;
-  }
-  
-  .newsLabel {
+}
+
+.newsLabel {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
     text-align: center;
     color: #62687b;
-  }
-  
-  @media (max-width: 375px)  {
+
+}
+
+@media (max-width: 375px) {
 
     .home {
-        padding: 0px;
-        margin-top: 24px;
         display: flex;
         flex-direction: column;
         gap: 40px;
-      }
+    }
 
 
     .newsList {
+        padding-left: 16px;
         display: flex;
         gap: 12px;
         overflow-x: scroll;
-    
     }
-    
+
     .newsList::-webkit-scrollbar {
         display: none;
     }
-    
+
     .newsList::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.1);
         border-radius: 3px;
     }
-    
+
     .newsItem {
         display: flex;
         flex-direction: column;
@@ -108,27 +110,23 @@
         gap: 8px;
         cursor: pointer;
     }
-    
+
     .newsImageWrapper {
         width: 100px;
         height: 100px;
         border-radius: 100%;
-        border-radius: 100%;
         border: 3px solid rgba(33, 91, 131, 0.26);
-        stroke: rgba(33, 91, 131, 0.26);
         overflow: hidden;
-        border: 3px solid #000000;
-        padding: 4px;
         background: #fff;
     }
-    
+
     .newsImage {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 100%;
     }
-    
+
     .newsLabel {
         font-family: var(--font-family);
         font-weight: 600;
@@ -138,4 +136,63 @@
         color: #1b2226;
     }
 }
-  
+@media (max-width: 575px) {
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+    .newsList {
+        padding-left: 16px;
+        display: flex;
+        gap: 12px;
+        overflow-x: scroll;
+    }
+
+    .newsList::-webkit-scrollbar {
+        display: none;
+    }
+
+    .newsList::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    .newsItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px;
+        height: 151px;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .newsImageWrapper {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        border: 3px solid rgba(33, 91, 131, 0.26);
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .newsImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    .newsLabel {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+        color: #1b2226;
+    }
+}

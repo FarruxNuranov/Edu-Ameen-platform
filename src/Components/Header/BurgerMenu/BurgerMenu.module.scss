@@ -3,57 +3,126 @@
     top: 0;
     left: -100%;
     width: 80%;
+    max-width: 320px;
     height: 100%;
     background: white;
     z-index: 1000;
     transition: left 0.3s ease;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
 
     &.open {
         left: 0;
     }
+}
 
-    .header {
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        width: 109px;
+        height: 40px;
+    }
+
+    .closeIcon {
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.divider {
+    margin: 12px 0;
+    border: none;
+    height: 1px;
+    background-color: #dcdcdc;
+}
+
+.menuContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.menuItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 56px;
+
+    .left {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        
-        .logo {
-            width: 109px;
-            height: 40px;
-        }
+        gap: 10px;
 
-   
-
-       
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin-top: 2rem;
-
-        li {
-            margin: 1rem 0;
-
-            a {
-                color: #333;
-                text-decoration: none;
-                font-size: 1.1rem;
-            }
+        a {
+            font-family: var(--third-family);
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            color: #000;
         }
     }
 
-    .logout {
-        margin-top: 2rem;
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
 
-        button {
-            color: red;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+.badge {
+    border: 1.68px solid #fff;
+    border-radius: 38px;
+    padding: 0px 1px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    background: var(--primary);
+}
+
+.textRight {
+    font-size: 12px;
+    color: #888;
+}
+
+.logout {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+
+    button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        color: red;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
     }
 }

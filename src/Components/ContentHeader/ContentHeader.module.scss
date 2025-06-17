@@ -64,7 +64,14 @@
 }
 
 
-@media (min-width: 375px)  {
+@media (max-width: 375px)  {
+  .header {
+    display: none;
+  }
+}
+
+
+@media (max-width: 575px)  {
   .header {
     display: none;
   }

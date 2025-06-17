@@ -21,10 +21,7 @@ const DashboardLayout = () => {
         </div>
 
         <main className={styles.content}>
-          {/* Шапка страницы */}
           <ContentHeader />
-
-          {/* Тело страницы */}
           <Outlet />
         </main>
       </div>

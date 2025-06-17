@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { FaBell, FaChevronDown, FaSearch, FaCommentDots, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { Communication, Logo, system } from '../../../utils/getimage';
+import { burger, Communication, Logo, news1, search, system } from '../../../utils/getimage';
 import styles from './Navbar.module.scss';
 import { FiSearch } from 'react-icons/fi';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.burger}>
-      <FaBars className={styles.burgerIcon} onClick={() => setMenuOpen(true)} />
+      <img src={burger} alt='' className={styles.burgerIcon} onClick={() => setMenuOpen(true)} img/>
       <BurgerMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
       </div>
       {/* Левый блок */}
@@ -49,8 +49,9 @@ const Navbar = () => {
           {messages > 0 && <span className={styles.badge}>{messages}</span>}
         </div>
         <div className={styles.user}>
-          <FiSearch className={styles.searchMobile}/>
-          <div className={styles.avatar}>OM</div>
+          <img className={styles.searchMobile} src={search} alt="" />
+          <div className={styles.avatar}>
+            <img className={styles.imgAva} src={news1} alt="" /></div>
             <>
               <div className={styles.info}>
 

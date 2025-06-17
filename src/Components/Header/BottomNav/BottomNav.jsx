@@ -1,27 +1,30 @@
 import React from 'react';
-import { FaHome, FaBookOpen, FaClipboardCheck, FaBriefcase } from 'react-icons/fa';
-import styles from './BottomNav.module.scss';
 import { NavLink } from 'react-router-dom';
+import styles from './BottomNav.module.scss';
+import { home, homework, quizz, TakenCourses } from '../../../utils/getimage';
+
+const navItems = [
+  { to: '/', label: 'Bosh sahifa', icon: home },
+  { to: '/', label: 'Kurslarim', icon: TakenCourses },
+  { to: '/', label: 'Quizlar', icon: quizz },
+  { to: '/', label: 'Uy vazifalar', icon: homework },
+];
 
 const BottomNav = () => {
   return (
     <div className={styles.bottomNav}>
-      <NavLink to="/" className={({ isActive }) => isActive ? styles.active : ''}>
-        <FaHome />
-        <span>Bosh sahifa</span>
-      </NavLink>
-      <NavLink to="#" className={({ isActive }) => isActive ? styles.active : ''}>
-        <FaBookOpen />
-        <span>Kurslarim</span>
-      </NavLink>
-      <NavLink to="#" className={({ isActive }) => isActive ? styles.active : ''}>
-        <FaClipboardCheck />
-        <span>Quizlar</span>
-      </NavLink>
-      <NavLink to="#" className={({ isActive }) => isActive ? styles.active : ''}>
-        <FaBriefcase />
-        <span>Uy vazifalar</span>
-      </NavLink>
+      {navItems.map((item, idx) => (
+        <NavLink
+          key={idx}
+          to={item.to}
+          className={({ isActive }) =>
+            `${styles.navItem} ${isActive ? styles.active : ''}`
+          }
+        >
+          <img src={item.icon} alt={item.label} className={styles.icon} />
+          <span>{item.label}</span>
+        </NavLink>
+      ))}
     </div>
   );
 };
