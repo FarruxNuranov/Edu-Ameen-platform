@@ -34,7 +34,7 @@ export default function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/coursestaken"
+         to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -45,7 +45,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/coursestaken"
+          to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -56,7 +56,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/coursestaken"
+         to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -67,7 +67,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/coursestaken"
+          to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -78,7 +78,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/coursestaken"
+          to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
@@ -93,7 +93,7 @@ export default function Sidebar() {
       {/* Нижняя группа */}
       <div className={styles.bottomGroup}>
         <NavLink
-          to="/"
+          to="#"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }

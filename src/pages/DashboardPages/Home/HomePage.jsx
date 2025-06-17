@@ -5,6 +5,7 @@ import { FaStar } from "react-icons/fa";
 import styles from './HomePage.module.scss'
 import News from "../News/News";
 import ProgressCards from "../ProgressCards/ProgressCards";
+import TopRatings from "../TopRatings/TopRatings";
 
 
 
@@ -17,6 +18,7 @@ export default function HomePage() {
 <div className={styles.container}>
 <ProgressCards />
 </div>
+<TopRatings/>
 
   </>
   );
