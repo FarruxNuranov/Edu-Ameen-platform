@@ -11,11 +11,7 @@ const STATIC_TITLES = {
   // …другие статичные пути
 };
 
-export default function ContentHeader({
-  revenue = "12 500",
-  revenueLink = "/revenue-history",
-  revenueLinkText = "Daromad tarixi",
-}) {
+export default function ContentHeader() {
   const { pathname } = useLocation();
   const { id } = useParams();
 
@@ -33,15 +29,7 @@ export default function ContentHeader({
     <div className={styles.header}>
       <h1 className={styles.title}>{title}</h1>
 
-      <div className={styles.actions}>
-        <div className={styles.stat}>
-          <img className={styles.icon} src={Daramod} alt="revenue icon" />
-          <span className={styles.value}>{revenue}</span>
-        </div>
-        <Link to={revenueLink} className={styles.link}>
-          {revenueLinkText}
-        </Link>
-      </div>
+      
     </div>
   );
 }

@@ -1,16 +1,22 @@
 // src/components/Navbar/Navbar.jsx
 import React, { useState } from 'react';
-import { FaBell, FaChevronDown, FaSearch, FaCommentDots } from 'react-icons/fa';
+import { FaBell, FaChevronDown, FaSearch, FaCommentDots, FaBars } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Communication, Logo, system } from '../../../utils/getimage';
 import styles from './Navbar.module.scss';
+import { FiSearch } from 'react-icons/fi';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 const Navbar = () => {
   const [notifications] = useState(4);
   const [messages] = useState(4);
-
+  const [menuOpen, setMenuOpen] = useState(true);
   return (
     <nav className={styles.navbar}>
+      <div className={styles.burger}>
+      <FaBars className={styles.burgerIcon} onClick={() => setMenuOpen(true)} />
+      <BurgerMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+      </div>
       {/* Левый блок */}
       <div className={styles.left}>
         <Link to="/" className={styles.logo}>
@@ -41,6 +47,16 @@ const Navbar = () => {
         <div className={styles.iconButton}>
           <img className={styles.iconSystem} src={Communication} alt="" />
           {messages > 0 && <span className={styles.badge}>{messages}</span>}
+        </div>
+        <div className={styles.user}>
+          <FiSearch className={styles.searchMobile}/>
+          <div className={styles.avatar}>OM</div>
+            <>
+              <div className={styles.info}>
+
+              </div>
+              
+            </>
         </div>
       </div>
     </nav>

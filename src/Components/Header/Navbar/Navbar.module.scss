@@ -59,6 +59,7 @@
   position: relative;
   display: flex;
   align-items: center;
+
   input {
     padding: 8px 12px 8px 36px;
     width: 300px;
@@ -70,6 +71,7 @@
     font-size: 14px;
     color: #374151;
     outline: none;
+
     &::placeholder {
       color: #9ca3af;
     }
@@ -91,7 +93,7 @@
 }
 
 .cta {
-  
+
   border-radius: 8px;
   padding: 6px 16px;
 
@@ -114,6 +116,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
   svg {
     font-size: 18px;
     color: #374151;
@@ -142,4 +145,116 @@
   font-weight: 600;
   font-size: 11px;
   color: #fff;
+}
+
+.avatar {
+  border-radius: 100%;
+  border: 2px solid #000;
+  
+  width: 26px;
+  height: 26px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 140%;
+  text-align: center;
+  color: #228be6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e7f5ff;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 16px;
+}
+
+.searchMobile {
+  font-size: 20px;
+  font-weight: 900;
+ 
+}
+
+
+.burger {
+  display: none;
+
+}
+
+
+.burgerIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 475px) {
+  .burger {
+    display: block;
+  }
+
+
+  .navbar {
+    padding: 2px 16px;
+  }
+
+  .logo {
+    width: 109px;
+    height: 40px;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+
+  .search {
+    display: none;
+  }
+
+  .iconButton {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .burger {
+    display: block;
+  }
+
+
+  .navbar {
+    padding: 2px 16px;
+  }
+
+  .logo {
+    width: 109px;
+    height: 40px;
+  }
+
+  .cta {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+
+  .search {
+    display: none;
+  }
+
+  .iconButton {
+    display: none;
+  }
 }

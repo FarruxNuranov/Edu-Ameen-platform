@@ -6,6 +6,7 @@ import styles from "./DashboardLayout.module.scss";
 import Navbar from "../../Components/Header/Navbar/Navbar";
 import Sidebar from "../../Components/Header/Sidebar/Sidebar";
 import ContentHeader from "../../Components/ContentHeader/ContentHeader";
+import BottomNav from "../../Components/Header/BottomNav/BottomNav";
 
 const DashboardLayout = () => {
   return (
@@ -15,7 +16,9 @@ const DashboardLayout = () => {
 
       {/* Контейнер с Sidebar слева и основным контентом справа */}
       <div className={styles.container}>
-        <Sidebar />
+        <div className={styles.siedebar}>
+          <Sidebar />
+        </div>
 
         <main className={styles.content}>
           {/* Шапка страницы */}
@@ -25,6 +28,9 @@ const DashboardLayout = () => {
           <Outlet />
         </main>
       </div>
+
+      {/* Мобильное нижнее меню */}
+      <BottomNav />
     </div>
   );
 };
