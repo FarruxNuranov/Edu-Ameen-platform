@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './TopRatings.module.scss';
 import { FaCrown } from 'react-icons/fa';
 import { BsTrophy } from 'react-icons/bs';
-import {  news3, TopRaitingCup } from '../../../utils/getimage';
+import {  news3, TopRaitingCup } from '../../../../utils/getimage';
 
 const users = [
   {

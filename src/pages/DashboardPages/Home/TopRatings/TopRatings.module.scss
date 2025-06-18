@@ -284,9 +284,14 @@
         margin-top: 24px;
         padding: 16px;
         margin: 0;
-        margin-bottom: 100px;
+        
         gap: 24px;
         box-sizing: border-box;
+    }
+
+
+    .title {
+        margin-top: 36px;
     }
 
     .left,
@@ -334,6 +339,7 @@
 
         .list {
             align-items: stretch;
+            margin-bottom: 32px;
         }
 
         .userCard {
@@ -377,5 +383,7 @@
             justify-content: center;
             gap: 5px;
         }
+
+        
     }
 }

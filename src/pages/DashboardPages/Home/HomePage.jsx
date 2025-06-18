@@ -3,9 +3,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import styles from './HomePage.module.scss'
-import News from "../News/News";
-import ProgressCards from "../ProgressCards/ProgressCards";
-import TopRatings from "../TopRatings/TopRatings";
+import News from "./News/News";
+import ProgressCards from "./ProgressCards/ProgressCards";
+import TopRatings from "./TopRatings/TopRatings";
+import CurrentLessons from "./CurrentLessons/CurrentLessons";
+import PaidCourses from "./PaidCourses/PaidCourses";
+
 
 
 
@@ -19,7 +22,12 @@ export default function HomePage() {
 <ProgressCards />
 </div>
 <TopRatings/>
-
+<div className={styles.container}>
+<CurrentLessons/>
+</div>
+<div className={styles.container}>
+<PaidCourses/>
+</div>
   </>
   );
 }

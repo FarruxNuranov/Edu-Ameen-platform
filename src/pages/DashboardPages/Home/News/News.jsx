@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './News.module.scss'
-import { news1, news2, news3, news4 } from '../../../utils/getimage';
+import { news1, news2, news3, news4 } from '../../../../utils/getimage';
 
 const newsItems = [
     { image: news1, label: "HR kurslari" },

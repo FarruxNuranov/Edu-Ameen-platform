@@ -31,3 +31,5 @@ export { default as sidebarHomework } from '../assets/Images/icons/sidebarHomewo
 export { default as sidebarSertification } from '../assets/Images/icons/sidebarSertificate.svg'
 export { default as sidebarData } from '../assets/Images/icons/sidebarData.svg'
 export { default as TopRaitingCup } from '../assets/Images/icons/TopRaitingCup.svg'
+export { default as CurrentPage } from '../assets/Images/icons/current.svg'
+export { default as PaidCourses } from '../assets/Images/PaidCourses.png'

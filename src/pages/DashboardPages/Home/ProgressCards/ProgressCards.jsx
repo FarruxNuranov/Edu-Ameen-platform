@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ProgressCards.module.scss';
 import { BsBriefcase, BsCheck2Square, BsInfoCircle } from 'react-icons/bs';
-import { progressOne, progressThree, progressTwo } from '../../../utils/getimage';
+import { progressOne, progressThree, progressTwo } from '../../../../utils/getimage';
 
 const ProgressCards = () => {
   const data = [
