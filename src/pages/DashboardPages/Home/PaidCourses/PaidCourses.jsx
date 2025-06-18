@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import styles from './PaidCourses.module.scss';
-
 import { courses1 } from '../../../../utils/getimage';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
@@ -37,8 +36,12 @@ const PaidCourses = () => {
         <h2>Pulli kurslar</h2>
         <p>Professional ustozlardan amaliy va nazariy bilimlar to‘plami.</p>
         <div className={styles.controls}>
-          <button onClick={() => scroll('left')}><IoIosArrowBack className={styles.arrow} /></button>
-          <button onClick={() => scroll('right')}><IoIosArrowForward className={styles.arrow} /></button>
+          <button onClick={() => scroll('left')}>
+            <IoIosArrowBack className={styles.arrow} />
+          </button>
+          <button onClick={() => scroll('right')}>
+            <IoIosArrowForward className={styles.arrow} />
+          </button>
         </div>
       </div>
 
