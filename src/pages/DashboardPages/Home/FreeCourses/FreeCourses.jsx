@@ -1,30 +1,30 @@
 import React, { useRef } from 'react';
 import styles from './FreeCourses.module.scss';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { courses1 } from '../../../../utils/getimage';
+import {  PaidCourses } from '../../../../utils/getimage';
 
 
 const courses = [
-  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: courses1 },
-  { title: "Human Resource Management", teacher: "Darrell Steward", image: courses1 },
-  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: courses1 },
-  { title: "Human Resource Management", teacher: "Dianne Russell", image: courses1 },
-  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: courses1 },
-  { title: "Human Resource Management", teacher: "Darrell Steward", image: courses1 },
-  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: courses1 },
-  { title: "Human Resource Management", teacher: "Dianne Russell", image: courses1 },
-  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: courses1 },
-  { title: "Human Resource Management", teacher: "Darrell Steward", image: courses1 },
-  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: courses1 },
-  { title: "Human Resource Management", teacher: "Dianne Russell", image: courses1 },
-  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: courses1 },
-  { title: "Human Resource Management", teacher: "Darrell Steward", image: courses1 },
-  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: courses1 },
-  { title: "Human Resource Management", teacher: "Dianne Russell", image: courses1 },
-  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: courses1 },
-  { title: "Human Resource Management", teacher: "Darrell Steward", image: courses1 },
-  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: courses1 },
-  { title: "Human Resource Management", teacher: "Dianne Russell", image: courses1 },
+  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Darrell Steward", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Dianne Russell", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Darrell Steward", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Dianne Russell", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Darrell Steward", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Dianne Russell", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Darrell Steward", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Dianne Russell", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Brooklyn Simmons", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Darrell Steward", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Savannah Nguyen", image: PaidCourses },
+  { title: "Human Resource Management", teacher: "Dianne Russell", image: PaidCourses },
 ];
 
 const FreeCourses = () => {
@@ -33,7 +33,7 @@ const FreeCourses = () => {
   const scroll = (direction) => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: direction === 'left' ? -300 : 300,
+        left: direction === 'left' ? -290 : 290,
         behavior: 'smooth'
       });
     }

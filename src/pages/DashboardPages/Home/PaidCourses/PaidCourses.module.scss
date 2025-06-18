@@ -5,7 +5,7 @@
     background: #fff;
     margin-top: 48px;
 
-    
+
     align-items: center;
 
 }
@@ -74,9 +74,8 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
-    padding-bottom: 8px;
-    overflow: hidden;
-    width: 100%;
+    padding: 0 16px 8px 16px;
+
     &::-webkit-scrollbar {
         display: none;
     }
@@ -148,13 +147,13 @@
     .wrapper {
         display: flex;
         flex-direction: column;
-       
+        width: 100%;
         gap: 16px;
         padding-left: 0px;
         background: #fff;
         margin-top: 48px;
-        align-items: center;
-    
+
+
 
 
     }
@@ -226,10 +225,11 @@
     .carousel {
         display: flex;
         overflow-x: auto;
+        width: 100%;   
         scroll-behavior: smooth;
         gap: 16px;
-        padding-bottom: 8px;
-        overflow: hidden;
+        padding: 0 16px 8px 16px;
+
         &::-webkit-scrollbar {
             display: none;
         }
@@ -301,13 +301,13 @@
     .wrapper {
         display: flex;
         flex-direction: column;
-       
+
         gap: 16px;
         padding-left: 0px;
         background: #fff;
         margin-top: 48px;
         align-items: center;
-     
+
 
 
     }
@@ -322,8 +322,8 @@
         height: 150px;
         flex-shrink: 0;
         display: flex;
-      
-        
+
+
         align-items: center;
 
         h2 {
@@ -383,6 +383,7 @@
         gap: 16px;
         padding-bottom: 8px;
         overflow: hidden;
+
         &::-webkit-scrollbar {
             display: none;
         }
