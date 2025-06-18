@@ -25,9 +25,8 @@ export default function HomePage() {
 <div className={styles.container}>
 <CurrentLessons/>
 </div>
-<div className={styles.container}>
 <PaidCourses/>
-</div>
+
   </>
   );
 }

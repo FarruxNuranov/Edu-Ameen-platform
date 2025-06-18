@@ -1,201 +1,297 @@
 .wrapper {
     display: flex;
-    background: #fff;
-    padding: 24px;
-    border-radius: 16px;
     gap: 16px;
+    padding-left: 16px;
+    background: #fff;
+    margin-top: 48px;
+
     overflow: hidden;
-  }
-  
-  .info {
-    background: #1742c7;
-    color: white;
-    padding: 24px;
-    border-radius: 16px;
-    width: 260px;
+    align-items: center;
+
+}
+
+.info {
+    background: #1e3c97;
+    color: #fff;
+    border-radius: 16px 16px 16px 16px;
+    padding: 32px 40px;
+    width: 330px;
+    height: 301px;
     flex-shrink: 0;
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     h2 {
-      font-size: 24px;
-      font-weight: bold;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 32px;
+        color: #fdfbf8;
     }
-  
+
     p {
-      margin-top: 8px;
-      font-size: 14px;
-      line-height: 1.4;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #fdfbf8;
+        max-width: 218px;
+        width: 100%;
     }
-  
+
+
+
     .controls {
-      display: flex;
-      gap: 8px;
-      margin-top: 16px;
+        display: flex;
+        gap: 8px;
+
+        button {
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: white;
+            color: #1e3c97;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .arrow {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2b2d60;
+        }
     }
-  
-    .arrow {
-      background: white;
-      border: none;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      font-size: 18px;
-      font-weight: bold;
-      color: #1742c7;
-      cursor: pointer;
-  
-      &:first-child {
-        background: #cbd5e1;
-      }
-    }
-  }
-  
-  .carousel {
+}
+
+.carousel {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 16px;
     padding-bottom: 8px;
-  
-    /* Скрыть scrollbars */
+
     &::-webkit-scrollbar {
-      display: none;
+        display: none;
     }
+
     -ms-overflow-style: none;
     scrollbar-width: none;
-  }
-  
-  .card {
-    background: #f1f5ff;
-    border-radius: 16px;
-    width: 220px;
+}
+
+.card {
     flex-shrink: 0;
-    padding: 8px;
+    width: 276px;
+    height: 227px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 16px 16px 16px 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.imageWrapper {
+    border-radius: 24px;
+    width: 276px;
+    height: 160px;
+
     img {
-      width: 100%;
-      height: 120px;
-      border-radius: 12px;
-      object-fit: cover;
-      margin-bottom: 8px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
     }
-  
+}
+
+.textBox {
+    border-radius: 16px;
+    padding: 8px 16px;
+    width: 276px;
+    height: 61px;
+    background: rgba(215, 231, 255, 0.5);
+
     h3 {
-      font-size: 16px;
-      font-weight: bold;
-      margin: 0;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #000;
     }
-  
+
     p {
-      font-size: 13px;
-      margin-top: 4px;
-  
-      span {
-        color: #64748b;
+        font-family: var(--font-family);
         font-weight: 500;
-      }
-    }
-  }
-  @media (max-width: 575px) {
-    .wrapper {
-      flex-direction: column;
-      padding: 16px;
-    }
-  
-    .info {
-      width: 100%;
-      text-align: center;
-      padding: 16px;
-  
-      h2 {
-        font-size: 20px;
-      }
-  
-      p {
-        font-size: 13px;
-      }
-  
-      .controls {
-        justify-content: center;
-        margin-top: 12px;
-      }
-    }
-  
-    .carousel {
-      margin-top: 12px;
-      gap: 12px;
-    }
-  
-    .card {
-      width: 180px;
-  
-      img {
-        height: 100px;
-      }
-  
-      h3 {
         font-size: 14px;
-      }
-  
-      p {
-        font-size: 12px;
-      }
+        letter-spacing: 0.01em;
+        color: #000;
+
+        span {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: #5c5f66;
+        }
     }
-  
-    .info .arrow {
-      width: 28px;
-      height: 28px;
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 375px) {
+}
+
+
+@media (max-width:375px) {
     .wrapper {
-      flex-direction: column;
-      padding: 16px;
+        display: flex;
+        flex-direction: column;
+margin-bottom: 200px;
+        gap: 16px;
+        padding-left: 0px;
+        background: #fff;
+        margin-top: 48px;
+        align-items: center;
+        overflow: hidden;
+
+
     }
-  
+
     .info {
-      width: 100%;
-      text-align: center;
-      padding: 16px;
-  
-      h2 {
-        font-size: 20px;
-      }
-  
-      p {
-        font-size: 13px;
-      }
-  
-      .controls {
+        background: #1e3c97;
+        color: #fff;
+        border-radius: 16px 16px 16px 16px;
+        padding: 32px 40px;
+        width: 100%;
+        gap: 10px;
+        height: 150px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 12px;
-      }
+        align-items: center;
+
+        h2 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 150%;
+            color: #fdfbf8;
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 140%;
+            letter-spacing: 0.01em;
+            color: #fff;
+            max-width: 218px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+
+        .controls {
+            display: flex;
+            gap: 8px;
+
+            button {
+                width: 32px;
+                height: 32px;
+                border: none;
+                border-radius: 50%;
+                background: white;
+                color: #1e3c97;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .arrow {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #2b2d60;
+            }
+        }
     }
-  
+
     .carousel {
-      margin-top: 12px;
-      gap: 12px;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 16px;
+        padding-bottom: 8px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
-  
+
     .card {
-      width: 180px;
-  
-      img {
-        height: 100px;
-      }
-  
-      h3 {
-        font-size: 14px;
-      }
-  
-      p {
-        font-size: 12px;
-      }
+        flex-shrink: 0;
+        width: 276px;
+        height: 227px;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 16px 16px 16px 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-  
-    .info .arrow {
-      width: 28px;
-      height: 28px;
-      font-size: 16px;
+
+    .imageWrapper {
+        border-radius: 24px;
+        width: 276px;
+        height: 160px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
     }
-  }
-  
+
+    .textBox {
+        border-radius: 16px;
+        padding: 8px 16px;
+        width: 276px;
+        height: 61px;
+        background: rgba(215, 231, 255, 0.5);
+
+        h3 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            color: #000;
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: #000;
+
+            span {
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 14px;
+                letter-spacing: 0.01em;
+                color: #5c5f66;
+            }
+        }
+    }
+}
