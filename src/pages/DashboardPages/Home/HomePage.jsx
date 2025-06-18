@@ -8,6 +8,7 @@ import ProgressCards from "./ProgressCards/ProgressCards";
 import TopRatings from "./TopRatings/TopRatings";
 import CurrentLessons from "./CurrentLessons/CurrentLessons";
 import PaidCourses from "./PaidCourses/PaidCourses";
+import FreeCourses from "./FreeCourses/FreeCourses";
 
 
 
@@ -26,7 +27,9 @@ export default function HomePage() {
 <CurrentLessons/>
 </div>
 <PaidCourses/>
-
+<div className={styles.container}>
+<FreeCourses/>
+</div>
   </>
   );
 }
