@@ -13,6 +13,12 @@ export default function ContentHeader() {
   const { id } = useParams();
 
   const crumbs = [];
+
+if (pathname === "/") {
+  // Только текущая страница, без ссылки
+  crumbs.push({ path: null, label: STATIC_TITLES["/"] });
+} else {
+  // Всегда добавляем ссылку на главную
   crumbs.push({ path: "/", label: STATIC_TITLES["/"] });
 
   if (pathname.includes("/coursestaken/") && id) {
@@ -24,6 +30,7 @@ export default function ContentHeader() {
   } else if (STATIC_TITLES[pathname]) {
     crumbs.push({ path: null, label: STATIC_TITLES[pathname] });
   }
+}
 
   return (
     <div className={styles.header}>
