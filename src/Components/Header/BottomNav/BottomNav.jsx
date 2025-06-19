@@ -5,7 +5,7 @@ import { home, homework, quizz, TakenCourses, Takencurs } from '../../../utils/g
 
 const navItems = [
   { to: '/ref', label: 'Bosh sahifa', icon: home },
-  { to: '/er', label: 'Kurslarim', icon: Takencurs },
+  { to: '/taken', label: 'Kurslarim', icon: Takencurs },
   { to: '/ss', label: 'Quizlar', icon: quizz },
   { to: '/dd', label: 'Uy vazifalar', icon: homework },
 ];
