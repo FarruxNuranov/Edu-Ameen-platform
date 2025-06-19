@@ -13,6 +13,7 @@ import HomePage from "../pages/DashboardPages/Home/HomePage";
 import CoursesTaken from "../pages/DashboardPages/CoursesTaken/CoursesTaken";
 
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
+import SingleCourse from "../pages/DashboardPages/CoursesTaken/SingleCourse/SingleCourse";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
     children: [
       { path: "", element: <HomePage /> },
       { path: "/coursestaken", element: <CoursesTaken /> },
+      { path: "/coursestaken/:id", element: <SingleCourse /> },
       
       { path: "*", element: <NotFoundPage /> },
     ],
@@ -34,6 +36,7 @@ export const router = createBrowserRouter([
       { path: "verify", element: <VerifyPage /> },
       { path: "forgot-password", element: <ForgotPasswordPage /> },
       { path: "reset-password", element: <ResetPasswordPage /> },
+      
     ],
   },
 ]);

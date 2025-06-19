@@ -1,0 +1,392 @@
+.wrapper {
+  padding: 24px;
+}
+
+.VideoBox {
+  min-width: 756px;
+  width: 10%;
+
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #101113;
+  margin-bottom: 16px;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 2px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 16px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font3);
+  font-weight: 590;
+  font-size: 13px;
+  line-height: 138%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.active {
+  border-radius: 7px;
+  background: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.04), 0 3px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.active {
+  background: #fff;
+  color: black;
+}
+
+.videoWrapper {
+  position: relative;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: #182f43;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  margin-bottom: 6px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #182f43;
+}
+
+.descriptionBox {
+  border-radius: 16px;
+  padding: 16px;
+  width: 756px;
+  height: auto;
+  background: #f2f2f7;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1e2a50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: #2d3a66;
+    }
+  }}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #182f43;
+}
+
+.materials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.materialItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f8f8;
+  background: #fff;
+  border: 1px solid #cacaca;
+  border-radius: 16px;
+  padding: 16px;
+  width: 759px;
+  height: 72px;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: #353535;
+  }
+
+  span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 167%;
+    color: #989692;
+  }
+}
+
+.download {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 12px;
+  text-align: right;
+  color: #007aff;
+  display: flex;
+  gap: 5px;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.inputBox {
+  display: flex;
+  gap: 12px;
+}
+
+.commentInput {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+  padding: 24px;
+
+  background: #f6f6f6;
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background: #0b1745;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f6f6f6;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 760px;
+  height: 584px;
+  overflow-y: auto;
+}
+
+.commentItem {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .ItemText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .commentTop {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 4px;
+
+    strong {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 14px;
+      color: #1a1a18;
+    }
+
+    span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 167%;
+      color: #707070;
+    }
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    color: #1a1a18;
+  }
+}
+
+
+.curriculumBox {
+  background: #f8f9fc;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curriculumTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.curriculumList {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section {
+  background: #f1f3f7;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lessonList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.lessonItem {
+  background: white;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.lessonIcon {
+  color: #1e40af;
+  margin-right: 8px;
+}
+
+.lessonStatus {
+  font-size: 14px;
+  color: #999;
+}
+
+.taskButton {
+  margin-top: 20px;
+  width: 100%;
+  background: #c7cbd7;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: not-allowed;
+}
+
