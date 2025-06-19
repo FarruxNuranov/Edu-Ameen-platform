@@ -4,8 +4,8 @@ import styles from './BottomNav.module.scss';
 import { home, homework, quizz, TakenCourses, Takencurs } from '../../../utils/getimage';
 
 const navItems = [
-  { to: '/ref', label: 'Bosh sahifa', icon: home },
-  { to: '/taken', label: 'Kurslarim', icon: Takencurs },
+  { to: '/', label: 'Bosh sahifa', icon: home },
+  { to: '/coursestaken', label: 'Kurslarim', icon: Takencurs },
   { to: '/ss', label: 'Quizlar', icon: quizz },
   { to: '/dd', label: 'Uy vazifalar', icon: homework },
 ];
