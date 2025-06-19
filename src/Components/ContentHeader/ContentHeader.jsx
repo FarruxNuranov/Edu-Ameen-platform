@@ -3,7 +3,8 @@ import React from "react";
 import { useLocation, Link, useParams } from "react-router-dom";
 import styles from "./ContentHeader.module.scss";
 import { Daramod } from "../../utils/getimage";
-import { coursesData } from "../../utils/coursesData";
+import { coursesData } from "../../pages/DashboardPages/CoursesTaken/coursesData";
+
 
 const STATIC_TITLES = {
   "/": "Bosh sahifa",
