@@ -38,4 +38,5 @@ export { default as arrowTop } from '../assets/Images/icons/arrowTop.svg'
 export { default as arrowBottom } from '../assets/Images/icons/arrowBottom.svg'
 export { default as locked } from '../assets/Images/icons/locked.svg'
 export { default as playlist } from '../assets/Images/icons/playlist.svg'
+export { default as playImage } from '../assets/Images/singlemediaPlay.png'
 

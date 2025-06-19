@@ -37,7 +37,8 @@ const SingleCourse = () => {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>{course.title}</h2>
       <div className={styles.wrapperBox}>
-        <div className={styles.VideoBox}>
+       <div className={styles.videoScrollBox}>
+         <div className={styles.VideoBox}>
           {/* Вкладки */}
           <div className={styles.tabs}>
             <button
@@ -71,7 +72,7 @@ const SingleCourse = () => {
             <>
               <div className={styles.videoWrapper}>
                 <img src={course.banner} alt="preview" />
-                <button className={styles.playBtn}>▶</button>
+                {/* <button className={styles.playBtn}>▶</button> */}
               </div>
               <p className={styles.date}>Mar 13 2020</p>
 
@@ -82,8 +83,10 @@ const SingleCourse = () => {
               <div className={styles.navButtons}>
                 <button >
                   <IoIosArrowBack className={styles.arrow} />
+                  Oldingi
                 </button>
                 <button   >
+                  Keyingi
                   <IoIosArrowForward className={styles.arrow} />
                 </button>
               </div>
@@ -147,6 +150,7 @@ const SingleCourse = () => {
             </div>
           )}
         </div>
+       </div>
 
         <div className={styles.curriculumBox}>
           <div className={styles.curriculumList}>

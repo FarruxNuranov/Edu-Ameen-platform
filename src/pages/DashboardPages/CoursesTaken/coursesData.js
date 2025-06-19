@@ -1,15 +1,16 @@
 import { FaFilePdf, FaFileExcel } from "react-icons/fa";
-import { courses1, news1, news3 } from "../../../utils/getimage";
+import { news1, news3, playImage } from "../../../utils/getimage";
+
 
 export const coursesData = [
   {
     id: 1,
     title: "Python Crawling",
-    banner: courses1,
+    banner: playImage,
     author: { name: "Kathryn Murphy" },
     progress: { current: 1, total: 4 },
     unlocked: true, // если true — все серии будут открыты
-    description: "Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.",
+    description: "Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.",
     
     materials: [
       {
@@ -38,7 +39,103 @@ export const coursesData = [
         date: "September 22, 2023",
         text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
         avatar: news1
-      }
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
+      {
+        name: "Jamila Akbarova",
+        date: "September 20, 2023",
+        text: "Kurs juda foydali bo‘ldi. Tushunarli va amaliy misollar bilan boyitilgan!",
+        avatar: news3
+      },
+      {
+        name: "Hasanboy Tursunov",
+        date: "September 22, 2023",
+        text: "Men bu kursni tugatdim va hozir o‘zim bot yaratayapman. Rahmat!",
+        avatar: news1
+      },
     ],
 
     sections: [
