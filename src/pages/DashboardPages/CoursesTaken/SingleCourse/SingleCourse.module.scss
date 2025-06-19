@@ -445,6 +445,21 @@ display: flex;
   cursor: not-allowed;
 }
 
+@media (max-width:575px) {
+
+
+.title {
+  text-align: center;
+}
+
+  .VideoBox{
+    display: none;
+  }
+
+ .curriculumBox {
+  width: 100%;
+ }
+}
 @media (max-width:375px) {
 
 
