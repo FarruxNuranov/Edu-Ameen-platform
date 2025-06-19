@@ -37,8 +37,7 @@ const SingleCourse = () => {
     <div className={styles.wrapper}>
       <h2 className={styles.title}>{course.title}</h2>
       <div className={styles.wrapperBox}>
-       <div className={styles.videoScrollBox}>
-         <div className={styles.VideoBox}>
+        <div className={styles.VideoBox}>
           {/* Вкладки */}
           <div className={styles.tabs}>
             <button
@@ -81,11 +80,11 @@ const SingleCourse = () => {
                 <p className={styles.description}>{course.description}</p>
               </div>
               <div className={styles.navButtons}>
-                <button >
+                <button>
                   <IoIosArrowBack className={styles.arrow} />
                   Oldingi
                 </button>
-                <button   >
+                <button>
                   Keyingi
                   <IoIosArrowForward className={styles.arrow} />
                 </button>
@@ -150,7 +149,6 @@ const SingleCourse = () => {
             </div>
           )}
         </div>
-       </div>
 
         <div className={styles.curriculumBox}>
           <div className={styles.curriculumList}>

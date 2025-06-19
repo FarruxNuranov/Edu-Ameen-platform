@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  display: none;
+
   border-bottom: 1px solid #f1f3f5;
   border-left: 1px solid #f1f3f5;
   border-right: 1px solid #f1f3f5;
@@ -13,53 +13,39 @@
   height: 92px;
 }
 
-.title {
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: #101113;
-}
 
-.actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 24px 16px;
-}
+  a {
+    text-decoration: none;
+    color: #007bff;
+    transition: 0.2s ease;
 
-.stat {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+    &:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+  }
 
-.icon {
-  font-size: 20px;
-  color: #475467;
-}
+  .current {
+    color: #101113;
+    font-weight: 500;
+  }
 
-.value {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 125%;
-  letter-spacing: 0.01em;
-  color: #1a1a18;
-}
-
-.link {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 143%;
-  letter-spacing: 0.01em;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: var(--secondary);
-
-  &:hover {
-    text-decoration: underline;
+  .separator {
+    color: #c0c0c0;
+    font-weight: 400;
+    margin: 0 4px;
+    user-select: none;
   }
 }
 

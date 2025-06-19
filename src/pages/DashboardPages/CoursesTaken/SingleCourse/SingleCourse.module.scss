@@ -11,8 +11,10 @@
   width: 100%;
 }
 
-.videoScrollBox {
-  width: 75%;
+
+
+.VideoBox {
+    width: 65%;
   height: 813px;
   position: relative;
   overflow-y: scroll;
@@ -20,10 +22,6 @@
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.VideoBox {
-  
   
 }
 
@@ -90,7 +88,8 @@
   justify-content: center;
 
   img {
-    width: 80%;
+    width: 100%;
+   
     border-radius: 12px;
   }
 }
@@ -346,7 +345,7 @@
   border: 1px solid #c7c7cc;
   border-radius: 16px;
   padding: 16px;
-  width: 25%;
+  width: 35%;
   height: 814px;
 
   background: #fff;
