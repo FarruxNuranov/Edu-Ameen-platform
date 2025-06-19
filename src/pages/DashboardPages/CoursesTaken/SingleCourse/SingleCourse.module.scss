@@ -1,11 +1,17 @@
 .wrapper {
-  padding: 24px;
+  padding: 16px;
+  
+}
+
+.wrapperBox {
+display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
 }
 
 .VideoBox {
-  min-width: 756px;
-  width: 10%;
-
+  width: 75%;
 }
 
 .title {
@@ -103,7 +109,7 @@
 .descriptionBox {
   border-radius: 16px;
   padding: 16px;
-  width: 756px;
+  width: 100%;
   height: auto;
   background: #f2f2f7;
 }
@@ -132,7 +138,8 @@
     &:hover {
       background-color: #2d3a66;
     }
-  }}
+  }
+}
 
 .description {
   font-family: var(--font-family);
@@ -157,7 +164,7 @@
   border: 1px solid #cacaca;
   border-radius: 16px;
   padding: 16px;
-  width: 759px;
+  width: 100%;
   height: 72px;
 }
 
@@ -253,7 +260,7 @@
   border-radius: 16px;
   padding: 24px;
   width: 100%;
-  max-width: 760px;
+  
   height: 584px;
   overflow-y: auto;
 }
@@ -306,21 +313,24 @@
   }
 }
 
-
 .curriculumBox {
-  background: #f8f9fc;
-  border-radius: 16px;
-  padding: 20px;
-  width: 100%;
-  max-width: 340px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid #c7c7cc;
+  border-radius: 16px;
+  padding: 16px;
+  width: 40%;
+  height: 814px;
+  background: #fff;
 }
 
 .curriculumTitle {
-  font-size: 16px;
-  font-weight: 600;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 159%;
+  color: #182f43;
   margin-bottom: 16px;
 }
 
@@ -333,10 +343,27 @@
   gap: 12px;
 }
 
+.ItemTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #182f43;
+}
+
+.ItemSeriasTitle {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  color: #000;
+}
+
 .section {
-  background: #f1f3f7;
+  background: rgba(0, 122, 255, 0.05);
   border-radius: 12px;
   padding: 12px;
+  
 }
 
 .sectionHeader {
@@ -346,8 +373,29 @@
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #ddd;
+ 
+  
+  
+}
+
+.sectionIcons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .arrowIcon {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .lockIcon {
+    opacity: 0.6;
+  }
 }
 
 .lessonList {
@@ -358,14 +406,19 @@
 }
 
 .lessonItem {
-  background: white;
-  border-radius: 8px;
-  padding: 8px 10px;
+  cursor: pointer;
+  border: 1px solid #e5e5ea;
+  background: #fff;
+  border-radius: 16px;
+  padding: 8px 16px;
+  width: 100%;
+  height: 52px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   font-size: 13px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  position: relative;
 }
 
 .lessonIcon {
@@ -376,6 +429,8 @@
 .lessonStatus {
   font-size: 14px;
   color: #999;
+  position: absolute;
+  right: 5%;
 }
 
 .taskButton {
@@ -390,3 +445,18 @@
   cursor: not-allowed;
 }
 
+@media (max-width:375px) {
+
+
+.title {
+  text-align: center;
+}
+
+  .VideoBox{
+    display: none;
+  }
+
+ .curriculumBox {
+  width: 100%;
+ }
+}

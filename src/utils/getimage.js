@@ -34,4 +34,8 @@ export { default as sidebarData } from '../assets/Images/icons/sidebarData.svg'
 export { default as TopRaitingCup } from '../assets/Images/icons/TopRaitingCup.svg'
 export { default as CurrentPage } from '../assets/Images/icons/current.svg'
 export { default as Download } from '../assets/Images/icons/Download.svg'
+export { default as arrowTop } from '../assets/Images/icons/arrowTop.svg'
+export { default as arrowBottom } from '../assets/Images/icons/arrowBottom.svg'
+export { default as locked } from '../assets/Images/icons/locked.svg'
+export { default as playlist } from '../assets/Images/icons/playlist.svg'
 

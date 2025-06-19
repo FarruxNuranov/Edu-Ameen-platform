@@ -8,7 +8,7 @@ export const coursesData = [
     banner: courses1,
     author: { name: "Kathryn Murphy" },
     progress: { current: 1, total: 4 },
-    unlocked: false, // если true — все серии будут открыты
+    unlocked: true, // если true — все серии будут открыты
     description: "Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.",
     
     materials: [
@@ -47,7 +47,7 @@ export const coursesData = [
         locked: false,
         lessons: [
           { title: "1.1 Python nima?", completed: true, locked: false },
-          { title: "1.2 O‘zgaruvchilar", completed: false, locked: false },
+          { title: "1.2 O‘zgaruvchilar", completed:true, locked: false },
           { title: "1.3 Listlar va Tuple", completed: false, locked: false }
         ]
       },
