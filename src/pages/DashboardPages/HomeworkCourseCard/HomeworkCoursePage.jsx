@@ -21,7 +21,7 @@ const HomeworkCoursePage = () => {
         {course.homeworks?.map((hw) => (
           <Link
             key={hw.id}
-            // to={`/coursestaken/${course.id}/homeworks/${hw.id}`}
+           to={`/homework/${course.id}/${hw.id}`}
             className={styles.card}
           >
              <img src={CardBg} alt="" className={styles.bgIcon} />
