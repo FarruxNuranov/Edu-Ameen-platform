@@ -26,10 +26,8 @@
   img {
     width: 100%;
     height: 100%;
- 
   }
 }
-
 
 .dropdown {
   margin-left: 56px;
@@ -170,40 +168,32 @@
 
 .burger {
   display: none;
-  display: flex;
-  
   width: 40px;
-    height: 30px;
-
-    & img {
-      width: 100%;
-    }
+  height: 30px;
 }
 
 @media (max-width: 375px) {
   .burger {
     display: block;
-    width: 25px;
-    height: 25px;
+
+    & img {
+      width: 100%;
+    }
   }
 
   .navbar {
     padding: 2px 16px;
   }
 
-.logo {
-  width: 109px;
-  height: 40px;
- 
+  .logo {
+    width: 109px;
+    height: 40px;
 
-  img {
-    width: 100%;
-    height: 100%;
-    
-
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
-}
-
 
   .cta {
     display: none;
@@ -244,6 +234,9 @@
 @media (max-width: 575px) {
   .burger {
     display: block;
+    width: 40px;
+  height: 30px;
+  display: flex;
   }
 
   .navbar {
@@ -253,11 +246,11 @@
   .logo {
     width: 109px;
     height: 52px;
+    display: none;
 
     img {
       width: 100%;
       height: 100%;
-  
     }
   }
 
