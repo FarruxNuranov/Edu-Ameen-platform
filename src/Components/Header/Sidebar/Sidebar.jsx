@@ -56,7 +56,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-         to="/taken"
+         to="/homework"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }

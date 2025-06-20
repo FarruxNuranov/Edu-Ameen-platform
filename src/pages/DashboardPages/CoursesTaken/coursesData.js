@@ -12,6 +12,141 @@ export const coursesData = [
     unlocked: false, // если true — все серии будут открыты
     description: "Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.Ushbu kurs orqali siz Python'da veb sahifalardan ma'lumotlarni avtomatik tarzda yig'ish texnikasini o'rganasiz.",
     
+        homeworks: [
+      {
+        id: "hw-1",
+        title: "Crawling asoslari",
+        banner: "/images/hw-crawling.png",
+        status: "Tekshirilgan", // yoki "Topshirilmagan", "Topshirilmoqda"
+        description: "Ushbu topshiriqda siz requests kutubxonasi yordamida sahifani chaqirishni amalda bajarasiz.",
+        materials: [
+          {
+            name: "Requests qo‘llanmasi.pdf",
+            icon: FaFilePdf,
+            size: "150 KB",
+            link: "/files/requests.pdf"
+          },
+          {
+            name: "Kod namunalari.xlsx",
+            icon: FaFileExcel,
+            size: "90 KB",
+            link: "/files/code.xlsx"
+          }
+        ],
+        comments: [
+          {
+            name: "Jamila Akbarova",
+            date: "2024-10-15",
+            text: "Topshiriq aniq va amaliy bo‘ldi.",
+            avatar: news3
+          }
+        ],
+        tasks: [
+          {
+            question: "requests kutubxonasi yordamida sahifani qanday chaqirasiz?",
+            answered: true
+          },
+          {
+            question: "response.json() va response.text o‘rtasidagi farq nima?",
+            answered: false
+          }
+        ]
+      },
+      {
+        id: "hw-2",
+        title: "Crawling asoslari",
+        banner: "/images/hw-crawling.png",
+        status: "Tekshirilgan", // yoki "Topshirilmagan", "Topshirilmoqda"
+        description: "Ushbu topshiriqda siz requests kutubxonasi yordamida sahifani chaqirishni amalda bajarasiz.",
+        materials: [
+          {
+            name: "Requests qo‘llanmasi.pdf",
+            icon: FaFilePdf,
+            size: "150 KB",
+            link: "/files/requests.pdf"
+          },
+          {
+            name: "Kod namunalari.xlsx",
+            icon: FaFileExcel,
+            size: "90 KB",
+            link: "/files/code.xlsx"
+          }
+        ],
+        comments: [
+          {
+            name: "Jamila Akbarova",
+            date: "2024-10-15",
+            text: "Topshiriq aniq va amaliy bo‘ldi.",
+            avatar: news3
+          }
+        ],
+        tasks: [
+          {
+            question: "requests kutubxonasi yordamida sahifani qanday chaqirasiz?",
+            answered: true
+          },
+          {
+            question: "response.json() va response.text o‘rtasidagi farq nima?",
+            answered: false
+          }
+        ]
+      },
+      {
+        id: "hw-3",
+        title: "Crawling asoslari",
+        banner: "/images/hw-crawling.png",
+        status: "Tekshirilgan", // yoki "Topshirilmagan", "Topshirilmoqda"
+        description: "Ushbu topshiriqda siz requests kutubxonasi yordamida sahifani chaqirishni amalda bajarasiz.",
+        materials: [
+          {
+            name: "Requests qo‘llanmasi.pdf",
+            icon: FaFilePdf,
+            size: "150 KB",
+            link: "/files/requests.pdf"
+          },
+          {
+            name: "Kod namunalari.xlsx",
+            icon: FaFileExcel,
+            size: "90 KB",
+            link: "/files/code.xlsx"
+          }
+        ],
+        comments: [
+          {
+            name: "Jamila Akbarova",
+            date: "2024-10-15",
+            text: "Topshiriq aniq va amaliy bo‘ldi.",
+            avatar: news3
+          }
+        ],
+        tasks: [
+          {
+            question: "requests kutubxonasi yordamida sahifani qanday chaqirasiz?",
+            answered: true
+          },
+          {
+            question: "response.json() va response.text o‘rtasidagi farq nima?",
+            answered: false
+          }
+        ]
+      },
+      {
+        id: "hw-4",
+        title: "BeautifulSoup bilan ishlash",
+        banner: "/images/hw-beautifulsoup.png",
+        status: "Topshirilmagan",
+        description: "Siz ushbu vazifada sahifadan sarlavha va linklarni ajratib olasiz.",
+        materials: [],
+        comments: [],
+        tasks: [
+          {
+            question: "Taglar orqali HTML elementlarni qanday aniqlaysiz?",
+            answered: false
+          }
+        ]
+      }
+    ],
+
     materials: [
       {
         name: "Crawling qo‘llanmasi.pdf",
@@ -167,3 +302,7 @@ export const coursesData = [
     ]
   }
 ];
+
+
+
+
