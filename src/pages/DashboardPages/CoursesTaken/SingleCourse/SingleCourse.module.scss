@@ -11,18 +11,15 @@
   width: 100%;
 }
 
-
-
 .VideoBox {
-    width: 65%;
+  width: 65%;
   height: 813px;
   position: relative;
   overflow-y: scroll;
-   border-radius: 12px;
+  border-radius: 12px;
   &::-webkit-scrollbar {
     display: none;
   }
-  
 }
 
 .title {
@@ -89,7 +86,7 @@
 
   img {
     width: 100%;
-   
+
     border-radius: 12px;
   }
 }
@@ -172,6 +169,21 @@
   font-size: 16px;
   line-height: 150%;
   color: #182f43;
+}
+
+.readMoreBtn {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  text-decoration: underline;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .materials {
@@ -472,12 +484,22 @@
     text-align: center;
   }
 
+  .wrapperBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+
   .VideoBox {
-    display: none;
+    width: 100%;
+    height: 100%;
   }
 
   .curriculumBox {
     width: 100%;
+    height: 100%;
   }
 }
 @media (max-width: 375px) {
@@ -485,11 +507,21 @@
     text-align: center;
   }
 
+  .wrapperBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    padding-bottom: 100px;
+  }
+
   .VideoBox {
-    display: none;
+    width: 100%;
+    height: 100%;
   }
 
   .curriculumBox {
     width: 100%;
+    height: 100%;
   }
 }

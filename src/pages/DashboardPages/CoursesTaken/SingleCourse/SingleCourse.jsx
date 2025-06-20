@@ -19,10 +19,17 @@ const SingleCourse = () => {
   const [activeTab, setActiveTab] = useState("description");
   const [comment, setComment] = useState("");
   const [expandedSection, setExpandedSection] = useState(null);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
   if (!course) return <div>Kurs topilmadi</div>;
 
   const toggleSection = (index) => {
     setExpandedSection(expandedSection === index ? null : index);
+  };
+
+  const getShortDescription = (text) => {
+    if (text.length <= 100) return text;
+    return showFullDescription ? text : text.slice(0, 100) + "...";
   };
 
   const visibleSections = course.unlocked
@@ -77,7 +84,22 @@ const SingleCourse = () => {
 
               <div className={styles.descriptionBox}>
                 <h4 className={styles.subTitle}>Darsning dolzarbligi</h4>
-                <p className={styles.description}>{course.description}</p>
+                <div className={styles.descriptionBox}>
+                  <h4 className={styles.subTitle}>Darsning dolzarbligi</h4>
+                  <p className={styles.description}>
+                    {getShortDescription(course.description)}
+                  </p>
+                  {course.description.length > 100 && (
+                    <button
+                      onClick={() =>
+                        setShowFullDescription(!showFullDescription)
+                      }
+                      className={styles.readMoreBtn}
+                    >
+                      {showFullDescription ? "Yopish" : "To‘liq o‘qish"}
+                    </button>
+                  )}
+                </div>
               </div>
               <div className={styles.navButtons}>
                 <button>
