@@ -7,7 +7,7 @@ const navItems = [
   { to: '/', label: 'Bosh sahifa', icon: home },
   { to: '/coursestaken', label: 'Kurslarim', icon: Takencurs },
   { to: '/ss', label: 'Quizlar', icon: quizz },
-  { to: '/dd', label: 'Uy vazifalar', icon: homework },
+  { to: '/homework', label: 'Uy vazifalar', icon: homework },
 ];
 
 const BottomNav = () => {
