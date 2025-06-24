@@ -17,6 +17,7 @@ import SingleCourse from "../pages/DashboardPages/CoursesTaken/SingleCourse/Sing
 import HomeworkCourseCard from "../pages/DashboardPages/HomeworkCourseCard/HomeworkCourseCard";
 import HomeworkCoursePage from "../pages/DashboardPages/HomeworkCourseCard/HomeworkCoursePage";
 import SingleHomeworkPage from "../pages/DashboardPages/HomeworkCourseCard/SingleHomeworkPage";
+import SingleTestPage from "../pages/DashboardPages/HomeworkCourseCard/SingleTestPage";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
       { path: "/homework", element: <HomeworkCourseCard /> },
       { path:"/homework/:id", element: <HomeworkCoursePage />},
       { path: "/homework/:id/:hwId", element: <SingleHomeworkPage /> },
+      { path: "/test/:courseId/:testId", element: <SingleTestPage /> },
       
       
       { path: "*", element: <NotFoundPage /> },

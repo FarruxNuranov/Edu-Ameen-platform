@@ -51,4 +51,10 @@ export { default as homeworkBadge } from '../assets/Images/icons/HomeWorkBadge.s
 export { default as Chek } from '../assets/Images/icons/Cheking.svg'
 export { default as cardHomeBg } from '../assets/Images/HomeWorkCardBg.png'
 export { default as filterIcon } from '../assets/Images/icons/filtericon.svg'
+export { default as modalInfo } from '../assets/Images/icons/modalinfo.svg'
+export { default as tea } from '../assets/Images/Tea.png'
+export { default as homework1 } from '../assets/Images/icons/homework1.svg'
+export { default as homework2 } from '../assets/Images/icons/homework2.svg'
+export { default as homework3 } from '../assets/Images/icons/homework3.svg'
+export { default as homework4 } from '../assets/Images/icons/homework4.svg'
 

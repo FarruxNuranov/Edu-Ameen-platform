@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { coursesData } from "../CoursesTaken/coursesData";
 import styles from "./HomeworkCoursePage.module.scss";
 
-import { CardBg, CardTest, homeworkicon } from "../../../utils/getimage";
+import {
+  CardBg,
+  CardTest,
+  homeworkicon,
+  modalInfo,
+} from "../../../utils/getimage";
 import { FaCheckCircle, FaTimesCircle, FaClock } from "react-icons/fa";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoMdClose } from "react-icons/io";
 import { courseTestsData } from "./courseTestsData";
 
 const HomeworkCoursePage = () => {
@@ -16,11 +21,25 @@ const HomeworkCoursePage = () => {
   const [statusFilter, setStatusFilter] = useState(""); // Tekshirilgan и т.п.
   const [searchTerm, setSearchTerm] = useState("");
 
+  const [selectedTest, setSelectedTest] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
+
   if (!course) return <div>Kurs topilmadi</div>;
 
   const filteredHomeworks = course.homeworks
     ?.filter((hw) => hw.title.toLowerCase().includes(searchTerm.toLowerCase()))
     .filter((hw) => (statusFilter ? hw.status === statusFilter : true));
+
+  const handleTestClick = (test) => {
+    setSelectedTest(test);
+    setShowModal(true);
+  };
+
+//   const handleCancelModal = () => {
+//   setSelectedTest(null);
+//   setShowModal(false);
+// };
 
   return (
     <section className={styles.section}>
@@ -125,7 +144,11 @@ const HomeworkCoursePage = () => {
               statusFilter ? test.status === statusFilter : true
             )
             .map((test) => (
-              <div key={test.id} className={styles.card}>
+              <div
+                key={test.id}
+                className={styles.card}
+                onClick={() => handleTestClick(test)}
+              >
                 <img src={CardTest} alt="" className={styles.bgIcon} />
                 <div className={styles.left}>
                   <div className={styles.nameTitle}>
@@ -160,6 +183,38 @@ const HomeworkCoursePage = () => {
                 </div>
               </div>
             ))}
+        </div>
+      )}
+
+      {showModal && selectedTest && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modal}>
+          
+            <div className={styles.modalBox}>
+              <div className={styles.modalIcon}>
+                <img src={modalInfo} alt="" />
+              </div>
+              <h3 className={styles.modalTitle}>Ogohlantirish</h3>
+              <p className={styles.modalText}>
+                Diqqat! Test bajarish jarayonida qurilmangiz orqali boshqa
+                ilovalarga o‘tish mumkin emas.
+              </p>
+              <div className={styles.modalActions}>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className={styles.cancel}
+                >
+                  Bekor qilish
+                </button>
+                <button
+                  onClick={() => navigate(`/test/${id}/${selectedTest.id}`)}
+                  className={styles.confirm}
+                >
+                  Boshlash
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </section>
