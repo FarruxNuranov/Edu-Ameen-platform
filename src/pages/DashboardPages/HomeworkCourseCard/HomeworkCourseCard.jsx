@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./HomeworkCourseCard.module.scss";
 import { coursesData } from "../CoursesTaken/coursesData";
 import { Link } from "react-router-dom";
+import { cardHomeBg, Chek, homeworkBadge, TeacherHomework, TeacherNameIcon } from "../../../utils/getimage";
+import { IoIosArrowForward } from "react-icons/io";
 
 const HomeworkCourseCard = () => {
   const renderProgressCircle = (current, total) => {
@@ -10,6 +12,7 @@ const HomeworkCourseCard = () => {
     const normalizedRadius = radius - stroke / 2;
     const circumference = 2 * Math.PI * normalizedRadius;
     const progress = (current / total) * circumference;
+    const percentage = Math.round((current / total) * 100);
 
     return (
       <svg height={radius * 2} width={radius * 2} className={styles.svg}>
@@ -31,7 +34,6 @@ const HomeworkCourseCard = () => {
           r={normalizedRadius}
           cx={radius}
           cy={radius}
-          className={styles.progress}
         />
         <text
           x="50%"
@@ -41,7 +43,7 @@ const HomeworkCourseCard = () => {
           fontSize="10"
           fill="black"
         >
-          {current} of {total}
+          {percentage}%
         </text>
       </svg>
     );
@@ -57,24 +59,45 @@ const HomeworkCourseCard = () => {
             key={course.id}
             className={styles.card}
           >
-            <div className={styles.imageWrapper}>
-              <img src={course.banner} alt={course.title} />
-            </div>
+            <img className={styles.CardBg} src={cardHomeBg} alt="" />
             <div className={styles.box}>
-              <div className={styles.info}>
-                <div className={styles.title}>{course.title}</div>
+              <div className={styles.left}>
+                <div className={styles.titleRow}>
+                  <img src={TeacherHomework} alt="" className={styles.icon} />
+                  <span className={styles.title}>{course.title}</span>
+                </div>
+
                 <div className={styles.teacher}>
-                  Ustoz:{" "}
-                  <span className={styles.teacherName}>
-                    {course.author.name}
-                  </span>{" "}
+                  <img
+                    className={styles.TeachernameIcon}
+                    src={TeacherNameIcon}
+                    alt=""
+                  />
+                  Kozimxon To’rayev
+                </div>
+                <div className={styles.actions}>
+                  <div className={styles.badge}>
+                    <img src={homeworkBadge} alt="" />
+                  <div className={styles.textBadge}>
+                      Barcha uy vazifalar <span>24</span>
+                  </div>
+                  </div>
+                  <div className={styles.checking}>
+                    <img src={Chek} alt="" />
+                    <div className={styles.ChekTest}>
+                      Tekshirilmoqda <span>4</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className={styles.progressWrapper}>
-                {renderProgressCircle(
-                  course.progress.current,
-                  course.progress.total
-                )}
+              <div className={styles.right}>
+                <div className={styles.progressWrapper}>
+                  {renderProgressCircle(
+                    course.progress.current,
+                    course.progress.total
+                  )}
+                </div>
+                <div className={styles.arrow}><IoIosArrowForward/></div>
               </div>
             </div>
           </Link>

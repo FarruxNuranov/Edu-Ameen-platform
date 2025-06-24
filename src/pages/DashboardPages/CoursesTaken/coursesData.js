@@ -5,7 +5,7 @@ import { news1, news3, playImage } from "../../../utils/getimage";
 export const coursesData = [
   {
     id: 1,
-    title: "Python Crawling",
+    title: "HR Menejment Kursi",
     banner: playImage,
     author: { name: "Kathryn Murphy" },
     progress: { current: 1, total: 4 },

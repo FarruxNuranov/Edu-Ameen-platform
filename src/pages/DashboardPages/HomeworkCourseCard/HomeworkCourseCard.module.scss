@@ -1,59 +1,65 @@
 .section {
-  padding: 16px;
- 
+  padding: 20px;
 }
 
 .sectionTitle {
-  font-family: var(--second-family);
-  font-weight: 600;
   font-size: 24px;
-  line-height: 150%;
-  color: #101113;
+  font-weight: 600;
   margin-bottom: 16px;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
 .card {
   position: relative;
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.5s ease;
-}
-
-.box {
-  display: flex;
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  height: 125px;
+  background: linear-gradient(
+    129deg,
+    rgba(0, 178, 255, 0.1) 0%,
+    rgba(7, 0, 207, 0.1) 100%
+  );
   align-items: center;
   justify-content: space-between;
-  padding: 10px 12px;
+
+  &:hover .CardBg {
+    transform: scale(1.5);
+  }
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.CardBg {
+  position: absolute;
+  top: 25%;
+  right: 40%;
+  transition: 500ms;
 }
-
-.imageWrapper img {
+.box {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 130px;
-  object-fit: cover;
 }
 
-.title {
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.01em;
-  color: #000;
+  color: #182f43;
 }
 
 .teacher {
@@ -61,36 +67,126 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.01em;
-  color: #5c5f66;
-
-  .teacherName {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 0.01em;
-    color: #000;
-  }
+  color: #8e8e93;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
 }
 
-.progress {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: #0061ff;
-  color: white;
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.badge,
+.checking {
   font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 20px;
-  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 16px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-@media (max-width: 375px) {
-  .section {
-    padding-bottom: 100px;
+.badge {
+  border: 1px solid var(--primary);
+  border-radius: 100px;
+  padding: 6px 8px;
+
+  height: 28px;
+  background: #fff;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.textBadge {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  & span {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
-@media (max-width: 575px) {
-  .section {
-    padding-bottom: 100px;
+
+.checking {
+  border: 1px solid #ffa500;
+  border-radius: 100px;
+  padding: 6px 8px;
+
+  height: 28px;
+  background: #fff;
+}
+
+.ChekTest {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  & span {
+    border-radius: 50%;
+    padding: 0 1px;
+    width: 16px;
+    height: 16px;
+    background: #ffa500;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.progressWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1.5);
+}
+
+.arrow {
+  border: 1px solid #e5e5ea;
+  border-radius: 100px;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  font-size: 23px;
+}
+
+.TeachernameIcon {
+  width: 16px;
+  height: 11px;
 }
