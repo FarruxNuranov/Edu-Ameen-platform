@@ -1,5 +1,5 @@
 .section {
-  padding: 20px;
+  padding: 16px;
 }
 
 .sectionTitle {
@@ -184,9 +184,33 @@
   height: 32px;
   background: #fff;
   font-size: 23px;
+ transition: 500ms;
+  &:hover {
+   transform: scale(1.5);
+  }
 }
 
 .TeachernameIcon {
   width: 16px;
   height: 11px;
+}
+
+
+@media (max-width: 375px) {
+  .CardBg {
+    display: none;
+  }
+
+  .textBadge {
+    font-size: 0px;
+  }
+
+  .ChekTest{
+    font-size: 0;
+  }
+
+  
+  .right{
+    gap: 20px;
+  }
 }
