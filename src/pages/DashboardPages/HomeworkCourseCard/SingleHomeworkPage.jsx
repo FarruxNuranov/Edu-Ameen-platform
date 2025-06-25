@@ -1,120 +1,196 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./SingleHomeworkPage.module.scss";
-import { useParams } from "react-router-dom";
-import { homework1, homework2, homework3, homework4, tea } from "../../../utils/getimage";
+import {
+  FaUser,
+  FaCalendarAlt,
+  FaSignal,
+  FaCheckCircle,
+  FaStar,
+  FaCommentAlt,
+  FaLink,
+} from "react-icons/fa";
+import {
+  arrowUp,
+  basket,
+  homework1,
+  homework2,
+  homework3,
+  homework4,
+  homework5,
+  homework6,
+  modalInfo,
+  tabriklaymiz,
+  tea,
+} from "../../../utils/getimage";
 
 const SingleHomeworkPage = () => {
-  const { id, hwId } = useParams();
   const [uploadedFiles, setUploadedFiles] = useState([
     "Vazifa 123.pdf",
     "Vazifa 234.pdf",
   ]);
   const [submittedLinks, setSubmittedLinks] = useState([
-    "https://figma.com/task",
-    "https://t.me/task",
+    "Topshiriq figma link",
+    "Topshiriq telegram",
   ]);
   const [text, setText] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const fileInputRef = useRef();
+  const [showModal, setShowModal] = useState(false);
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const handleFileUpload = (e) => {
+    const files = Array.from(e.target.files).map((f) => f.name);
+    setUploadedFiles((prev) => [...prev, ...files]);
+    e.target.value = null;
+  };
+
+  const handleDeleteFile = (index) => {
+    setUploadedFiles((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleDeleteLink = (index) => {
+    setSubmittedLinks((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (
     <div className={styles.page}>
-      <h2 className={styles.title}>
-        Kompaniyada uchraydigan muammolarga HR beradigan yechimlar
-      </h2>
+      <div className={styles.header}>
+        <h1 className={styles.title}>
+          Kompaniyada uchraydigan muammolarga HR beradigan yechimlar
+        </h1>
+        <button className={styles.lessonBtn}>Darsga o‘tish →</button>
+      </div>
 
-      <div className={styles.grid}>
-        {/* Left Info Panel */}
-        <div className={styles.infoCard}>
-          <h2 className={styles.infoTitle}>Ma’lumotlar</h2>
-          <div className={styles.nameBlock}>
-            <img className={styles.nameImg} src={tea} alt="" />
-            <div className={styles.Name}>
+      <div className={styles.mainSection}>
+        <div className={styles.leftBlock}>
+          <h2 className={styles.blockTitle}>Ma’lumotlar</h2>
+
+          <div className={styles.infoItem}>
+            <img className={styles.icon} src={tea} alt="" />
+            <div>
               <p className={styles.label}>O‘qituvchi</p>
               <p className={styles.value}>Kozimxon To‘rayev</p>
             </div>
           </div>
-          <div className={styles.nameBlock}>
-            <div className={styles.nameBounce}>
-              <img src={homework1} alt="" />
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework1} alt="" />
             </div>
-            <div className={styles.Name}>
+            <div>
               <p className={styles.label}>Nashr qilingan sana</p>
               <p className={styles.value}>19 Noyabr, 2024</p>
             </div>
           </div>
-          <div className={styles.nameBlock}>
-            <div className={styles.nameBounce}>
-              <img src={homework2} alt="" />
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework2} alt="" />
             </div>
-            <div className={styles.Name}>
+            <div>
               <p className={styles.label}>Murakkablik darajasi</p>
               <p className={styles.value}>Yengil</p>
             </div>
           </div>
-          <div className={styles.nameBlock}>
-            <div className={styles.nameBounce}>
-              <img src={homework3} alt="" />
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework3} alt="" />
             </div>
-            <div className={styles.Name}>
+            <div>
               <p className={styles.label}>Status</p>
-              <p className={`${styles.badge} ${styles.green}`}>
-                {submitted ? "Tekshirilmoqda" : "Topshirilmagan"}
-              </p>
+              <div className={`${styles.badge} ${styles.orange}`}>
+                Tekshirilmoqda
+              </div>
             </div>
           </div>
-          <div className={styles.nameBlock}>
-            <div className={styles.nameBounce}>
-              <img src={homework4} alt="" />
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework4} alt="" />
             </div>
-            <div className={styles.Name}>
-              {submitted && (
-                <div>
-                  <p className={styles.label}>To‘plagan ballar</p>
-                  <p className={styles.value}>15 (a’lo)</p>
-                </div>
-              )}
+            <div>
+              <p className={styles.label}>To‘plagan ballar</p>
+              <p className={styles.value}>-</p>
+            </div>
+          </div>
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework5} alt="" />
+            </div>
+            <div>
+              <p className={styles.label}>
+                Natija bo‘yicha ustoz kommentariyasi
+              </p>
+              <p className={styles.value}>-</p>
+            </div>
+          </div>
+
+          <div className={styles.infoItem}>
+            <div className={styles.IconBorder}>
+              <img className={styles.icon} src={homework6} alt="" />
+            </div>
+            <div>
+              <p className={styles.label}>Topshiriq uchun havolalar</p>
+              <p className={styles.value}>-</p>
             </div>
           </div>
         </div>
+        <div className={styles.rightBlock}>
+          <h2 className={styles.sectionTitle}>
+            Vazifani bajaring va natijangizni yuboring
+          </h2>
+          <p className={styles.sectionDesc}>
+            Ushbu vazifani diqqat bilan o‘rganing va berilgan mavzu bo‘yicha
+            topshiriqni bajaring. Kerakli fayllar va havolalarni yuklang yoki
+            yozma javob kiriting. Tugatganingizdan so‘ng yakunlash tugmasini
+            bosing.
+          </p>
 
-        {/* Right Submission Area */}
-        <div className={styles.submitArea}>
-          <div className={styles.AreaBox}>
-            <div className={styles.blocks}>
+          <div className={styles.uploadGrid}>
+            {/* File Upload */}
+            <div className={styles.uploadBox}>
               <h4>Vazifa uchun fayllar</h4>
-              <div className={styles.fileBox}>
-                {uploadedFiles.map((f, i) => (
-                  <div key={i} className={styles.fileLink}>
-                    <a href="#">{f}</a>
-                    <span>🗑</span>
+              <div className={styles.fileList}>
+                {uploadedFiles.map((file, i) => (
+                  <div key={i} className={styles.fileItem}>
+                    <a href="#">{file}</a>
+                    <button onClick={() => handleDeleteFile(i)}><img src={basket} alt="" /></button>
                   </div>
                 ))}
+                <label className={styles.uploadBtn}>
+                  <img src={arrowUp} alt="" /> Fayl yuklash
+                  <input
+                    type="file"
+                    hidden
+                    multiple
+                    ref={fileInputRef}
+                    onChange={handleFileUpload}
+                  />
+                </label>
               </div>
             </div>
 
-            <div className={styles.blocks}>
+            {/* Links */}
+            <div className={styles.uploadBox}>
               <h4>Topshiriqqa havolalar</h4>
-              <div className={styles.fileBox}>
-                {submittedLinks.map((l, i) => (
-                  <div key={i} className={styles.fileLink}>
-                    <a href={l} target="_blank" rel="noreferrer">
-                      {l.split("//")[1]}
-                    </a>
-                    <span>🗑</span>
+              <div className={styles.fileList}>
+                {submittedLinks.map((link, i) => (
+                  <div key={i} className={styles.fileItem}>
+                    <a href="#">{link}</a>
+                    <button onClick={() => handleDeleteLink(i)}> <img src={basket} alt="" /></button>
                   </div>
                 ))}
+                <div className={styles.uploadBtn}>
+                  <img src={arrowUp} alt="" /> Fayl yuklash
+                  <input type="file" hidden multiple />
+                </div>
               </div>
             </div>
           </div>
 
-          <div className={styles.block}>
+          <div className={styles.textBlock}>
             <h4>Yozma shaklda</h4>
             <textarea
-              disabled={submitted}
               placeholder="Matn yozish"
               value={text}
               onChange={(e) => setText(e.target.value)}
@@ -122,13 +198,36 @@ const SingleHomeworkPage = () => {
           </div>
         </div>
       </div>
-      {!submitted && (
-        <button className={styles.submitBtn} onClick={handleSubmit}>
+      <div className={styles.LastBtn}>
+        <button onClick={() => setShowModal(true)} className={styles.BtnDone}>
           Yakunlash
         </button>
+      </div>
+      {showModal && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modal}>
+            <div className={styles.modalBox}>
+              <div className={styles.modalIcon}>
+                <img src={tabriklaymiz} alt="" />
+              </div>
+              <h3 className={styles.modalTitle}>Tabriklaymiz!</h3>
+              <p className={styles.modalText}>
+                Siz vazifalarni muvaffaqiyatli topshirdingiz! Ballingizni
+                tekshirilgandan so’ng ko’rishingiz mumkin.
+              </p>
+              <div className={styles.modalActions}>
+                <button
+                  onClick={() => setShowModal(false)}
+                  className={styles.confirm}
+                >
+                  Tushundim
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
 };
-
 export default SingleHomeworkPage;
