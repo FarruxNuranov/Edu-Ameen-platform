@@ -62,4 +62,5 @@ export { default as homework6 } from '../assets/Images/icons/homework6.svg'
 export { default as arrowUp } from '../assets/Images/icons/arrowUp.svg'
 export { default as tabriklaymiz } from '../assets/Images/icons/Tabriklaymiz.svg'
 export { default as basket } from '../assets/Images/icons/Basket.svg'
+export { default as quizCard } from '../assets/Images/quiz.png'
 

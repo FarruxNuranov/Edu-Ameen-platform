@@ -98,7 +98,7 @@ const SingleHomeworkPage = () => {
             <div>
               <p className={styles.label}>Status</p>
               <div className={`${styles.badge} ${styles.orange}`}>
-                Tekshirilmoqda
+                Topshirilmagan
               </div>
             </div>
           </div>

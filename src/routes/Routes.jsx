@@ -18,6 +18,8 @@ import HomeworkCourseCard from "../pages/DashboardPages/HomeworkCourseCard/Homew
 import HomeworkCoursePage from "../pages/DashboardPages/HomeworkCourseCard/HomeworkCoursePage";
 import SingleHomeworkPage from "../pages/DashboardPages/HomeworkCourseCard/SingleHomeworkPage";
 import SingleTestPage from "../pages/DashboardPages/HomeworkCourseCard/SingleTestPage";
+import Quiz from "../pages/DashboardPages/QuizPage/Quiz";
+import SingleQuizTestPage from "../pages/DashboardPages/QuizPage/SingleQuizTestPage";
 
 export const router = createBrowserRouter([
   {
@@ -33,7 +35,10 @@ export const router = createBrowserRouter([
       { path:"/homework/:id", element: <HomeworkCoursePage />},
       { path: "/homework/:id/:hwId", element: <SingleHomeworkPage /> },
       { path: "/test/:courseId/:testId", element: <SingleTestPage /> },
-      
+
+
+       { path: "/quiz", element: <Quiz /> },
+      { path: "/quiz/:quizId", element: <SingleQuizTestPage /> },
       
       { path: "*", element: <NotFoundPage /> },
     ],

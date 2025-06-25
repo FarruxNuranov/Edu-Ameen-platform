@@ -82,22 +82,21 @@
 }
 
 .badge {
-  border: 1px solid #fd7e14;
+  border: 1px solid #8e8e93;
   border-radius: 100px;
   padding: 6px 8px;
   width: 122px;
   height: 24px;
-  background: rgba(253, 126, 20, 0.08);
+
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 12px;
   line-height: 100%;
-  color: #fd7e14;
 }
 
 .orange {
-  background: #fef3c7;
-  color: #d97706;
+  background: #f2f2f7;
+  color: #8e8e93;
 }
 
 .value {

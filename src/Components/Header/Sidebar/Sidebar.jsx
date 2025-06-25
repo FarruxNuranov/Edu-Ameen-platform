@@ -45,7 +45,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/refresh"
+          to="/quiz"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
