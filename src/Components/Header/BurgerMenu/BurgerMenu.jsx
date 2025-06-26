@@ -27,14 +27,14 @@ const BurgerMenu = ({ isOpen, onClose }) => {
         <div className={styles.menuContent}>
           {[
             { icon: burgerStars, label: 'Sertifikatlar' },
-            { icon: data, label: "Ma'lumotlar" },
-            { icon: burgerSystem, label: 'Bildirishnomalar', badge: 1 },
+            { icon: data, label: "Ma'lumotlar", to:"/links"},
+            { icon: burgerSystem,  label: 'Bildirishnomalar', badge: 1 },
             { icon: burgerHelp, label: 'Help' },
           ].map((item, i) => (
             <div className={styles.menuItem} key={i} onClick={onClose}>
               <div className={styles.left}>
                 <img src={item.icon} alt="" />
-                <Link to="/">{item.label}</Link>
+                <Link to={item.to}>{item.label}</Link>
               </div>
 
               <div className={styles.right}>
