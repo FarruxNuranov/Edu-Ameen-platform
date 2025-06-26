@@ -168,8 +168,10 @@
 .modal {
   border: 1px solid #ececec;
   border-radius: 16px;
-  width: 500px;
-  height: 445px;
+  max-width: 500px;
+  width: 100%;
+ height: 445px;
+  
 
   background: #fff;
   padding: 40px;
@@ -296,5 +298,9 @@
 
   .resultBoxes {
     flex-direction: column;
+  }
+
+  .modal {
+    width: 415px;
   }
 }
