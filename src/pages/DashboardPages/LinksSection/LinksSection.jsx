@@ -1,65 +1,93 @@
 import React from "react";
 import styles from "./LinksSection.module.scss";
 import { FaExternalLinkAlt } from "react-icons/fa";
-
-const linksData = [
-  {
-    title: "Kurslar uchun ochiq havolalar",
-    items: [
-      {
-        title: "HR Management telegram kanali",
-        description: "HR sohasi bo‘yicha ustozlar ko‘rsatmalarini kuzatishingiz mumkin",
-        icon: "/icons/telegram.png",
-        link: "https://t.me/hr_channel",
-      },
-      {
-        title: "Islom Moliya telegram kanali",
-        description: "Islom moliyasi sohasi bo‘yicha ustozlardan o‘rganing",
-        icon: "/icons/telegram.png",
-        link: "https://t.me/islom_moliya",
-      },
-    ],
-  },
-  {
-    title: "Ameen.uz to‘g‘risida ochiq va ommabop havolalar",
-    items: [
-      {
-        title: "Ameen.uz instagram kanali",
-        description: "Instagram’da bizni kuzatib boring",
-        icon: "/icons/instagram.png",
-        link: "https://instagram.com/ameen_uz",
-      },
-      {
-        title: "Ameen.uz linkedin sahifasi",
-        description: "Bizning yangiliklarimiz endi LinkedIn’da ham",
-        icon: "/icons/linkedin.png",
-        link: "https://linkedin.com/company/ameen",
-      },
-    ],
-  },
-];
+import { AmeenLink, AmeenXLink, HrLinkIcon, InstagramLink, islomlinkIcon, linkIcon } from "../../../utils/getimage";
 
 const LinksSection = () => {
+  const kursLinks = [
+    {
+      title: "HR Management telegram kanali",
+      description: "Ushbu telegram kanali orqali HR sohasini birinchi raqamli ustozlar ko’rsatmalarini kuzatib borishingiz mumkin",
+      icon: linkIcon,
+      url: "https://t.me/hr_channel",
+    },
+      {
+      title: "HR Management telegram kanali",
+      description: "Ushbu telegram kanali orqali HR sohasini birinchi raqamli ustozlar ko’rsatmalarini kuzatib borishingiz mumkin",
+      icon: HrLinkIcon,
+      url: "https://t.me/hr_channel2",
+    },
+    {
+      title: "Islom Moliya telegram kanali",
+      description: "Ushbu telegram kanali orqali Islom Moliyasi  sohasi va pul ilmini birinchi raqamli ustozlar ko’rsatmalarini kuzatib borishingiz mumkin",
+      icon: linkIcon,
+      url: "https://t.me/islom_moliya",
+    },
+  
+    {
+      title: "Islom Moliya va fikrlar telegram kanali",
+      description: "Ushbu telegram kanali orqali Islom Moliyasi  sohasi va pul ilmini birinchi raqamli ustozlar ko’rsatmalarini kuzatib borishingiz mumkin",
+      icon: islomlinkIcon,
+      url: "https://t.me/islom_fikr",
+    },
+  ];
+
+  const ameenLinks = [
+    {
+      title: "Ameen.uz ommabop telegram kanali",
+      description: "Yangi kurslar va yangiliklarni kuzatib boring",
+      icon: linkIcon,
+      url: "https://t.me/ameen_channel",
+    },
+    {
+      title: "Ameen.uz linkedin sahifasi",
+      description: "LinkedIn’da yangiliklar bilan tanishing",
+      icon: AmeenLink,
+      url: "https://linkedin.com/ameen",
+    },
+    {
+      title: "Ameen.uz instagram kanali",
+      description: "Instagramda ham biz bor!",
+      icon: InstagramLink,
+      url: "https://instagram.com/ameen",
+    },
+    {
+      title: "Ameen.uz twitlari",
+      description: "X (Twitter) orqali yangiliklar",
+      icon: AmeenXLink,
+      url: "https://x.com/ameen",
+    },
+  ];
+
+  const renderBox = (title, links) => (
+    <div className={styles.box}>
+      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.grid}>
+        {links.map((link, index) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+            className={styles.card}
+          >
+            <img src={link.icon} alt={link.title} className={styles.icon} />
+            <div>
+              <div className={styles.cardTitle}>
+                {link.title} <FaExternalLinkAlt className={styles.TitleLink} size={12} />
+              </div>
+              <p className={styles.desc}>{link.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <div className={styles.container}>
-      {linksData.map((section, index) => (
-        <div key={index} className={styles.section}>
-          <h3 className={styles.sectionTitle}>{section.title}</h3>
-          <div className={styles.grid}>
-            {section.items.map((item, idx) => (
-              <a href={item.link} target="_blank" rel="noopener noreferrer" key={idx} className={styles.card}>
-                <img src={item.icon} alt={item.title} className={styles.icon} />
-                <div className={styles.info}>
-                  <div className={styles.cardTitle}>
-                    {item.title} <FaExternalLinkAlt size={12} />
-                  </div>
-                  <p className={styles.desc}>{item.description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      ))}
+      {renderBox("Kurslar uchun ochiq havolalar", kursLinks)}
+      {renderBox("Ameen.uz to‘g‘risida ochiq va ommabop havolalar", ameenLinks)}
     </div>
   );
 };

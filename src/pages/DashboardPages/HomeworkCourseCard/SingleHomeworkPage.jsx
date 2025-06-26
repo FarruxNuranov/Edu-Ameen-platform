@@ -18,7 +18,7 @@ import {
   homework4,
   homework5,
   homework6,
-  modalInfo,
+ 
   tabriklaymiz,
   tea,
 } from "../../../utils/getimage";
@@ -204,8 +204,6 @@ const SingleHomeworkPage = () => {
         </button>
       </div>
       {showModal && (
-         
-
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
             <div className={styles.modalBox}>
