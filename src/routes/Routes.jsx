@@ -21,6 +21,7 @@ import SingleTestPage from "../pages/DashboardPages/HomeworkCourseCard/SingleTes
 import Quiz from "../pages/DashboardPages/QuizPage/Quiz";
 import SingleQuizTestPage from "../pages/DashboardPages/QuizPage/SingleQuizTestPage";
 import ResultPage from "../pages/DashboardPages/QuizPage/ResultPage";
+import LinksSection from "../pages/DashboardPages/LinksSection/LinksSection";
 
 export const router = createBrowserRouter([
   {
@@ -30,18 +31,19 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "/coursestaken", element: <CoursesTaken /> },
       { path: "/coursestaken/:id", element: <SingleCourse /> },
-      
-      
+
       { path: "/homework", element: <HomeworkCourseCard /> },
-      { path:"/homework/:id", element: <HomeworkCoursePage />},
+      { path: "/homework/:id", element: <HomeworkCoursePage /> },
       { path: "/homework/:id/:hwId", element: <SingleHomeworkPage /> },
       { path: "/test/:courseId/:testId", element: <SingleTestPage /> },
 
-
-       { path: "/quiz", element: <Quiz /> },
+      { path: "/quiz", element: <Quiz /> },
       { path: "/quiz/:quizId", element: <SingleQuizTestPage /> },
-    { path:"/result", element: <ResultPage />  },
-      
+      { path: "/result", element: <ResultPage /> },
+
+
+      { path: "/links", element: <LinksSection /> },
+
       { path: "*", element: <NotFoundPage /> },
     ],
   },
@@ -54,7 +56,6 @@ export const router = createBrowserRouter([
       { path: "verify", element: <VerifyPage /> },
       { path: "forgot-password", element: <ForgotPasswordPage /> },
       { path: "reset-password", element: <ResetPasswordPage /> },
-      
     ],
   },
 ]);

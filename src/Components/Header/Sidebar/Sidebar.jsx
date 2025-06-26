@@ -78,14 +78,14 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="/mo"
+          to="/links"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
         >
           <img className={styles.icon} src={sidebarData} alt="" />
           {!collapsed && (
-            <span className={styles.label}>Ma‘lumotlar</span>
+            <span className={styles.label}>Havolalar</span>
           )}
         </NavLink>
       </div>
