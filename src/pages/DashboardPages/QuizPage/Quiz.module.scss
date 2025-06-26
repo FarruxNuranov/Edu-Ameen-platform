@@ -48,15 +48,31 @@
 .cards {
   display: flex;
   gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+       display: none;
+  }
 }
 
 .card {
-  width: 100%;
-  height: 312px;
+  scroll-snap-align: start;
+  flex: 0 0 auto;
   border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 4px 28px -4px rgba(0, 0, 0, 0.04),
-    0 49px 71px 0 rgba(0, 0, 0, 0.08);
+  width: 276px;
+  height: 312px;
+  background: #f8f8f8;
+
   overflow: hidden;
 
   .image {

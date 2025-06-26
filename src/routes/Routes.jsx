@@ -20,6 +20,7 @@ import SingleHomeworkPage from "../pages/DashboardPages/HomeworkCourseCard/Singl
 import SingleTestPage from "../pages/DashboardPages/HomeworkCourseCard/SingleTestPage";
 import Quiz from "../pages/DashboardPages/QuizPage/Quiz";
 import SingleQuizTestPage from "../pages/DashboardPages/QuizPage/SingleQuizTestPage";
+import ResultPage from "../pages/DashboardPages/QuizPage/ResultPage";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,7 @@ export const router = createBrowserRouter([
 
        { path: "/quiz", element: <Quiz /> },
       { path: "/quiz/:quizId", element: <SingleQuizTestPage /> },
+    { path:"/result", element: <ResultPage />  },
       
       { path: "*", element: <NotFoundPage /> },
     ],
