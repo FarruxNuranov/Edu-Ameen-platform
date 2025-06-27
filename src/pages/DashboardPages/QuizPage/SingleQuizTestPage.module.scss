@@ -1,29 +1,49 @@
 .section {
   padding: 16px;
-  
+
   margin: 0 auto;
-  background: #f9f9f9;
+}
+
+.quizBox {
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+
+  background: #f2f2f7;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  gap: 40%;
   align-items: center;
   margin-bottom: 24px;
 }
 
 .title {
-  font-size: 20px;
+  font-family: var(--second-family);
   font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #101113;
+  margin-top: 16px;
+  margin-bottom: 20px;
+}
+
+.quizTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 180%;
+  color: #101113;
 }
 
 .timer {
-  font-size: 16px;
-  background: #e5f0ff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 500;
-  color: #0050d8;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: center;
+  color: #101113;
 }
 
 .questions {
@@ -33,16 +53,27 @@
 }
 
 .questionCard {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  height: 202px;
+  background: #fff;
+}
+
+.quizCardIcon {
+  position: absolute;
+  right: 5%;
+  top: 25%;
 }
 
 .questionText {
+  font-family: var(--font-family);
   font-weight: 600;
-  margin-bottom: 12px;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1e1e1e;
+  margin-bottom: 16px;
 }
 
 .option {
@@ -60,36 +91,37 @@
   }
 }
 
-.submitButton {
-  margin-top: 32px;
-  width: 100%;
-  padding: 14px 0;
-  background: #0050d8;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
+.variant {
+  font-family: var(--font-family);
   font-weight: 500;
-  transition: 0.2s;
+  font-size: 14px;
+  line-height: 140%;
+  color: #49454f;
+}
 
-  &:hover {
-    background: #003bbd;
-  }
+.submitButton {
+  border-radius: 16px;
+  padding: 16px 41px;
+  width: 100%;
+  height: 56px;
+  border: none;
+  background: var(--primary);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  margin-top: 16px;
 }
 
 @media (max-width: 375px) {
   .section {
     padding-bottom: 100px;
   }
-
-  
 }
 @media (max-width: 575px) {
   .section {
     padding-bottom: 100px;
   }
-
-  
 }
-

@@ -69,4 +69,8 @@ export { default as islomlinkIcon } from '../assets/Images/icons/IslomLinkIcon.j
 export { default as InstagramLink } from '../assets/Images/icons/InstagramLink.jpg'
 export { default as AmeenLink } from '../assets/Images/icons/AmeenLink.jpg'
 export { default as AmeenXLink } from '../assets/Images/icons/AmeenXLink.jpg'
+export { default as Sertifikat } from '../assets/Images/Sertifikat.jpg'
+export { default as SertificateIcon } from '../assets/Images/icons/SertificateIcon.svg'
+export { default as Xicon } from '../assets/Images/icons/XIcon.svg'
+export { default as TestTest } from '../assets/Images/icons/TestTest.svg'
 

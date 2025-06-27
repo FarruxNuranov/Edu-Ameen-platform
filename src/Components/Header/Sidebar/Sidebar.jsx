@@ -67,7 +67,7 @@ export default function Sidebar() {
           )}
         </NavLink>
         <NavLink
-          to="slov"
+          to="/certificate"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.active}` : styles.link
           }
