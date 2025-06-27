@@ -390,3 +390,21 @@
   letter-spacing: 0.01em;
   color: #fff;
 }
+
+@media (max-width:575px) {
+  .mainSection {
+  flex-direction: column;
+}
+
+.title {
+  font-size: 14px;
+}
+
+.lessonBtn{
+  font-size: 12px;
+}
+
+.leftBlock {
+  width: 100%;
+}
+}
