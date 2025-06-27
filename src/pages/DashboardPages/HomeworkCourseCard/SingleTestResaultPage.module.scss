@@ -1,0 +1,274 @@
+.page {
+  padding: 16px;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #101113;
+}
+
+.goLesson {
+  border: 1px solid #c4c4c4;
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: 178px;
+  height: 40px;
+  background: #fff;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainSection {
+  display: flex;
+  gap: 16px;
+}
+
+//  left block
+
+.leftBlock {
+  border-radius: 16px;
+  padding: 16px;
+  width: 573px;
+
+  background: #f2f2f7;
+}
+
+.blockTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 180%;
+  color: #101113;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.icon {
+  font-size: 20px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.IconBorder {
+  border: 1px solid #e5e5ea;
+  border-radius: 100px;
+  padding: 14px;
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  border: 1px solid #8e8e93;
+  border-radius: 100px;
+  padding: 6px 8px;
+  width: 122px;
+  height: 24px;
+
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+.orange {
+  background: #f2f2f7;
+  color: #8e8e93;
+}
+
+.value {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #182f43;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.01em;
+  color: #182f43;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  li {
+    margin-top: 6px;
+    a {
+      color: #3b82f6;
+      font-size: 14px;
+      text-decoration: underline;
+    }
+  }
+}
+
+// resault Box
+
+.resultBoxes {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.leftbox {
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  height: 260px;
+  background: #f2f2f7;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.rightbox {
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  height: 258px;
+  background: #f2f2f7;
+}
+
+
+.leftTitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 180%;
+  color: #101113;
+}
+
+
+
+.ballBox {
+  border: 1px solid #dee2e6;
+  border-radius: 16px 16px 0 0;
+  padding: 16px;
+  width: 100%;
+  height: 85px;
+  background: #f8f9fa;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    letter-spacing: 0.01em;
+    color: #182f43;
+  }
+
+  & strong {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #182f43;
+  }
+}
+
+.Maqomi {
+  border: 1px solid #dee2e6;
+  border-radius: 0 0 16px 16px;
+  padding: 16px;
+  width: 100%;
+  height: 85px;
+  background: #f8f9fa;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 114%;
+    letter-spacing: 0.01em;
+    color: #182f43;
+  }
+
+  & strong {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #182f43;
+  }
+}
+
+
+
+
+@media (max-width: 375px) {
+  .page {
+    padding-bottom: 100px;
+  }
+
+  .title {
+    font-size: 10px;
+  }
+
+  .resultBoxes {
+    flex-direction: column;
+  }
+}
+@media (max-width: 575px) {
+  .page {
+    padding-bottom: 100px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .resultBoxes {
+    flex-direction: column;
+  }
+
+  .modal {
+    width: 415px;
+  }
+}

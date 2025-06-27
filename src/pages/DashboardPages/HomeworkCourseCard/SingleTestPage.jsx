@@ -1,13 +1,13 @@
 // src/pages/HomeworkCourseCard/SingleTestPage.jsx
 
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { testQuestionsData } from "./testQuestionsData";
 import styles from "./SingleTestPage.module.scss";
 
 const SingleTestPage = () => {
   const { testId } = useParams();
-
+  const navigate = useNavigate();
   const testData = testQuestionsData.find(
     (test) => test.testId.toString() === testId
   );
@@ -27,11 +27,7 @@ const SingleTestPage = () => {
             <p className={styles.questionText}>{q.text}</p>
             {q.options.map((opt, i) => (
               <label key={i} className={styles.option}>
-                <input
-                  type="radio"
-                  name={`question-${q.id}`}
-                  value={opt}
-                />
+                <input type="radio" name={`question-${q.id}`} value={opt} />
                 <span>{opt}</span>
               </label>
             ))}
@@ -39,7 +35,7 @@ const SingleTestPage = () => {
         ))}
       </div>
 
-      <button className={styles.submitButton}>Yakunlash</button>
+      <button onClick={() => navigate("/test/resault")} className={styles.submitButton}>Yakunlash</button>
     </section>
   );
 };
