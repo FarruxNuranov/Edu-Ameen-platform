@@ -4,9 +4,7 @@ import {
   homework1,
   homework2,
   homework3,
-  homework4,
-  homework5,
-  homework6,
+  
   tea,
 } from "../../../utils/getimage";
 

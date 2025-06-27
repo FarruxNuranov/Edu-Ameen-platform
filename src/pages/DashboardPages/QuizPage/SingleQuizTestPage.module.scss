@@ -119,9 +119,15 @@
   .section {
     padding-bottom: 100px;
   }
+    .title {
+    font-size: 15px;
+  }
 }
 @media (max-width: 575px) {
   .section {
     padding-bottom: 100px;
+  }
+    .title {
+    font-size: 15px;
   }
 }
