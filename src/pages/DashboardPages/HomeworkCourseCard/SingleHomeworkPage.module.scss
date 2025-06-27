@@ -293,7 +293,7 @@
 .BtnDone {
   background: var(--primary);
   border-radius: 16px;
-
+ border: none;
   width: 164px;
   height: 40px;
   font-family: var(--font-family);
@@ -389,11 +389,17 @@
   line-height: 114%;
   letter-spacing: 0.01em;
   color: #fff;
+  border: none;
 }
 
 @media (max-width:575px) {
   .mainSection {
   flex-direction: column;
+ 
+}
+
+.page {
+  padding-bottom: 100px;
 }
 
 .title {
@@ -405,6 +411,18 @@
 }
 
 .leftBlock {
+  width: 100%;
+}
+
+.modal {
+  width: 100%;
+}
+
+.modalOverlay{
+  padding: 0 16px;
+}
+
+.BtnDone{
   width: 100%;
 }
 }
