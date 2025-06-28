@@ -1,22 +1,28 @@
-import { Link } from 'react-router-dom';
-import { FiChevronRight } from 'react-icons/fi';
-import styles from './BurgerMenu.module.scss';
+import { Link, useNavigate } from "react-router-dom";
+import { FiChevronRight } from "react-icons/fi";
+import styles from "./BurgerMenu.module.scss";
 import {
   burgerHelp,
   burgerStars,
   burgerSystem,
   data,
   Logo,
-} from '../../../utils/getimage';
+} from "../../../utils/getimage";
 
 const BurgerMenu = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+   
+    navigate("/login");
+  };
   return (
     <>
       {/* Overlay — при клике закрывает меню */}
       {isOpen && <div className={styles.overlay} onClick={onClose} />}
 
       {/* Menu */}
-      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
+      <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
         {/* Header */}
         <div className={styles.header}>
           <img src={Logo} alt="Ameen Class" className={styles.logo} />
@@ -26,10 +32,10 @@ const BurgerMenu = ({ isOpen, onClose }) => {
         {/* Menu items */}
         <div className={styles.menuContent}>
           {[
-            { icon: burgerStars, label: 'Sertifikatlar' },
-            { icon: data, label: "Ma'lumotlar", to:"/links"},
-            { icon: burgerSystem,  label: 'Bildirishnomalar', badge: 1 },
-            { icon: burgerHelp, label: 'Help' },
+            { icon: burgerStars, label: "Sertifikatlar" },
+            { icon: data, label: "Ma'lumotlar", to: "/links" },
+            { icon: burgerSystem, label: "Bildirishnomalar", badge: 1 },
+            { icon: burgerHelp, label: "Help" },
           ].map((item, i) => (
             <div className={styles.menuItem} key={i} onClick={onClose}>
               <div className={styles.left}>
@@ -38,7 +44,9 @@ const BurgerMenu = ({ isOpen, onClose }) => {
               </div>
 
               <div className={styles.right}>
-                {item.badge && <span className={styles.badge}>{item.badge}</span>}
+                {item.badge && (
+                  <span className={styles.badge}>{item.badge}</span>
+                )}
                 <FiChevronRight />
               </div>
             </div>
@@ -47,7 +55,7 @@ const BurgerMenu = ({ isOpen, onClose }) => {
 
         {/* Logout */}
         <div className={styles.logout}>
-          <button onClick={onClose}>
+          <button onClick={() => handleLogout()}>
             <svg viewBox="0 0 24 24" fill="none" width="20" height="20">
               <path
                 d="M16 17L21 12L16 7"

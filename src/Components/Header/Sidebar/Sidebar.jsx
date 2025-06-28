@@ -21,7 +21,7 @@ export default function Sidebar() {
 
   const handleLogout = () => {
     // например, тут очистишь localStorage или токены
-    console.log("Logged out");
+ 
     navigate("/login");
   };
   const userRef = useRef();

@@ -11,6 +11,7 @@ const navItems = [
 ];
 
 const BottomNav = () => {
+ 
   return (
     <div className={styles.bottomNav}>
       {navItems.map((item, idx) => (
