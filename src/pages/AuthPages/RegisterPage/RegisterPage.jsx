@@ -9,7 +9,7 @@ const RegisterPage = () => {
 
   const onSubmit = (data) => {
     console.log('Register:', data);
-    navigate('/auth/verify'); // можно перекинуть на код
+    navigate('/login'); // можно перекинуть на код
   };
 
   return (

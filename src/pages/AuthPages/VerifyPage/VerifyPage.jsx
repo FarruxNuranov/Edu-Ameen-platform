@@ -1,6 +1,7 @@
 // src/pages/auth/VerifyPage.jsx
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './VerifyPage.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const VerifyPage = () => {
   const [code, setCode] = useState(['', '', '', '', '', '']);
@@ -24,10 +25,13 @@ const VerifyPage = () => {
     }
   };
 
+  const navigate =useNavigate()
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const fullCode = code.join('');
-    console.log('Submitted code:', fullCode);
+   navigate('/login')
+    // const fullCode = code.join('');
+    // console.log('Submitted code:', fullCode);
     // отправка на backend
   };
 

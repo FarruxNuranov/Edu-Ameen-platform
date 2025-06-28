@@ -9,7 +9,7 @@ const ForgotPasswordPage = () => {
 
   const onSubmit = (data) => {
     console.log('Reset code to:', data);
-    navigate('/auth/verify'); // после отправки кода → /verify
+    navigate('/verify'); // после отправки кода → /verify
   };
 
   return (
