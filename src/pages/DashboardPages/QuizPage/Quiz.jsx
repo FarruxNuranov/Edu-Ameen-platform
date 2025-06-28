@@ -119,7 +119,7 @@ const Quiz = () => {
             <div className={styles.content}>
               <h3>{quiz.title}</h3>
               <p>{quiz.desc}</p>
-              <Link className={styles.buttonStart} to={`/quiz/${quiz.id}`}>
+              <Link className={styles.buttonStart} to={`/Dashboard/quiz/${quiz.id}`}>
                 ▶ Start quiz
               </Link>
             </div>

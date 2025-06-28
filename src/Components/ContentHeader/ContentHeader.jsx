@@ -2,14 +2,15 @@ import React from "react";
 import { useLocation, useParams, Link } from "react-router-dom";
 import styles from "./ContentHeader.module.scss";
 import { coursesData } from "../../pages/DashboardPages/CoursesTaken/coursesData";
-import { quizzes } from "../../pages/DashboardPages/QuizPage/quizData"; // 👈 обязательно импортируй свои данные
+import { quizzes } from "../../pages/DashboardPages/QuizPage/quizData";
 
 const STATIC_TITLES = {
-  "/": "Bosh sahifa",
-  "/coursestaken": "Mening kurslarim",
-  "/homework": "Uy vazifalar",
-  "/links": "Havolalar",
-  "/quiz": "HR Kursi Quizlari",
+  "/Dashboard": "Bosh sahifa",
+  "/Dashboard/coursestaken": "Mening kurslarim",
+  "/Dashboard/homework": "Uy vazifalar",
+  "/Dashboard/links": "Havolalar",
+  "/Dashboard/quiz": "HR Kursi Quizlari",
+  "/Dashboard/certificate": "Sertifikatlar",
 };
 
 export default function ContentHeader() {
@@ -17,22 +18,22 @@ export default function ContentHeader() {
   const { id, hwId, quizId } = useParams();
   const crumbs = [];
 
-  // Always start with home
-  crumbs.push({ path: "/", label: STATIC_TITLES["/"] });
+  // Всегда начинаем с главной
+  crumbs.push({ path: "/Dashboard", label: STATIC_TITLES["/Dashboard"] });
 
-  if (pathname.startsWith("/coursestaken") && id) {
+  if (pathname.startsWith("/Dashboard/coursestaken") && id) {
     const course = coursesData.find((c) => String(c.id) === String(id));
-    crumbs.push({ path: "/coursestaken", label: STATIC_TITLES["/coursestaken"] });
+    crumbs.push({ path: "/Dashboard/coursestaken", label: STATIC_TITLES["/Dashboard/coursestaken"] });
     if (course) {
       crumbs.push({ path: null, label: course.title });
     }
 
-  } else if (pathname.startsWith("/homework")) {
-    crumbs.push({ path: "/homework", label: STATIC_TITLES["/homework"] });
+  } else if (pathname.startsWith("/Dashboard/homework")) {
+    crumbs.push({ path: "/Dashboard/homework", label: STATIC_TITLES["/Dashboard/homework"] });
     if (id) {
       const course = coursesData.find((c) => String(c.id) === String(id));
       if (course) {
-        crumbs.push({ path: `/homework/${id}`, label: course.title });
+        crumbs.push({ path: `/Dashboard/homework/${id}`, label: course.title });
         if (hwId) {
           const homework = course.homeworks?.find((h) => h.id === hwId);
           if (homework) {
@@ -42,15 +43,14 @@ export default function ContentHeader() {
       }
     }
 
-  } else if (pathname.startsWith("/quiz")) {
-    crumbs.push({ path: "/quiz", label: STATIC_TITLES["/quiz"] });
-
+  } else if (pathname.startsWith("/Dashboard/quiz")) {
+    crumbs.push({ path: "/Dashboard/quiz", label: STATIC_TITLES["/Dashboard/quiz"] });
     if (quizId) {
       const quiz = quizzes.find((q) => String(q.id) === String(quizId));
       if (quiz) {
         crumbs.push({ path: null, label: quiz.title });
       }
-    } else if (pathname === "/result") {
+    } else if (pathname === "/Dashboard/result") {
       crumbs.push({ path: null, label: "Natija" });
     }
 

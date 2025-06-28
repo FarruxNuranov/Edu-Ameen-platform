@@ -42,7 +42,7 @@ const ForgotPasswordPage = () => {
         <button type="submit" className={styles.submitBtn}>Parolni tiklash</button>
 
         <p className={styles.bottom}>
-          Akkountingiz yo‘qmi ? <Link to="/auth/register">Ro‘yxatdan o‘tish</Link>
+          Akkountingiz yo‘qmi ? <Link to="/register">Ro‘yxatdan o‘tish</Link>
         </p>
       </form>
     </div>

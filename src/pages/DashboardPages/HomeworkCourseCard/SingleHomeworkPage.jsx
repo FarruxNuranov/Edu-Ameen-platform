@@ -18,7 +18,6 @@ import {
   homework4,
   homework5,
   homework6,
- 
   tabriklaymiz,
   tea,
 } from "../../../utils/getimage";
@@ -61,77 +60,80 @@ const SingleHomeworkPage = () => {
 
       <div className={styles.mainSection}>
         <div className={styles.leftBlock}>
-          <h2 className={styles.blockTitle}>Ma’lumotlar</h2>
+          <div className={styles.mainInfoBox}>
+            <h2 className={styles.blockTitle}>Ma’lumotlar</h2>
 
-          <div className={styles.infoItem}>
-            <img className={styles.icon} src={tea} alt="" />
-            <div>
-              <p className={styles.label}>O‘qituvchi</p>
-              <p className={styles.value}>Kozimxon To‘rayev</p>
+            <div className={styles.infoItem}>
+              <img className={styles.icon} src={tea} alt="" />
+              <div>
+                <p className={styles.label}>O‘qituvchi</p>
+                <p className={styles.value}>Kozimxon To‘rayev</p>
+              </div>
             </div>
-          </div>
 
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework1} alt="" />
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework1} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>Nashr qilingan sana</p>
+                <p className={styles.value}>19 Noyabr, 2024</p>
+              </div>
             </div>
-            <div>
-              <p className={styles.label}>Nashr qilingan sana</p>
-              <p className={styles.value}>19 Noyabr, 2024</p>
-            </div>
-          </div>
 
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework2} alt="" />
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework2} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>Murakkablik darajasi</p>
+                <p className={styles.value}>Yengil</p>
+              </div>
             </div>
-            <div>
-              <p className={styles.label}>Murakkablik darajasi</p>
-              <p className={styles.value}>Yengil</p>
-            </div>
-          </div>
 
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework3} alt="" />
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework3} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>Status</p>
+                <div className={`${styles.badge} ${styles.orange}`}>
+                  Topshirilmagan
+                </div>
+              </div>
             </div>
-            <div>
-              <p className={styles.label}>Status</p>
-              <div className={`${styles.badge} ${styles.orange}`}>
-                Topshirilmagan
+
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework4} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>To‘plagan ballar</p>
+                <p className={styles.value}>-</p>
+              </div>
+            </div>
+
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework5} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>
+                  Natija bo‘yicha ustoz kommentariyasi
+                </p>
+                <p className={styles.value}>-</p>
               </div>
             </div>
           </div>
-
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework4} alt="" />
-            </div>
-            <div>
-              <p className={styles.label}>To‘plagan ballar</p>
-              <p className={styles.value}>-</p>
-            </div>
-          </div>
-
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework5} alt="" />
-            </div>
-            <div>
-              <p className={styles.label}>
-                Natija bo‘yicha ustoz kommentariyasi
-              </p>
-              <p className={styles.value}>-</p>
-            </div>
-          </div>
-
-          <div className={styles.infoItem}>
-            <div className={styles.IconBorder}>
-              <img className={styles.icon} src={homework6} alt="" />
-            </div>
-            <div>
-              <p className={styles.label}>Topshiriq uchun havolalar</p>
-              <p className={styles.value}>-</p>
+          <div className={styles.linkBox}>
+            <div className={styles.infoItem}>
+              <div className={styles.IconBorder}>
+                <img className={styles.icon} src={homework6} alt="" />
+              </div>
+              <div>
+                <p className={styles.label}>Topshiriq uchun havolalar</p>
+                <p className={styles.value}>-</p>
+              </div>
             </div>
           </div>
         </div>
@@ -140,10 +142,20 @@ const SingleHomeworkPage = () => {
             Vazifani bajaring va natijangizni yuboring
           </h2>
           <p className={styles.sectionDesc}>
-            Ushbu vazifani diqqat bilan o‘rganing va berilgan mavzu bo‘yicha
-            topshiriqni bajaring. Kerakli fayllar va havolalarni yuklang yoki
-            yozma javob kiriting. Tugatganingizdan so‘ng yakunlash tugmasini
-            bosing.
+            "Kompaniyada inson resurslari (HR) bo‘limi tashkilotning strategik
+            maqsadlariga qanday ta'sir ko‘rsatadi?" mavzusida 500-700 so‘zdan
+            iborat tahliliy esse yozing. Quyidagi savollar asosida
+            fikrlaringizni chuqurlashtiring: HR bo‘limining asosiy funksiyalari
+            va ular tashkilot samaradorligiga qanday ta’sir qiladi? Zamonaviy HR
+            yondashuvlari (masalan, talent management, employee engagement,
+            performance management) kompaniyaning uzoq muddatli muvaffaqiyatida
+            qanday rol o‘ynaydi? Sizningcha, biror kompaniyada HR bo‘limi sust
+            ishlasa yoki umuman bo‘lmasa, qanday muammolar yuzaga kelishi
+            mumkin? Siz tanlagan real yoki o‘ylab topilgan biror kompaniya
+            misolida HR strategiyasini qisqacha tahlil qilib bering. Eslatma:
+            Ilmiy maqolalardan, kompaniya tahlillaridan yoki dars davomida
+            berilgan materiallardan foydalanish mumkin. O‘z fikringizni aniq,
+            mantiqiy va tahliliy tarzda bayon qiling.
           </p>
 
           <div className={styles.uploadGrid}>
@@ -154,7 +166,9 @@ const SingleHomeworkPage = () => {
                 {uploadedFiles.map((file, i) => (
                   <div key={i} className={styles.fileItem}>
                     <a href="#">{file}</a>
-                    <button onClick={() => handleDeleteFile(i)}><img src={basket} alt="" /></button>
+                    <button onClick={() => handleDeleteFile(i)}>
+                      <img src={basket} alt="" />
+                    </button>
                   </div>
                 ))}
                 <label className={styles.uploadBtn}>
@@ -177,7 +191,10 @@ const SingleHomeworkPage = () => {
                 {submittedLinks.map((link, i) => (
                   <div key={i} className={styles.fileItem}>
                     <a href="#">{link}</a>
-                    <button onClick={() => handleDeleteLink(i)}> <img src={basket} alt="" /></button>
+                    <button onClick={() => handleDeleteLink(i)}>
+                      {" "}
+                      <img src={basket} alt="" />
+                    </button>
                   </div>
                 ))}
                 <div className={styles.uploadBtn}>
@@ -196,13 +213,17 @@ const SingleHomeworkPage = () => {
               onChange={(e) => setText(e.target.value)}
             />
           </div>
+          <div className={styles.LastBtn}>
+            <button
+              onClick={() => setShowModal(true)}
+              className={styles.BtnDone}
+            >
+              Yakunlash
+            </button>
+          </div>
         </div>
       </div>
-      <div className={styles.LastBtn}>
-        <button onClick={() => setShowModal(true)} className={styles.BtnDone}>
-          Yakunlash
-        </button>
-      </div>
+
       {showModal && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>

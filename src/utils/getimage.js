@@ -73,4 +73,5 @@ export { default as Sertifikat } from '../assets/Images/Sertifikat.jpg'
 export { default as SertificateIcon } from '../assets/Images/icons/SertificateIcon.svg'
 export { default as Xicon } from '../assets/Images/icons/XIcon.svg'
 export { default as TestTest } from '../assets/Images/icons/TestTest.svg'
+export { default as sea } from '../assets/Images/icons/sea.svg'
 

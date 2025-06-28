@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import styles from './LoginPage.module.scss';
 
 const LoginPage = () => {
@@ -11,7 +11,7 @@ const LoginPage = () => {
 
   const onSubmit = (data) => {
     console.log('Login:', data);
-    navigate('/'); // или /dashboard если будет
+    navigate('/dashboard'); // или /dashboard если будет
   };
 
   return (
@@ -55,13 +55,13 @@ const LoginPage = () => {
         {errors.password && <p className={styles.error}>{errors.password.message}</p>}
 
         <div className={styles.forgot}>
-          <Link to="/auth/forgot-password">Parolni unutdingizmi?</Link>
+          <Link to="/forgot-password">Parolni unutdingizmi?</Link>
         </div>
 
         <button type="submit" className={styles.submitBtn}>Kirish</button>
 
         <p className={styles.bottom}>
-          Akkountingiz yo‘qmi? <Link to="/auth/register">Ro‘yxatdan o‘tish</Link>
+          Akkountingiz yo‘qmi? <Link to="/register">Ro‘yxatdan o‘tish</Link>
         </p>
       </form>
     </div>

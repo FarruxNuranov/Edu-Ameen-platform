@@ -25,7 +25,7 @@ const SingleTestPage = () => {
       }
     });
 
-    navigate("/result", { state: { score, total: quiz.questions.length } });
+    navigate("/Dashboard/result", { state: { score, total: quiz.questions.length } });
   };
 
   return (

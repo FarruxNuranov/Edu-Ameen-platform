@@ -42,7 +42,7 @@ const RegisterPage = () => {
         <button type="submit" className={styles.submitBtn}>Ro‘yxatdan o‘tish</button>
 
         <p className={styles.bottom}>
-          Avvaldan akkauntingiz bormi? <Link to="/auth/login">Kirish</Link>
+          Avvaldan akkauntingiz bormi? <Link to="/login">Kirish</Link>
         </p>
       </form>
     </div>

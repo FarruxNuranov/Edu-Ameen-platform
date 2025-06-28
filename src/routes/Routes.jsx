@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import DashboardLayout from "../LayOut/DashboardLayout/DashboardLayout";
 import AuthLayout from "../LayOut/AuthLayout/AuthLayout";
 
@@ -26,37 +26,35 @@ import SingleTestResaultPage from "../pages/DashboardPages/HomeworkCourseCard/Si
 import CertificateList from "../pages/DashboardPages/CertificateList/CertificateList";
 
 export const router = createBrowserRouter([
+ {
+  path: "/dashboard",
+  element: <DashboardLayout />,
+  children: [
+    { path: "", element: <HomePage /> },
+    { path: "coursestaken", element: <CoursesTaken /> },
+    { path: "coursestaken/:id", element: <SingleCourse /> },
+
+    { path: "homework", element: <HomeworkCourseCard /> },
+    { path: "homework/:id", element: <HomeworkCoursePage /> },
+    { path: "homework/:id/:hwId", element: <SingleHomeworkPage /> },
+    { path: "test/:courseId/:testId", element: <SingleTestPage /> },
+    { path: "test/resault", element: <SingleTestResaultPage /> },
+
+    { path: "quiz", element: <Quiz /> },
+    { path: "quiz/:quizId", element: <SingleQuizTestPage /> },
+    { path: "result", element: <ResultPage /> },
+
+    { path: "certificate", element: <CertificateList /> },
+    { path: "links", element: <LinksSection /> },
+
+    { path: "*", element: <NotFoundPage /> },
+  ],
+},
   {
     path: "/",
-    element: <DashboardLayout />,
-    children: [
-      { path: "", element: <HomePage /> },
-      { path: "/coursestaken", element: <CoursesTaken /> },
-      { path: "/coursestaken/:id", element: <SingleCourse /> },
-
-      { path: "/homework", element: <HomeworkCourseCard /> },
-      { path: "/homework/:id", element: <HomeworkCoursePage /> },
-      { path: "/homework/:id/:hwId", element: <SingleHomeworkPage /> },
-      { path: "/test/:courseId/:testId", element: <SingleTestPage /> },
-      {path: "/test/resault", element:<SingleTestResaultPage/> },
-
-      { path: "/quiz", element: <Quiz /> },
-      { path: "/quiz/:quizId", element: <SingleQuizTestPage /> },
-      { path: "/result", element: <ResultPage /> },
-
-
-      { path: "/certificate", element: <CertificateList/> },
-
-
-      { path: "/links", element: <LinksSection /> },
-
-      { path: "*", element: <NotFoundPage /> },
-    ],
-  },
-  {
-    path: "/auth",
     element: <AuthLayout />,
     children: [
+      { path: "", element: <Navigate to="/register" replace /> },
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
       { path: "verify", element: <VerifyPage /> },

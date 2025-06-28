@@ -54,7 +54,7 @@ export default function CoursesTaken() {
       <div className={styles.grid}>
         {coursesData.map((course) => (
           <Link
-            to={`/coursestaken/${course.id}`}
+            to={`/Dashboard/coursestaken/${course.id}`}
             key={course.id}
             className={styles.card}
           >

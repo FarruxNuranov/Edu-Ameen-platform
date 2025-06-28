@@ -12,6 +12,8 @@ import {
 import { FaCheckCircle, FaTimesCircle, FaClock } from "react-icons/fa";
 import { IoIosArrowForward, IoMdClose } from "react-icons/io";
 import { courseTestsData } from "./courseTestsData";
+import FilterDropdown from "./FilterDropdown";
+import { FiSearch } from "react-icons/fi";
 
 const HomeworkCoursePage = () => {
   const { id } = useParams();
@@ -29,17 +31,21 @@ const HomeworkCoursePage = () => {
 
   const filteredHomeworks = course.homeworks
     ?.filter((hw) => hw.title.toLowerCase().includes(searchTerm.toLowerCase()))
-    .filter((hw) => (statusFilter ? hw.status === statusFilter : true));
+    .filter((hw) =>
+      statusFilter && statusFilter !== "Hammasi"
+        ? hw.status === statusFilter
+        : true
+    );
 
   const handleTestClick = (test) => {
     setSelectedTest(test);
     setShowModal(true);
   };
 
-//   const handleCancelModal = () => {
-//   setSelectedTest(null);
-//   setShowModal(false);
-// };
+  //   const handleCancelModal = () => {
+  //   setSelectedTest(null);
+  //   setShowModal(false);
+  // };
 
   return (
     <section className={styles.section}>
@@ -66,25 +72,22 @@ const HomeworkCoursePage = () => {
               Testlar
             </button>
           </div>
-          <select
-            className={styles.filter}
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-          >
-            <option value="">Filter by status</option>
-            <option value="Tekshirilgan">Tekshirilgan</option>
-            <option value="Topshirilmoqda">Topshirilmoqda</option>
-            <option value="Topshirilmagan">Topshirilmagan</option>
-          </select>
+          <FilterDropdown
+            selected={statusFilter}
+            setSelected={setStatusFilter}
+          />
         </div>
 
-        <input
-          type="text"
-          className={styles.search}
-          placeholder="Vazifalar nomi bo‘yicha qidirish"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className={styles.searchWrapper}>
+          <FiSearch className={styles.searchIcon} />
+          <input
+            type="text"
+            className={styles.search}
+            placeholder="Vazifalar nomi bo‘yicha qidirish"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
 
       {/* Only show when tab is 'homework' */}
@@ -93,7 +96,7 @@ const HomeworkCoursePage = () => {
           {filteredHomeworks.map((hw) => (
             <Link
               key={hw.id}
-              to={`/homework/${course.id}/${hw.id}`}
+              to={`/Dashboard/homework/${course.id}/${hw.id}`}
               className={styles.card}
             >
               <img src={CardBg} alt="" className={styles.bgIcon} />
@@ -141,7 +144,9 @@ const HomeworkCoursePage = () => {
               test.title.toLowerCase().includes(searchTerm.toLowerCase())
             )
             .filter((test) =>
-              statusFilter ? test.status === statusFilter : true
+              statusFilter && statusFilter !== "Hammasi"
+                ? test.status === statusFilter
+                : true
             )
             .map((test) => (
               <div
@@ -189,7 +194,6 @@ const HomeworkCoursePage = () => {
       {showModal && selectedTest && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
-          
             <div className={styles.modalBox}>
               <div className={styles.modalIcon}>
                 <img src={modalInfo} alt="" />
@@ -207,7 +211,9 @@ const HomeworkCoursePage = () => {
                   Bekor qilish
                 </button>
                 <button
-                  onClick={() => navigate(`/test/${id}/${selectedTest.id}`)}
+                  onClick={() =>
+                    navigate(`/Dashboard/test/${id}/${selectedTest.id}`)
+                  }
                   className={styles.confirm}
                 >
                   Boshlash

@@ -44,8 +44,11 @@
   border-radius: 16px;
   padding: 16px;
   width: 373px;
-  height: 624px;
+  height: 811px;
   background: #f2f2f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .blockTitle {
@@ -287,13 +290,12 @@
 
 .LastBtn {
   display: flex;
-  justify-content: end;
 }
 
 .BtnDone {
   background: var(--primary);
   border-radius: 16px;
- border: none;
+  border: none;
   width: 164px;
   height: 40px;
   font-family: var(--font-family);
@@ -392,37 +394,36 @@
   border: none;
 }
 
-@media (max-width:575px) {
+@media (max-width: 575px) {
   .mainSection {
-  flex-direction: column;
- 
-}
+    flex-direction: column;
+  }
 
-.page {
-  padding-bottom: 100px;
-}
+  .page {
+    padding-bottom: 100px;
+  }
 
-.title {
-  font-size: 14px;
-}
+  .title {
+    font-size: 14px;
+  }
 
-.lessonBtn{
-  font-size: 12px;
-}
+  .lessonBtn {
+    font-size: 12px;
+  }
 
-.leftBlock {
-  width: 100%;
-}
+  .leftBlock {
+    width: 100%;
+  }
 
-.modal {
-  width: 100%;
-}
+  .modal {
+    width: 100%;
+  }
 
-.modalOverlay{
-  padding: 0 px;
-}
+  .modalOverlay {
+    padding: 0 px;
+  }
 
-.BtnDone{
-  width: 100%;
-}
+  .BtnDone {
+    width: 100%;
+  }
 }

@@ -43,7 +43,7 @@ const SingleTestPage = () => {
         </div>
 
         <button
-          onClick={() => navigate("/test/resault")}
+          onClick={() => navigate("/Dashboard/test/resault")}
           className={styles.submitButton}
         >
           Yakunlash

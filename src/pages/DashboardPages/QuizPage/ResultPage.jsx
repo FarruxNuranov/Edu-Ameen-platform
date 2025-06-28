@@ -73,7 +73,7 @@ const ResultPage = () => {
         <h2 className={styles.title}>
           Kompaniyada uchraydigan muammolarga HR beradigan yechimlar
         </h2>
-        <button className={styles.goLesson}>Darsga o‘tish →</button>
+      
       </div>
 
       {/* Result Boxes */}

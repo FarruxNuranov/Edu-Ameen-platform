@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       {/* Левый блок */}
       <div className={styles.left}>
-        <Link to="/" className={styles.logo}>
+        <Link to="/Dashboard" className={styles.logo}>
           <img src={Logo} alt="Ameen Class" />
        
         </Link>

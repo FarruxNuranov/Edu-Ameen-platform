@@ -55,7 +55,7 @@ const HomeworkCourseCard = () => {
       <div className={styles.grid}>
         {coursesData.map((course) => (
           <Link
-            to={`/homework/${course.id}`}
+            to={`/Dashboard/homework/${course.id}`}
             key={course.id}
             className={styles.card}
           >
