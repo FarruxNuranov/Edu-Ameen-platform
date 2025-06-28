@@ -28,26 +28,22 @@ const courses = [
 ];
 
 const FreeCourses = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -290 : 290,
-        behavior: 'smooth'
-      });
-    }
-  };
+    const scrollRef = useRef();
+  
+    const scroll = (offset) => {
+      scrollRef.current.scrollLeft += offset;
+    };
+  
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <h2>Bepul kurslar</h2>
         <div className={styles.controls}>
-          <button onClick={() => scroll('left')}>
+          <button onClick={() => scroll(-276)}>
             <IoIosArrowBack />
           </button>
-          <button onClick={() => scroll('right')}>
+          <button onClick={() => scroll(276)}>
             <IoIosArrowForward />
           </button>
         </div>
@@ -55,7 +51,7 @@ const FreeCourses = () => {
 
       <div className={styles.carousel} ref={scrollRef}>
         {courses.map((course, index) => (
-          <div className={styles.card} key={index}>
+          <div className={styles.card} key={course.id + "-" + index}>
             <div className={styles.imageWrapper}>
               <img src={course.image} alt={course.title} />
             </div>

@@ -1,7 +1,12 @@
 import React, { useRef } from "react";
 import styles from "./PaidCourses.module.scss";
 
-import { courses1, CurrentPage, people, school } from "../../../../utils/getimage";
+import {
+  courses1,
+  CurrentPage,
+  people,
+  school,
+} from "../../../../utils/getimage";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const courses = [
@@ -20,15 +25,10 @@ const courses = [
 ];
 
 const PaidCourses = () => {
-  const scrollRef = useRef(null);
+  const scrollRef = useRef();
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -290 : 290,
-        behavior: "smooth",
-      });
-    }
+  const scroll = (offset) => {
+    scrollRef.current.scrollLeft += offset;
   };
 
   return (
@@ -37,10 +37,10 @@ const PaidCourses = () => {
         <h2>Pulli kurslar</h2>
         <p>Professional ustozlardan amaliy va nazariy bilimlar to‘plami.</p>
         <div className={styles.controls}>
-          <button onClick={() => scroll("left")}>
+          <button onClick={() => scroll(-317)}>
             <IoIosArrowBack className={styles.arrow} />
           </button>
-          <button onClick={() => scroll("right")}>
+          <button onClick={() => scroll(317)}>
             <IoIosArrowForward className={styles.arrow} />
           </button>
         </div>
@@ -48,7 +48,7 @@ const PaidCourses = () => {
 
       <div className={styles.carousel} ref={scrollRef}>
         {courses.map((course, index) => (
-          <div className={styles.card} key={index}>
+          <div className={styles.card} key={course.id + "-" + index}>
             <div className={styles.imageWrapper}>
               <img src={courses1} alt={course.title} />
             </div>
@@ -70,7 +70,8 @@ const PaidCourses = () => {
                   {course.teacher}
                 </div>
                 <div className={styles.teacherInfo}>
-                   45<img src={people} alt="" />
+                  45
+                  <img src={people} alt="" />
                 </div>
               </div>
             </div>

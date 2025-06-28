@@ -68,17 +68,22 @@
 
 .carousel {
   display: flex;
+  gap: 16px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 26px;
-  padding: 0 16px 0px 16px;
+  scroll-snap-type: x mandatory;
+  
 
   &::-webkit-scrollbar {
+    height: 6px;
     display: none;
   }
 
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+    display: none;
+  }
 }
 
 .card {
@@ -86,7 +91,7 @@
   width: 317px;
   height: 301px;
   display: flex;
-
+  scroll-snap-align: start;
   justify-content: space-between;
   flex-direction: column;
   overflow: hidden;
