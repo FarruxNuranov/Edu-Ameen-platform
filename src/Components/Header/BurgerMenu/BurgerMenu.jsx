@@ -32,8 +32,8 @@ const BurgerMenu = ({ isOpen, onClose }) => {
         {/* Menu items */}
         <div className={styles.menuContent}>
           {[
-            { icon: burgerStars, label: "Sertifikatlar" },
-            { icon: data, label: "Ma'lumotlar", to: "/links" },
+            { icon: burgerStars, label: "Sertifikatlar", to : "/Dashboard/certificate"},
+            { icon: data, label: "Ma'lumotlar", to: "/Dashboard/links" },
             { icon: burgerSystem, label: "Bildirishnomalar", badge: 1 },
             { icon: burgerHelp, label: "Help" },
           ].map((item, i) => (
