@@ -5,9 +5,9 @@ import { home, homework, quizz, TakenCourses, Takencurs } from '../../../utils/g
 
 const navItems = [
   { to: '/', label: 'Bosh sahifa', icon: home },
-  { to: '/coursestaken', label: 'Kurslarim', icon: Takencurs },
-  { to: '/quiz', label: 'Quizlar', icon: quizz },
-  { to: '/homework', label: 'Uy vazifalar', icon: homework },
+  { to: '/Dashboard/coursestaken', label: 'Kurslarim', icon: Takencurs },
+  { to: 'Dashboard/quiz', label: 'Quizlar', icon: quizz },
+  { to: 'Dashboard/homework', label: 'Uy vazifalar', icon: homework },
 ];
 
 const BottomNav = () => {
