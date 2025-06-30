@@ -1,0 +1,485 @@
+.page {
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  color: #101113;
+}
+
+.goLesson {
+  border: 1px solid #c4c4c4;
+  border-radius: 12px;
+  padding: 16px 24px;
+  width: 178px;
+  height: 40px;
+  background: #fff;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sectionBox {
+  display: flex;
+  gap: 16px;
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .resultsBox {
+      border-radius: 16px;
+      padding: 16px;
+      width: 100%;
+      height: 258px;
+      background: #f2f2f7;
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 180%;
+        color: #101113;
+        margin-bottom: 16px;
+      }
+
+      .resultNumbers {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .testResault {
+          text-align: center;
+          border: 1px solid #dee2e6;
+          border-radius: 16px 16px 0 0;
+          padding: 16px;
+          width: 100%;
+          height: 85px;
+          background: #f8f9fa;
+
+          span {
+            display: block;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 114%;
+            letter-spacing: 0.01em;
+            color: #182f43;
+          }
+
+          strong {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 0.01em;
+            color: #34c759;
+          }
+
+          .correct {
+            color: #28a745;
+          }
+
+          .incorrect {
+            color: #dc3545;
+          }
+        }
+
+        .testFols {
+          text-align: center;
+          border: 1px solid #dee2e6;
+          border-radius: 0 0 16px 16px;
+          padding: 16px;
+          width: 100%;
+          height: 85px;
+          background: #f8f9fa;
+
+          span {
+            display: block;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 114%;
+            letter-spacing: 0.01em;
+            color: #182f43;
+          }
+
+          strong {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 24px;
+            letter-spacing: 0.01em;
+            color: #34c759;
+          }
+
+          .correct {
+            color: #28a745;
+          }
+
+          .incorrect {
+            color: #dc3545;
+          }
+        }
+      }
+    }
+
+    .shareBox {
+      border-radius: 16px;
+      padding: 16px;
+      width: 100%;
+      height: 308px;
+      background: #f2f2f7;
+
+      h4 {
+        margin-bottom: 12px;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 180%;
+        color: #101113;
+      }
+
+      .inputBox {
+        display: flex;
+        align-items: center;
+        background: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 30px;
+        padding: 0 8px;
+        height: 52px;
+        overflow: hidden;
+
+        input {
+          flex: 1;
+          border: none;
+          background: transparent;
+          font-size: 16px;
+          color: #6c757d;
+          padding: 0 12px;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        button {
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg,
+          img {
+            width: 20px;
+            height: 20px;
+            color: #007bff;
+          }
+
+          &:hover svg,
+          &:hover img {
+            color: #0056b3;
+          }
+        }
+      }
+
+      .linkedin {
+        border-radius: 16px;
+        border: none;
+        padding: 16px;
+        width: 100%;
+        height: 56px;
+        background: #1265bf;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #fff;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 16px;
+        margin: 16px 0;
+        cursor: pointer;
+        &:hover {
+          background: #004182;
+        }
+      }
+
+      .medium {
+        border-radius: 16px;
+        border: none;
+        padding: 16px;
+        width: 100%;
+        height: 56px;
+        cursor: pointer;
+        background: #000;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #fff;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 16px;
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+   
+
+    .certificate {
+      border-radius: 16px;
+     
+     
+    }
+
+    .downloadBtn {
+      border: 1px solid #d1d1d6;
+      border-radius: 8px;
+      padding: 6px 16px;
+      width: 303px;
+      height: 32px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000;
+
+      &:hover {
+        background: #e9ecef;
+      }
+    }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.close {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal {
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  height: 445px;
+
+  background: #fff;
+  padding: 40px;
+}
+
+.modalIcon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: #007aff;
+}
+
+.modalTitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #1a1a18;
+}
+
+.modalText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #707070;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.cancel {
+  border: 1px solid #e5e5ea;
+  border-radius: 8px;
+  padding: 16px 41px;
+  width: 202px;
+  height: 48px;
+  background: #fff;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.01em;
+  color: #000;
+}
+
+.confirm {
+  border-radius: 8px;
+  padding: 16px 41px;
+  width: 202px;
+  height: 48px;
+  background: var(--primary);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  letter-spacing: 0.01em;
+  color: #fff;
+  border: none;
+}
+
+.boxScore {
+  display: flex;
+  gap: 8px;
+}
+
+.ballScore {
+  border: 1px solid #dee2e6;
+  border-radius: 16px 0 0 16px;
+  padding: 16px;
+  width: 160px;
+  height: 85px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+   gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.MaqomiScore {
+  border: 1px solid #dee2e6;
+  border-radius: 0 16px 16px 0;
+  padding: 16px;
+  width: 160px;
+  height: 85px;
+  background: #f8f9fa;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 575px) {
+
+    .page {
+        padding-bottom: 100px;
+    }
+  .sectionBox {
+    flex-direction: column;
+
+ 
+  }
+
+  .goLesson {
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+   .right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    
+
+    .certificate {
+      border-radius: 16px;
+     width: 100%;
+     
+    }
+
+    .downloadBtn {
+      border: 1px solid #d1d1d6;
+      border-radius: 8px;
+      padding: 6px 16px;
+      width: 303px;
+      height: 32px;
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000;
+
+      &:hover {
+        background: #e9ecef;
+      }
+    }
+  }
+  
+}

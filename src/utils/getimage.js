@@ -74,4 +74,12 @@ export { default as SertificateIcon } from '../assets/Images/icons/SertificateIc
 export { default as Xicon } from '../assets/Images/icons/XIcon.svg'
 export { default as TestTest } from '../assets/Images/icons/TestTest.svg'
 export { default as sea } from '../assets/Images/icons/sea.svg'
+export { default as copy } from '../assets/Images/icons/Copy.svg'
+export { default as linkin } from '../assets/Images/icons/linkin.svg'
+export { default as mediumLink } from '../assets/Images/icons/Medium.svg'
+export { default as downlo } from '../assets/Images/icons/dowla.svg'
+export { default as statusX } from '../assets/Images/icons/statusX.svg'
+export { default as statusDone } from '../assets/Images/icons/statusDone.svg'
+export { default as statusWaiting } from '../assets/Images/icons/statusWaiting.svg'
+export { default as alohidaLink } from '../assets/Images/icons/alohidaLink.svg'
 

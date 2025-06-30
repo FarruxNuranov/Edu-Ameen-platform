@@ -24,32 +24,37 @@ import ResultPage from "../pages/DashboardPages/QuizPage/ResultPage";
 import LinksSection from "../pages/DashboardPages/LinksSection/LinksSection";
 import SingleTestResaultPage from "../pages/DashboardPages/HomeworkCourseCard/SingleTestResaultPage";
 import CertificateList from "../pages/DashboardPages/CertificateList/CertificateList";
+import CertificateTest from "../pages/DashboardPages/CertificateList/CertificateTest";
+import CertificateResult from "../pages/DashboardPages/CertificateList/CertificateResult";
 
 export const router = createBrowserRouter([
- {
-  path: "/dashboard",
-  element: <DashboardLayout />,
-  children: [
-    { path: "", element: <HomePage /> },
-    { path: "coursestaken", element: <CoursesTaken /> },
-    { path: "coursestaken/:id", element: <SingleCourse /> },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      { path: "", element: <HomePage /> },
+      { path: "coursestaken", element: <CoursesTaken /> },
+      { path: "coursestaken/:id", element: <SingleCourse /> },
 
-    { path: "homework", element: <HomeworkCourseCard /> },
-    { path: "homework/:id", element: <HomeworkCoursePage /> },
-    { path: "homework/:id/:hwId", element: <SingleHomeworkPage /> },
-    { path: "test/:courseId/:testId", element: <SingleTestPage /> },
-    { path: "test/resault", element: <SingleTestResaultPage /> },
+      { path: "homework", element: <HomeworkCourseCard /> },
+      { path: "homework/:id", element: <HomeworkCoursePage /> },
+      { path: "homework/:id/:hwId", element: <SingleHomeworkPage /> },
+      { path: "test/:courseId/:testId", element: <SingleTestPage /> },
+      { path: "test/resault", element: <SingleTestResaultPage /> },
 
-    { path: "quiz", element: <Quiz /> },
-    { path: "quiz/:quizId", element: <SingleQuizTestPage /> },
-    { path: "result", element: <ResultPage /> },
+      { path: "quiz", element: <Quiz /> },
+      { path: "quiz/:quizId", element: <SingleQuizTestPage /> },
+      { path: "result", element: <ResultPage /> },
 
-    { path: "certificate", element: <CertificateList /> },
-    { path: "links", element: <LinksSection /> },
+      { path: "certificate", element: <CertificateList /> },
+      { path: "certificate/test/:certId", element: <CertificateTest /> },
+      { path: "certificate/result/:certId", element: <CertificateResult /> },
 
-    { path: "*", element: <NotFoundPage /> },
-  ],
-},
+
+      { path: "links", element: <LinksSection /> },
+      { path: "*", element: <NotFoundPage /> },
+    ],
+  },
   {
     path: "/",
     element: <AuthLayout />,
