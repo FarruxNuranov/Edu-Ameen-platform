@@ -86,16 +86,21 @@
 }
 
 .cta {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d1d1d6;
   border-radius: 8px;
   padding: 6px 16px;
-
-  border: none;
-  font-family: var(--second-family);
-  font-weight: 400;
+  width: 153px;
+  height: 32px;
+  font-family: var(--font-family);
+  font-weight: 500;
   font-size: 14px;
   line-height: 140%;
-  color: #fff;
-  background: var(--primary);
+  color: #000;
+  cursor: pointer;
 }
 
 .iconButton {

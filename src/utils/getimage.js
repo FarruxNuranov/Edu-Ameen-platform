@@ -82,4 +82,5 @@ export { default as statusX } from '../assets/Images/icons/statusX.svg'
 export { default as statusDone } from '../assets/Images/icons/statusDone.svg'
 export { default as statusWaiting } from '../assets/Images/icons/statusWaiting.svg'
 export { default as alohidaLink } from '../assets/Images/icons/alohidaLink.svg'
+export { default as sertifolish } from '../assets/Images/icons/sertificatOlish.svg'
 

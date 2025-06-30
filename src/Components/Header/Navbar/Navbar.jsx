@@ -14,6 +14,7 @@ import {
   Logo,
   news1,
   search,
+  sertifolish,
   system,
 } from "../../../utils/getimage";
 import styles from "./Navbar.module.scss";
@@ -85,7 +86,9 @@ const Navbar = () => {
 
       {/* Правый блок */}
       <div className={styles.right}>
-        <button className={styles.cta}>Kurslarni ko'rish</button>
+        <div onClick={() => navigate('/dashboard/certificate') } className={styles.cta}>
+          <img src={sertifolish} alt="" />
+          Sertifikat olish</div>
 
         <div
           onClick={() => navigate("/dashboard/notifications")}
