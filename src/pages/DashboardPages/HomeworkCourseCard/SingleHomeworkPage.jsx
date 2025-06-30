@@ -1,14 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "./SingleHomeworkPage.module.scss";
-import {
-  FaUser,
-  FaCalendarAlt,
-  FaSignal,
-  FaCheckCircle,
-  FaStar,
-  FaCommentAlt,
-  FaLink,
-} from "react-icons/fa";
+
 import {
   arrowUp,
   basket,

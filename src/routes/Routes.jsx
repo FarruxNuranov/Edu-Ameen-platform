@@ -26,6 +26,7 @@ import SingleTestResaultPage from "../pages/DashboardPages/HomeworkCourseCard/Si
 import CertificateList from "../pages/DashboardPages/CertificateList/CertificateList";
 import CertificateTest from "../pages/DashboardPages/CertificateList/CertificateTest";
 import CertificateResult from "../pages/DashboardPages/CertificateList/CertificateResult";
+import Notifications from "../Components/Notifications/Notifications";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,7 @@ export const router = createBrowserRouter([
       { path: "certificate/test/:certId", element: <CertificateTest /> },
       { path: "certificate/result/:certId", element: <CertificateResult /> },
 
+      { path: "notifications", element: <Notifications /> },
 
       { path: "links", element: <LinksSection /> },
       { path: "*", element: <NotFoundPage /> },

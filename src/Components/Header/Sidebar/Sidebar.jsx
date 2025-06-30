@@ -152,10 +152,6 @@ export default function Sidebar() {
                 <FiUser />
                 Mening profilim
               </button>
-              <button onClick={() => navigate("/Dashboard/settings")}>
-                <FiSettings />
-                Sozlamalar
-              </button>
               <button onClick={handleLogout}>
                 <FiLogOut />
                 Logout
