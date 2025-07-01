@@ -1,42 +1,40 @@
-import React, { useState } from "react";
-import styles from "./Profile.module.scss";
-import ProfileEdit from "./ProfileEdit";
+import React from "react";
+import styles from "./ProfileInfo.module.scss";
+import { profileEditIcon,  profileminiInfo } from "../../../utils/getimage";
 
-const ProfileInfo = () => {
-  const [editMode, setEditMode] = useState(false);
-  const [profile, setProfile] = useState({
-    ism: "Oybek",
-    familiya: "Mirhamidov",
-    address: "City, State",
-    kasb: "CEO",
-    businessOwner: "Ha",
-    phone: "+149345345543",
-    password: "******"
-  });
-
+const ProfileInfo = ({ data, onEdit }) => {
   return (
-    <div className={styles.profileInfo}>
-      {editMode ? (
-        <ProfileEdit
-          profile={profile}
-          setProfile={setProfile}
-          exitEdit={() => setEditMode(false)}
+    <div className={styles.profileInfoBox}>
+      <div className={styles.header}>
+        <h2>Profil ma'lumotlari</h2>
+        <img
+          src={profileEditIcon}
+          alt="Edit"
+          className={styles.editIcon}
+          onClick={onEdit}
         />
-      ) : (
-        <div>
-          <h2>Profil ma'lumotlari</h2>
-          <ul>
-            <li><strong>Ism:</strong> {profile.ism}</li>
-            <li><strong>Familiya:</strong> {profile.familiya}</li>
-            <li><strong>Address:</strong> {profile.address}</li>
-            <li><strong>Kasbi:</strong> {profile.kasb}</li>
-            <li><strong>Business Owner:</strong> {profile.businessOwner}</li>
-            <li><strong>Telefon:</strong> {profile.phone}</li>
-            <li><strong>Parol:</strong> {profile.password}</li>
-          </ul>
-          <button onClick={() => setEditMode(true)}>Edit</button>
-        </div>
-      )}
+      </div>
+      <table className={styles.profileTable}>
+        <tbody>
+          {data.map((item, idx) => (
+            <tr key={idx}>
+              <td>{item.label}</td>
+              <td className={item.label === "Ism:" ? styles.withTooltip : ""}>
+                {item.value}
+                {item.label === "Ism:" && (
+                  <div className={styles.tooltipWrapper}>
+                    <img src={profileminiInfo} alt="info" />
+                    <div className={styles.tooltip}>
+                      Ushbu ism va familiya sertifikatlarga yoziladi.
+                      <br /> Iltimos e’tiborli bo‘ling!
+                    </div>
+                  </div>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

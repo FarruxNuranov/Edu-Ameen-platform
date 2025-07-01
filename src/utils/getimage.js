@@ -88,4 +88,6 @@ export { default as profileStrelka } from '../assets/Images/icons/profileStrelka
 export { default as profileSettings } from '../assets/Images/icons/profileSettings.svg'
 export { default as profileHelp } from '../assets/Images/icons/profileHelp.svg'
 export { default as profileLogOut } from '../assets/Images/icons/profileLogOut.svg'
+export { default as profileEditIcon } from '../assets/Images/icons/profileEditIcon.svg'
+export { default as profileminiInfo } from '../assets/Images/icons/profileInfoIcon.svg'
 

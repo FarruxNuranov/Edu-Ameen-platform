@@ -1,0 +1,103 @@
+.profileInfoBox {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 16px;
+
+    h2 {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 150%;
+      color: #101113;
+    }
+
+    .editIcon {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .profileTable {
+    width: 100%;
+    border-collapse: collapse;
+   
+
+    td {
+      border-radius: 4px;
+      padding: 16px 16px 16px 32px;
+      width: 762px;
+      height: 56px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: #000;
+   
+
+      
+
+      &:first-child {
+        color: #555;
+        width: 200px;
+      }
+
+      &:last-child {
+        font-weight: 600;
+      }
+    }
+
+    tr:nth-child(even) {
+      background: #f5faf9;
+    }
+  }
+}
+
+
+.withTooltip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+
+  .tooltipWrapper {
+    position: relative;
+    display: inline-block;
+    display: flex;
+
+    img {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .tooltip {
+      visibility: hidden;
+      background-color: #6c757d;
+      color: #fff;
+      text-align: center;
+      padding: 8px 12px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 1;
+      top: -65px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    &:hover .tooltip {
+      visibility: visible;
+    }
+  }
+}

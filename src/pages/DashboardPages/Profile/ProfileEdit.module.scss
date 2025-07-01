@@ -1,0 +1,142 @@
+.profileEditBox {
+  .upload {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .circle {
+      width: 90px;
+      height: 90px;
+      border: 2px dashed #ccc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      color: #777;
+      cursor: pointer;
+    }
+
+    .textBox {
+      .text {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: var(--secondary);
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        font-family: var(--font9);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: #97999d;
+      }
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+
+    label {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 140%;
+      color: #25262b;
+      margin-left: 3px;
+      margin-bottom: 4px;
+    }
+
+    input,
+    select {
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      padding: 6px 12px;
+      width: 100%;
+      height: 36px;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #000;
+      &:focus {
+        border-color: #4d6bf3;
+        outline: none;
+      }
+    }
+  }
+
+  button {
+    display: block;
+    width: 220px;
+    padding: 12px;
+    background: #273f7c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #1e3368;
+    }
+  }
+}
+
+ .upload {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      border: 2px dashed #ccc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #777;
+    }
+
+    .textBox {
+      .text {
+        color: #4d6bf3;
+        font-size: 14px;
+      }
+
+      span {
+        display: block;
+        color: #888;
+        font-size: 12px;
+      }
+    }
+
+    .previewImage {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+    }
+  }

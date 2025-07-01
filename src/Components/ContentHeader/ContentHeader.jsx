@@ -19,7 +19,7 @@ export default function ContentHeader() {
   const crumbs = [];
 
   // Всегда начинаем с главной
-  crumbs.push({ path: "/Dashboard", label: STATIC_TITLES["/Dashboard"] });
+
 
   if (pathname.startsWith("/Dashboard/coursestaken") && id) {
     const course = coursesData.find((c) => String(c.id) === String(id));
