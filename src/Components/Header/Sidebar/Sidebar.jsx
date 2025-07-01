@@ -148,7 +148,7 @@ export default function Sidebar() {
                 collapsed ? styles.collapsed : ""
               }`}
             >
-              <button onClick={() => navigate("/Dashboard/profile")}>
+              <button onClick={() => navigate("/dashboard/profile")}>
                 <FiUser />
                 Mening profilim
               </button>
