@@ -143,3 +143,18 @@
     }
   }
 }
+
+@media (max-width:575px) {
+  .profileContainer {
+    flex-direction: column-reverse;
+    padding-bottom: 100px;
+
+      .sidebar {
+    height: 100%;
+  }
+  }
+
+
+
+  
+}
