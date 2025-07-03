@@ -29,7 +29,6 @@
   .profileTable {
     width: 100%;
     border-collapse: collapse;
-   
 
     td {
       border-radius: 4px;
@@ -42,9 +41,6 @@
       line-height: 150%;
       letter-spacing: 0.01em;
       color: #000;
-   
-
-      
 
       &:first-child {
         color: #555;
@@ -61,7 +57,6 @@
     }
   }
 }
-
 
 .withTooltip {
   display: flex;
@@ -98,6 +93,29 @@
 
     &:hover .tooltip {
       visibility: visible;
+    }
+  }
+}
+
+.userCard {
+  display: none; 
+}
+
+@media (max-width: 575px) {
+  .userCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
     }
   }
 }
