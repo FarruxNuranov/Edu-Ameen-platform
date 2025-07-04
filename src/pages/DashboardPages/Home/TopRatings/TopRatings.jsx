@@ -3,6 +3,7 @@ import styles from './TopRatings.module.scss';
 import { FaCrown } from 'react-icons/fa';
 import { BsTrophy } from 'react-icons/bs';
 import {  news3, TopRaitingCup } from '../../../../utils/getimage';
+import { useNavigate } from 'react-router-dom';
 
 const users = [
   {
@@ -35,6 +36,9 @@ const users = [
 ];
 
 const TopRatings = () => {
+
+ const navigate = useNavigate();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.left}>
@@ -45,8 +49,9 @@ const TopRatings = () => {
        <div className={styles.badge}>#2</div>
        </div>
         <div className={styles.label}>Sizning rating</div>
+          <div onClick={() => navigate('/dashboard/ratings')} className={styles.allreyting}>Reytinglarni ko’rish</div>
       </div>
-
+       
       <div className={styles.right}>
         
         <div className={styles.list}>

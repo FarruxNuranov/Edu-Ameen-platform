@@ -1,389 +1,388 @@
 .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1A3FAA;
-    border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a3faa;
+  border-radius: 20px;
 
-    color: white;
-    flex-wrap: wrap;
+  color: white;
+  flex-wrap: wrap;
 
-    margin: 24px 16px;
-    height: 420px;
-    margin-bottom: 20px;
+  margin: 24px 16px;
+  height: 420px;
+  margin-bottom: 20px;
 }
 
-
 .left {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.01em;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 50%;
+ 
+
+  .title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 32px;
     letter-spacing: -0.01em;
     color: #fff;
+  }
+
+  .ScoreBox {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
 
-
-    width: 50%;
-    height: 238px;
-
-
-    .title {
-        font-family: var(--font-family);
-        font-weight: 700;
-        font-size: 32px;
-        letter-spacing: -0.01em;
-        color: #fff;
+    .score {
+      font-family: var(--font7);
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      color: #fff;
     }
 
-    .ScoreBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 24px;
-
-        .score {
-            font-family: var(--font7);
-            font-weight: 700;
-            font-size: 24px;
-            letter-spacing: -0.01em;
-            color: #fff;
-        }
-
-        .badge {
-            border-radius: 24px;
-            padding: 8px 16px;
-            width: 53px;
-            height: 36px;
-            font-family: var(--font-family);
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 125%;
-            letter-spacing: -0.01em;
-            color: #fff;
-            background-color: orange;
-
-        }
+    .badge {
+      border-radius: 24px;
+      padding: 8px 16px;
+      width: 53px;
+      height: 36px;
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 125%;
+      letter-spacing: -0.01em;
+      color: #fff;
+      background-color: orange;
     }
+  }
 
-    .Cup {
-        margin-top: 36px;
-        margin-bottom: 22px;
-    }
+  .Cup {
+    margin-top: 36px;
+    margin-bottom: 22px;
+  }
 
+  .label {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #e5e5ea;
+  }
 
-    .label {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: -0.01em;
-        text-align: center;
-        color: #e5e5ea;
-    }
+  .allreyting {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    padding: 12px 19px;
+    width: 190px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 24px;
+  }
 }
 
 .right {
-    // flex: 2;
-    padding-right: 48px;
+  // flex: 2;
+  padding-right: 48px;
 
+  width: 50%;
 
-    width: 50%;
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
 
+    width: 100%;
+    gap: 24px;
+  }
 
+  .userCard {
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    height: 92px;
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.05);
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .userInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-weight: 600;
+    }
+
+    .course {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+  }
+
+  .userIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.6);
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .points {
+      font-weight: 500;
+    }
+
+    .change {
+      color: #4caf50;
+      font-size: 14px;
+    }
+
+    .userBadge {
+      background-color: orange;
+      color: white;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    margin-top: 24px;
+    padding: 16px;
+    margin: 0;
+    margin-bottom: 100px;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left {
+    align-items: center;
+
+    .title {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .ScoreBox {
+      flex-direction: column;
+      gap: 8px;
+
+      .score {
+        font-size: 20px;
+      }
+
+      .badge {
+        width: auto;
+        height: auto;
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+    }
+
+    .Cup {
+      margin-top: 24px;
+      margin-bottom: 16px;
+    }
+
+    .label {
+      font-size: 14px;
+    }
+  }
+
+  .right {
+    padding-right: 0;
 
     .list {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-
-        width: 100%;
-        gap: 24px;
+      align-items: stretch;
     }
 
     .userCard {
-        border-radius: 16px;
-        padding: 24px;
-        width: 100%;
-        height: 92px;
-        box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.05);
-        background: rgba(255, 255, 255, 0.15);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+      border-radius: 16px;
+      padding: 16px;
+      width: 343px;
+      height: 68px;
 
-    .userInfo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+      .name {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
 
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            object-fit: cover;
-        }
+      .points {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
 
-        .name {
-            font-weight: 600;
-        }
+      .course {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        color: #e5e5ea;
+      }
 
-        .course {
-            font-size: 13px;
-            opacity: 0.8;
-        }
-    }
-
-    .userIcon {
-
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: scale(1.6);
+      .userIcon {
+        transform: none;
+        width: none;
+      }
     }
 
     .meta {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .points {
-            font-weight: 500;
-        }
-
-        .change {
-            color: #4caf50;
-            font-size: 14px;
-        }
-
-        .userBadge {
-            background-color: orange;
-            color: white;
-            font-weight: bold;
-            padding: 4px 10px;
-            border-radius: 12px;
-        }
+      justify-content: center;
+      gap: 5px;
     }
-}
-
-
-@media (max-width: 375px) {
-    .wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        height: auto;
-        margin-top: 24px;
-        padding: 16px;
-        margin: 0;
-        margin-bottom: 100px;
-        gap: 24px;
-        box-sizing: border-box;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        height: auto;
-    }
-
-    .left {
-        align-items: center;
-
-        .title {
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .ScoreBox {
-            flex-direction: column;
-            gap: 8px;
-
-            .score {
-                font-size: 20px;
-            }
-
-            .badge {
-                width: auto;
-                height: auto;
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-
-        .Cup {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-
-        .label {
-            font-size: 14px;
-        }
-    }
-
-    .right {
-        padding-right: 0;
-
-        .list {
-            align-items: stretch;
-        }
-
-        .userCard {
-            border-radius: 16px;
-            padding: 16px;
-            width: 343px;
-            height: 68px;
-
-
-            .name {
-                font-family: var(--font-family);
-                font-weight: 600;
-                font-size: 14px;
-                letter-spacing: -0.02em;
-                color: #fff;
-            }
-
-            .points {
-                font-family: var(--font-family);
-                font-weight: 600;
-                font-size: 12px;
-                letter-spacing: -0.02em;
-                color: #fff;
-            }
-
-            .course {
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: 12px;
-                letter-spacing: -0.02em;
-                color: #e5e5ea;
-            }
-
-            .userIcon {
-                transform: none;
-                width: none
-            }
-        }
-
-        .meta {
-            justify-content: center;
-            gap: 5px;
-        }
-    }
+  }
 }
 
 @media (max-width: 575px) {
-    .wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        height: auto;
-        margin-top: 24px;
-        padding: 16px;
-        margin: 0;
-        
-        gap: 24px;
-        box-sizing: border-box;
-    }
+  .wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    margin-top: 24px;
+    padding: 16px;
+    margin: 0;
 
+    gap: 24px;
+    box-sizing: border-box;
+  }
+
+  .title {
+    margin-top: 36px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left {
+    align-items: center;
 
     .title {
-        margin-top: 36px;
+      font-size: 24px;
+      text-align: center;
     }
 
-    .left,
-    .right {
-        width: 100%;
+    .ScoreBox {
+      flex-direction: column;
+      gap: 8px;
+
+      .score {
+        font-size: 20px;
+      }
+
+      .badge {
+        width: auto;
         height: auto;
+        font-size: 14px;
+        padding: 6px 12px;
+      }
     }
 
-    .left {
-        align-items: center;
-
-        .title {
-            font-size: 24px;
-            text-align: center;
-        }
-
-        .ScoreBox {
-            flex-direction: column;
-            gap: 8px;
-
-            .score {
-                font-size: 20px;
-            }
-
-            .badge {
-                width: auto;
-                height: auto;
-                font-size: 14px;
-                padding: 6px 12px;
-            }
-        }
-
-        .Cup {
-            margin-top: 24px;
-            margin-bottom: 16px;
-        }
-
-        .label {
-            font-size: 14px;
-        }
+    .Cup {
+      margin-top: 24px;
+      margin-bottom: 16px;
     }
 
-    .right {
-        padding-right: 0;
-
-        .list {
-            align-items: stretch;
-            margin-bottom: 32px;
-        }
-
-        .userCard {
-            border-radius: 16px;
-            padding: 16px;
-            width: 100%;
-            height: 68px;
-
-
-            .name {
-                font-family: var(--font-family);
-                font-weight: 600;
-                font-size: 14px;
-                letter-spacing: -0.02em;
-                color: #fff;
-            }
-
-            .points {
-                font-family: var(--font-family);
-                font-weight: 600;
-                font-size: 12px;
-                letter-spacing: -0.02em;
-                color: #fff;
-            }
-
-            .course {
-                font-family: var(--font-family);
-                font-weight: 500;
-                font-size: 12px;
-                letter-spacing: -0.02em;
-                color: #e5e5ea;
-            }
-
-            .userIcon {
-                transform: none;
-                width: none
-            }
-        }
-
-        .meta {
-            justify-content: center;
-            gap: 5px;
-        }
-
-        
+    .label {
+      font-size: 14px;
     }
+  }
+
+  .right {
+    padding-right: 0;
+
+    .list {
+      align-items: stretch;
+      margin-bottom: 32px;
+    }
+
+    .userCard {
+      border-radius: 16px;
+      padding: 16px;
+      width: 100%;
+      height: 68px;
+
+      .name {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+
+      .points {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        color: #fff;
+      }
+
+      .course {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: -0.02em;
+        color: #e5e5ea;
+      }
+
+      .userIcon {
+        transform: none;
+        width: none;
+      }
+    }
+
+    .meta {
+      justify-content: center;
+      gap: 5px;
+    }
+  }
 }

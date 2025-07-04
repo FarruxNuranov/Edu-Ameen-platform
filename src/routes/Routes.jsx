@@ -28,6 +28,7 @@ import CertificateTest from "../pages/DashboardPages/CertificateList/Certificate
 import CertificateResult from "../pages/DashboardPages/CertificateList/CertificateResult";
 import Notifications from "../Components/Notifications/Notifications";
 import Profile from "../pages/DashboardPages/Profile/Profile";
+import RatingsPage from "../pages/DashboardPages/RatingsPage/RatingsPage";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,8 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "coursestaken", element: <CoursesTaken /> },
       { path: "coursestaken/:id", element: <SingleCourse /> },
+
+      { path: "ratings", element: <RatingsPage /> },
 
       { path: "homework", element: <HomeworkCourseCard /> },
       { path: "homework/:id", element: <HomeworkCoursePage /> },
