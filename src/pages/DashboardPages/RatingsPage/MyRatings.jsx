@@ -1,93 +1,62 @@
-import React from 'react';
-import Chart from 'react-apexcharts';
-import styles from './MyRatings.module.scss';
+import React from "react";
+import { BsTrophy } from "react-icons/bs";
+import styles from "./MyRatings.module.scss";
+import { answerIcon, myraiting, starRaiting } from "../../../utils/getimage";
 
 const MyRatings = () => {
-  const options = {
-    chart: {
-      type: 'donut',
-      animations: { enabled: false }
-    },
-    plotOptions: {
-      pie: {
-        donut: { size: '75%' }
-      }
-    },
-    stroke: {
-      show: true,
-      width: 3,
-      colors: ['#fff']
-    },
-    dataLabels: { enabled: false },
-    legend: { show: false },
-    tooltip: { enabled: false },
-    colors: ['#79c849', '#ff6f3f', '#44c2f1']
-  };
+  const cards = [
+    { value: 60, label: "Umumiy reyting" },
+    { value: 40, label: "HR Management kursi" },
+    { value: 20, label: "Islom Moliya kursi" },
+  ];
 
-  const series = [40, 30, 30];
+  const items = [
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim..."
+  ];
 
   return (
     <div className={styles.container}>
-      <div className={styles.cards}>
-        <div className={styles.card}>
-          <div className={styles.value}>60</div>
-          <div className={styles.label}>Umumiy reyting</div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.value}>40</div>
-          <div className={styles.label}>HR Management kursi</div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.value}>20</div>
-          <div className={styles.label}>Islom Moliya kursi</div>
-        </div>
-      </div>
-
-      <div className={styles.chartSection}>
-        <div className={styles.chart}>
-          <Chart options={options} series={series} type="donut" width={324} height={324} />
+      <div className={styles.wrapperBox}>
+        <div className={styles.cards}>
+          {cards.map((card, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.left}>
+                <div className={styles.value}>{card.value}</div>
+                <div className={styles.label}>{card.label}</div>
+              </div>
+              <div className={styles.icon}>
+                <img className={styles.icon} src={myraiting} alt="" />
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className={styles.progressList}>
-          <div className={styles.progressItem}>
-            <div className={styles.text}>
-              <span>Uy vazifalar</span><span>18</span>
-            </div>
-            <div className={styles.progress}>
-              <div className={styles.fill} style={{ width: '80%', backgroundColor: '#79c849' }}></div>
-            </div>
-          </div>
-          <div className={styles.progressItem}>
-            <div className={styles.text}>
-              <span>Testlar</span><span>15</span>
-            </div>
-            <div className={styles.progress}>
-              <div className={styles.fill} style={{ width: '60%', backgroundColor: '#44c2f1' }}></div>
-            </div>
-          </div>
-          <div className={styles.progressItem}>
-            <div className={styles.text}>
-              <span>Quizlar</span><span>22</span>
-            </div>
-            <div className={styles.progress}>
-              <div className={styles.fill} style={{ width: '90%', backgroundColor: '#ff6f3f' }}></div>
-            </div>
-          </div>
+        <div className={styles.bottomBox}>
+          <p>
+           
+          </p>
         </div>
-      </div>
 
-      <div className={styles.list}>
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className={styles.item}>
-            <div className={styles.title}>
-              <span>❓</span> Kompaniyada uchraydigan muammolarga HR beradigan yechim...
+        <div className={styles.list}>
+          {items.map((item, index) => (
+            <div key={index} className={styles.item}>
+              <div className={styles.title}>
+                <img src={answerIcon} alt="" /> {item}
+              </div>
+              <div className={styles.meta}>
+               <div className={styles.text}>
+                 <img src={starRaiting} alt="" /> 15
+               </div>
+                <span className={styles.date}>17 Sentyabr, 2024 12:25</span>
+              </div>
             </div>
-            <div className={styles.meta}>
-              <span>⭐ 15</span>
-              <span>17 Sentyabr, 2024 12:25</span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,115 +1,108 @@
 .container {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  justify-content: center;
 }
 
-/* Верхние карточки */
+.wrapperBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
 .cards {
   display: flex;
-  gap: 15px;
-
-  .card {
-    flex: 1;
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .value {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    .label {
-      font-size: 14px;
-      color: #555;
-    }
-  }
+  gap: 20px;
+  width: 100%;
 }
 
-/* Диаграмма и прогресс */
-.chartSection {
+.card {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
   align-items: center;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 100%;
+  height: 88px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 
-  .chart {
-    width: 324px;
-    height: 324px;
-    border-radius: 100%;
-    box-shadow: 0 3px 37px rgba(0,0,0,0.06);
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    canvas, svg {
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-
-  .progressList {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .progressItem {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-
-      .text {
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        font-weight: 600;
-      }
-
-      .progress {
-        width: 100%;
-        height: 8px;
-        background: #e9ecef;
-        border-radius: 4px;
-        overflow: hidden;
-
-        .fill {
-          height: 100%;
-          border-radius: 4px;
-        }
-      }
-    }
-  }
+  padding: 16px;
 }
 
-/* Список карточек */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.value {
+  font-family: var(--font5);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000;
+}
+
+.label {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #4f4f4f;
+}
+
+.bottomBox {
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  height: 356px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  background: #fff;
+ 
+}
+
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
 
   .item {
+    border: 1px solid #f2f2f7;
+    border-radius: 16px;
+    padding: 16px;
+    width: 100%;
+    height: 92px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
     background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 5px;
 
     .title {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: #182f43;
       display: flex;
       align-items: center;
-      gap: 8px;
-      font-size: 14px;
+      gap: 10px;
+    }
+
+    .text {
+      font-family: var(--font-family);
       font-weight: 600;
-      color: #222;
+      font-size: 16px;
+      line-height: 150%;
+      color: #182f43;
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
     }
 
     .meta {
@@ -117,6 +110,16 @@
       justify-content: space-between;
       font-size: 13px;
       color: #666;
+    }
+
+    .date {
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      text-align: right;
+      color: #8e8e93;
+      display: flex;
+      align-items: center;
     }
   }
 }

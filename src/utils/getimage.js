@@ -90,4 +90,7 @@ export { default as profileHelp } from '../assets/Images/icons/profileHelp.svg'
 export { default as profileLogOut } from '../assets/Images/icons/profileLogOut.svg'
 export { default as profileEditIcon } from '../assets/Images/icons/profileEditIcon.svg'
 export { default as profileminiInfo } from '../assets/Images/icons/profileInfoIcon.svg'
+export { default as myraiting } from '../assets/Images/icons/myraiting.svg'
+export { default as answerIcon } from '../assets/Images/icons/iconRaitinganswer.svg'
+export { default as starRaiting } from '../assets/Images/icons/starRaiting.svg'
 
