@@ -22,6 +22,7 @@ const MyRatings = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapperBox}>
+        {/* 1 */}
         <div className={styles.cards}>
           {cards.map((card, index) => (
             <div key={index} className={styles.card}>
@@ -35,13 +36,13 @@ const MyRatings = () => {
             </div>
           ))}
         </div>
-
+{/* 2 */}
         <div className={styles.bottomBox}>
           <p>
            
           </p>
         </div>
-
+{/* 3 */}
         <div className={styles.list}>
           {items.map((item, index) => (
             <div key={index} className={styles.item}>

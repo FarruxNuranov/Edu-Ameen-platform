@@ -11,6 +11,7 @@ const STATIC_TITLES = {
   "/Dashboard/links": "Havolalar",
   "/Dashboard/quiz": "HR Kursi Quizlari",
   "/Dashboard/certificate": "Sertifikatlar",
+  "/dashboard/ratings": "Reytinglar",
 };
 
 export default function ContentHeader() {
