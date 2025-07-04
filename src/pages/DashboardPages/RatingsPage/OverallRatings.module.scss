@@ -1,15 +1,259 @@
 .container {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  h3 {
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    text-align: left;
+  }
+}
+
+.topBlock {
+  position: relative;
+  border-radius: 24px;
+  width: 100%;
+  height: 304px;
+  background: #1e3c97;
+  padding: 30px;
 
   h3 {
-    color: #007bff;
-    margin-bottom: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+}
+
+.topBlockIcon {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+}
+
+.topUsers {
+  display: flex;
+  align-items: center;
+justify-content: start;
+  gap: 47px;
+  max-width: 593px;
+width: 100%;
+
+
+  .user {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    width: 100%;
+    
+    gap: 16px;
+
+    img {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .name {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 16px;
+      
+      color: #fff;
+    }
+
+    .points {
+      background: #fff;
+      border-radius: 20px;
+      padding: 4px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      .iconLeft {
+        color: #f39c12; // оранжевая звезда
+        font-size: 18px;
+      }
+
+      .value {
+        font-weight: 600;
+        color: #1e1e2f;
+      }
+
+      .iconRight {
+        color: #f39c12; // оранжевая корона
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.list {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    padding: 24px;
+    width: 100%;
+    height: 94px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    background: #f2f9ff;
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        margin-right: 12px;
+      }
+
+      .name {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: -0.01em;
+        color: #000;
+      }
+
+      .course {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #828282;
+      }
+    }
+
+    .right {
+      text-align: right;
+      .score {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #000;
+      }
+      .rank {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+        color: #34c759;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-bottom: 100px;
   }
 
-  p {
-    color: #333;
+  .topBlock {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .topBlockIcon {
+    display: none;
+  }
+
+  .topUsers {
+    width: 100%;
+    gap: 18px;
+    padding-left: 0;
+
+
+    .user {
+      width: 100%;
+
+        .name {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 11px;
+      
+      color: #fff;
+    }
+     .points {
+      border-radius: 24px;
+      padding: 6px 16px;
+      width: 92px;
+      height: 36px;
+      gap: 1px;
+    }
+
+    }
+   
+
+   
+
+    .value {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 171%;
+      text-align: center;
+      color: #182f43;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding-bottom: 100px;
+  }
+
+  .topBlock {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .topBlockIcon {
+    display: none;
+  }
+
+  .topUsers {
+    width: 100%;
+    gap: 18px;
+    padding-left: 0;
+
+
+    .user {
+      width: 100%;
+    }
+    .name {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 12px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .points {
+      border-radius: 24px;
+      padding: 6px 16px;
+      width: 92px;
+      height: 36px;
+    }
+
+    .value {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 171%;
+      text-align: center;
+      color: #182f43;
+    }
   }
 }

@@ -16,7 +16,7 @@ const MyRatings = () => {
     "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
     "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
     "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
-    "Kompaniyada uchraydigan muammolarga HR beradigan yechim..."
+    "Kompaniyada uchraydigan muammolarga HR beradigan yechim...",
   ];
 
   return (
@@ -28,21 +28,20 @@ const MyRatings = () => {
             <div key={index} className={styles.card}>
               <div className={styles.left}>
                 <div className={styles.value}>{card.value}</div>
-                <div className={styles.label}>{card.label}</div>
+                <div className={styles.icon}>
+                  <img className={styles.icon} src={myraiting} alt="" />
+                </div>
               </div>
-              <div className={styles.icon}>
-                <img className={styles.icon} src={myraiting} alt="" />
-              </div>
+
+              <div className={styles.label}>{card.label}</div>
             </div>
           ))}
         </div>
-{/* 2 */}
+        {/* 2 */}
         <div className={styles.bottomBox}>
-          <p>
-           
-          </p>
+          <p></p>
         </div>
-{/* 3 */}
+        {/* 3 */}
         <div className={styles.list}>
           {items.map((item, index) => (
             <div key={index} className={styles.item}>
@@ -50,9 +49,9 @@ const MyRatings = () => {
                 <img src={answerIcon} alt="" /> {item}
               </div>
               <div className={styles.meta}>
-               <div className={styles.text}>
-                 <img src={starRaiting} alt="" /> 15
-               </div>
+                <div className={styles.text}>
+                  <img src={starRaiting} alt="" /> 15
+                </div>
                 <span className={styles.date}>17 Sentyabr, 2024 12:25</span>
               </div>
             </div>

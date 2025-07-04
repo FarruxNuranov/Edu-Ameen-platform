@@ -93,4 +93,7 @@ export { default as profileminiInfo } from '../assets/Images/icons/profileInfoIc
 export { default as myraiting } from '../assets/Images/icons/myraiting.svg'
 export { default as answerIcon } from '../assets/Images/icons/iconRaitinganswer.svg'
 export { default as starRaiting } from '../assets/Images/icons/starRaiting.svg'
+export { default as kubok } from '../assets/Images/icons/kubok.svg'
+export { default as karona } from '../assets/Images/icons/karona.svg'
+export { default as kubokBlack } from '../assets/Images/icons/cerniykubok.svg'
 
