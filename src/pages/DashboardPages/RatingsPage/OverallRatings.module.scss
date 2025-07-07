@@ -31,11 +31,11 @@
 .topUsers {
   display: flex;
   align-items: center;
-justify-content: start;
+  justify-content: start;
   gap: 47px;
   max-width: 593px;
-width: 100%;
-
+  width: 100%;
+  margin-left: 100px;
 
   .user {
     display: flex;
@@ -43,7 +43,7 @@ width: 100%;
 
     align-items: center;
     width: 100%;
-    
+
     gap: 16px;
 
     img {
@@ -57,7 +57,7 @@ width: 100%;
       font-family: var(--second-family);
       font-weight: 600;
       font-size: 16px;
-      
+
       color: #fff;
     }
 
@@ -111,6 +111,7 @@ width: 100%;
     .info {
       display: flex;
       align-items: center;
+      width: 300px;
 
       img {
         width: 44px;
@@ -175,29 +176,24 @@ width: 100%;
     gap: 18px;
     padding-left: 0;
 
-
     .user {
       width: 100%;
 
-        .name {
-      font-family: var(--second-family);
-      font-weight: 600;
-      font-size: 11px;
-      
-      color: #fff;
-    }
-     .points {
-      border-radius: 24px;
-      padding: 6px 16px;
-      width: 92px;
-      height: 36px;
-      gap: 1px;
-    }
+      .name {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 11px;
 
+        color: #fff;
+      }
+      .points {
+        border-radius: 24px;
+        padding: 6px 16px;
+        width: 92px;
+        height: 36px;
+        gap: 1px;
+      }
     }
-   
-
-   
 
     .value {
       font-family: var(--font-family);
@@ -227,7 +223,6 @@ width: 100%;
     width: 100%;
     gap: 18px;
     padding-left: 0;
-
 
     .user {
       width: 100%;
