@@ -35,11 +35,9 @@
   padding: 16px;
   width: 100%;
   height: 92px;
-  background: linear-gradient(
-    129deg,
-    rgba(0, 178, 255, 0.1) 0%,
-    rgba(7, 0, 207, 0.1) 100%
-  );
+  background: linear-gradient(129deg,
+      rgba(0, 178, 255, 0.1) 0%,
+      rgba(7, 0, 207, 0.1) 100%);
   text-decoration: none;
   color: inherit;
   transition: 0.5s;
@@ -47,6 +45,7 @@
   &:hover {
     transform: translateY(-2px);
   }
+
   &:hover .bgIcon {
     transform: scale(1.5);
   }
@@ -58,6 +57,7 @@
   flex-direction: column;
   gap: 10px;
 }
+
 .icon {
   margin-right: 6px;
   font-size: 14px;
@@ -159,6 +159,14 @@
   width: 194px;
   height: 36px;
   border: none;
+  
+  font-family: var(--font3);
+  font-weight: 590;
+  font-size: 13px;
+  line-height: 138%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #000;
 }
 
 .tab.active {
@@ -174,6 +182,7 @@
   text-align: center;
   color: #000;
 }
+
 .filter {
   appearance: none;
   -webkit-appearance: none;
@@ -413,6 +422,7 @@
     padding: 16px;
     padding-bottom: 100px;
   }
+
   .tabs {
     border-radius: 9px;
     padding: 2px;

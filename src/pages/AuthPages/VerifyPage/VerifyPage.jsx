@@ -1,38 +1,55 @@
-// src/pages/auth/VerifyPage.jsx
-import React, { useState, useRef, useEffect } from 'react';
-import styles from './VerifyPage.module.scss';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from "react";
+import styles from "./VerifyPage.module.scss";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { verifySMSSlice } from "../../../App/Api/auth/authSlice";
+
+const CODE_LENGTH = 4;
 
 const VerifyPage = () => {
-  const [code, setCode] = useState(['', '', '', '', '', '']);
-  const [timer, setTimer] = useState(120); // 2 минуты
+  const [code, setCode] = useState(new Array(CODE_LENGTH).fill(""));
+  const [timer, setTimer] = useState(120);
   const inputs = useRef([]);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const phone = useSelector((state) => state.auth.phone_number);
 
   const handleChange = (value, index) => {
     if (/^\d?$/.test(value)) {
       const newCode = [...code];
       newCode[index] = value;
       setCode(newCode);
-      if (value && index < 5) {
-        inputs.current[index + 1].focus();
+      if (value && index < CODE_LENGTH - 1) {
+        inputs.current[index + 1]?.focus();
       }
     }
   };
 
   const handleKeyDown = (e, index) => {
-    if (e.key === 'Backspace' && !code[index] && index > 0) {
-      inputs.current[index - 1].focus();
+    if (e.key === "Backspace" && !code[index] && index > 0) {
+      inputs.current[index - 1]?.focus();
     }
   };
 
-  const navigate =useNavigate()
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   navigate('/login')
-    // const fullCode = code.join('');
-    // console.log('Submitted code:', fullCode);
-    // отправка на backend
+    const fullCode = code.join("");
+
+    if (fullCode.length < CODE_LENGTH) {
+      alert(`${CODE_LENGTH} xonali kodni kiriting`);
+      return;
+    }
+
+    try {
+      await dispatch(
+        verifySMSSlice({ phone_number: phone, smsCode: fullCode })
+      ).unwrap();
+      navigate("/create-password");
+    } catch (err) {
+      alert("Kod noto‘g‘ri yoki muddati tugagan");
+      console.error(err);
+    }
   };
 
   useEffect(() => {
@@ -42,15 +59,16 @@ const VerifyPage = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const minutes = String(Math.floor(timer / 60)).padStart(2, '0');
-  const seconds = String(timer % 60).padStart(2, '0');
+  const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
+  const seconds = String(timer % 60).padStart(2, "0");
 
   return (
     <div className={styles.verify}>
       <h2 className={styles.title}>Tasdiqlash</h2>
       <p className={styles.desc}>
-        Telefon raqamingizga yuborilgan yagona tasdiqlash kodini kiriting.
-        Ushbu kod sizning hisobingiz xavfsizligi va haqiqiyligini ta’minlaydi.
+        {phone
+          ? `Kod ${phone} raqamiga yuborildi.`
+          : "Telefon raqamingizga yuborilgan tasdiqlash kodini kiriting."}
       </p>
 
       <form onSubmit={handleSubmit} className={styles.codeForm}>
@@ -67,10 +85,32 @@ const VerifyPage = () => {
             />
           ))}
         </div>
-        <p className={styles.timer}>
-          Kodni qayta yuboring <span>{minutes}:{seconds}</span>
-        </p>
-        <button type="submit" className={styles.submitBtn}>Tasdiqlash</button>
+
+        {timer > 0 ? (
+          <p className={styles.timer}>
+            Kodni qayta yuborish mumkin{" "}
+            <span>
+              {minutes}:{seconds}
+            </span>{" "}
+            dan keyin
+          </p>
+        ) : (
+          <button
+            type="button"
+            className={styles.resendBtn}
+            onClick={() => {
+              console.log("Kod qayta yuborildi (имитация)");
+              setTimer(120);
+              // Тут можно: dispatch(sendPhoneNumber(phone));
+            }}
+          >
+            Kodni qayta yuborish
+          </button>
+        )}
+
+        <button type="submit" className={styles.submitBtn}>
+          Tasdiqlash
+        </button>
       </form>
     </div>
   );

@@ -1,15 +1,28 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 import styles from './RegisterPage.module.scss';
+import { sendPhoneNumber, setPhone } from '../../../App/Api/auth/authSlice';
 
 const RegisterPage = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const onSubmit = (data) => {
-    console.log('Register:', data);
-    navigate('/login'); // можно перекинуть на код
+  const onSubmit = async (data) => {
+    const fullPhone = `${data.code}${data.phone}`;
+
+    try {
+      await dispatch(sendPhoneNumber(fullPhone)).unwrap();
+      dispatch(setPhone(fullPhone)); // сохраним номер в state
+
+      navigate('/verify');
+    } catch (error) {
+      alert('Xatolik: Telefon yuborilmadi');
+      console.error(error);
+    }
   };
 
   return (
@@ -22,7 +35,7 @@ const RegisterPage = () => {
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <label>Telefon raqam</label>
         <div className={styles.phoneGroup}>
-          <select {...register('code')}>
+          <select {...register('code')} defaultValue="+998">
             <option value="+998">+998</option>
           </select>
           <input

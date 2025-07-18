@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import styles from './LoginPage.module.scss';
+import { login } from '../../../App/Api/auth/authSlice';
 
 const LoginPage = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { loading, error } = useSelector((state) => state.auth);
 
-  const onSubmit = (data) => {
-    console.log('Login:', data);
-    navigate('/dashboard'); // или /dashboard если будет
+  const onSubmit = async (data) => {
+    try {
+      const fullPhone = data.code + data.phone; // например: +998901234567
+      await dispatch(login({ phone_number: fullPhone, password: data.password })).unwrap();
+      navigate('/dashboard');
+    } catch (err) {
+      alert('Kirishda xatolik: ' + err);
+    }
   };
 
   return (
     <div className={styles.login}>
       <h2 className={styles.title}>Kirish</h2>
       <p className={styles.desc}>
-        Telefon raqamingizga bir martalik tasdiqlash kodini yuboramiz. Iltimos, uning to‘g‘riligiga ishonch hosil qiling
+        Telefon raqamingiz va parolingizni kiriting
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -54,11 +64,15 @@ const LoginPage = () => {
         </div>
         {errors.password && <p className={styles.error}>{errors.password.message}</p>}
 
+        {error && <p className={styles.error}>{error}</p>}
+
         <div className={styles.forgot}>
           <Link to="/forgot-password">Parolni unutdingizmi?</Link>
         </div>
 
-        <button type="submit" className={styles.submitBtn}>Kirish</button>
+        <button type="submit" className={styles.submitBtn} disabled={loading}>
+          {loading ? "Yuklanmoqda..." : "Kirish"}
+        </button>
 
         <p className={styles.bottom}>
           Akkountingiz yo‘qmi? <Link to="/register">Ro‘yxatdan o‘tish</Link>

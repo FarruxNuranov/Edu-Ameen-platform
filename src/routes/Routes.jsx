@@ -29,49 +29,50 @@ import CertificateResult from "../pages/DashboardPages/CertificateList/Certifica
 import Notifications from "../Components/Notifications/Notifications";
 import Profile from "../pages/DashboardPages/Profile/Profile";
 import RatingsPage from "../pages/DashboardPages/RatingsPage/RatingsPage";
+import CreatePasswordPage from "../pages/AuthPages/CreatePasswordPage/CreatePasswordPage";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
-  {
+ {
     path: "/dashboard",
-    element: <DashboardLayout />,
+    element: <PrivateRoute />, // сначала проверка
     children: [
-      { path: "", element: <HomePage /> },
-      { path: "coursestaken", element: <CoursesTaken /> },
-      { path: "coursestaken/:id", element: <SingleCourse /> },
-
-      { path: "ratings", element: <RatingsPage /> },
-
-      { path: "homework", element: <HomeworkCourseCard /> },
-      { path: "homework/:id", element: <HomeworkCoursePage /> },
-      { path: "homework/:id/:hwId", element: <SingleHomeworkPage /> },
-      { path: "test/:courseId/:testId", element: <SingleTestPage /> },
-      { path: "test/resault", element: <SingleTestResaultPage /> },
-
-      { path: "quiz", element: <Quiz /> },
-      { path: "quiz/:quizId", element: <SingleQuizTestPage /> },
-      { path: "result", element: <ResultPage /> },
-
-      { path: "certificate", element: <CertificateList /> },
-      { path: "certificate/test/:certId", element: <CertificateTest /> },
-      { path: "certificate/result/:certId", element: <CertificateResult /> },
-
-      { path: "notifications", element: <Notifications /> },
-
-
-        { path: "profile", element: <Profile /> }, 
-
-      { path: "links", element: <LinksSection /> },
-      { path: "*", element: <NotFoundPage /> },
+      {
+        path: "",
+        element: <DashboardLayout />, // теперь layout внутри
+        children: [
+          { path: "", element: <HomePage /> },
+          { path: "coursestaken", element: <CoursesTaken /> },
+          { path: "coursestaken/:id", element: <SingleCourse /> },
+          { path: "ratings", element: <RatingsPage /> },
+          { path: "homework", element: <HomeworkCourseCard /> },
+          { path: "homework/:id", element: <HomeworkCoursePage /> },
+          { path: "homework/:id/:hwId", element: <SingleHomeworkPage /> },
+          { path: "test/:courseId/:testId", element: <SingleTestPage /> },
+          { path: "test/resault", element: <SingleTestResaultPage /> },
+          { path: "quiz", element: <Quiz /> },
+          { path: "quiz/:quizId", element: <SingleQuizTestPage /> },
+          { path: "result", element: <ResultPage /> },
+          { path: "certificate", element: <CertificateList /> },
+          { path: "certificate/test/:certId", element: <CertificateTest /> },
+          { path: "certificate/result/:certId", element: <CertificateResult /> },
+          { path: "notifications", element: <Notifications /> },
+          { path: "profile", element: <Profile /> },
+          { path: "links", element: <LinksSection /> },
+          { path: "*", element: <NotFoundPage /> },
+        ],
+      },
     ],
   },
   {
     path: "/",
     element: <AuthLayout />,
     children: [
-      { path: "", element: <Navigate to="/login" replace /> },
+      { index: true, element: <Navigate to="/login" replace /> },
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
       { path: "verify", element: <VerifyPage /> },
+      { path: "create-password", element: <CreatePasswordPage /> }, 
       { path: "forgot-password", element: <ForgotPasswordPage /> },
       { path: "reset-password", element: <ResetPasswordPage /> },
     ],
