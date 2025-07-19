@@ -5,9 +5,10 @@ import {
   finalRegister,
   verifySMS as verifySMSAPI,
   loginUser,
+  forgotPasswordRequest,
 } from "./authAPI";
 
-// 1. Отправка номера
+// 1. Отправка номера (регистрация)
 export const sendPhoneNumber = createAsyncThunk(
   "auth/sendPhoneNumber",
   async (phone_number, thunkAPI) => {
@@ -16,7 +17,7 @@ export const sendPhoneNumber = createAsyncThunk(
   }
 );
 
-// 2. Проверка SMS-кода
+// 2. Проверка SMS-кода (общая)
 export const verifySMSSlice = createAsyncThunk(
   "auth/verifySMSSlice",
   async ({ phone_number, smsCode }, thunkAPI) => {
@@ -25,7 +26,7 @@ export const verifySMSSlice = createAsyncThunk(
   }
 );
 
-// 3. Создание пароля и получение токена
+// 3. Создание пароля и получение токена (регистрация)
 export const submitPassword = createAsyncThunk(
   "auth/submitPassword",
   async ({ first_name, last_name, password }, thunkAPI) => {
@@ -48,6 +49,15 @@ export const login = createAsyncThunk(
   "auth/login",
   async ({ phone_number, password }, thunkAPI) => {
     const res = await loginUser({ phone_number, password });
+    return res;
+  }
+);
+
+// 5. Запрос на восстановление пароля (отправка кода)
+export const forgotPassword = createAsyncThunk(
+  "auth/forgotPassword",
+  async (phone_number, thunkAPI) => {
+    const res = await forgotPasswordRequest(phone_number);
     return res;
   }
 );
@@ -87,6 +97,19 @@ const authSlice = createSlice({
         state.loading = false;
       })
       .addCase(sendPhoneNumber.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+
+      // forgot password
+      .addCase(forgotPassword.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(forgotPassword.fulfilled, (state) => {
+        state.loading = false;
+      })
+      .addCase(forgotPassword.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       })

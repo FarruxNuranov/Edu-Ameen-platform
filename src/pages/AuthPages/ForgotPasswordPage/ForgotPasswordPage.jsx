@@ -1,22 +1,29 @@
+// src/pages/AuthPages/ForgotPasswordPage/ForgotPasswordPage.jsx
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+
 import styles from './ForgotPasswordPage.module.scss';
+import { setPhone } from '../../../App/Api/auth/authSlice';
 
 const ForgotPasswordPage = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    console.log('Reset code to:', data);
-    navigate('/verify'); // после отправки кода → /verify
+    const fullPhone = `${data.code}${data.phone}`;
+    dispatch(setPhone(fullPhone));
+    // тут можно ещё отправить код повторно, если хочешь
+    navigate('/verify-reset'); // 👉 новый роут
   };
 
   return (
     <div className={styles.forgot}>
       <h2 className={styles.title}>Parolni unutdingizmi</h2>
       <p className={styles.desc}>
-        Iltimos, ro‘yxatdan o‘tgan telefon raqamingizni ko‘rsating va biz sizga parolni qanday tiklash bo‘yicha ko‘rsatmalar yuboramiz.
+        Iltimos, ro‘yxatdan o‘tgan telefon raqamingizni kiriting.
       </p>
 
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -34,7 +41,7 @@ const ForgotPasswordPage = () => {
                 message: '9 ta raqam kiriting',
               },
             })}
-            placeholder="-- --- -- --"
+            placeholder="__ ___ __ __"
           />
         </div>
         {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
@@ -42,7 +49,7 @@ const ForgotPasswordPage = () => {
         <button type="submit" className={styles.submitBtn}>Parolni tiklash</button>
 
         <p className={styles.bottom}>
-          Akkountingiz yo‘qmi ? <Link to="/register">Ro‘yxatdan o‘tish</Link>
+          Akkountingiz yo‘qmi? <Link to="/register">Ro‘yxatdan o‘tish</Link>
         </p>
       </form>
     </div>

@@ -31,6 +31,7 @@ import Profile from "../pages/DashboardPages/Profile/Profile";
 import RatingsPage from "../pages/DashboardPages/RatingsPage/RatingsPage";
 import CreatePasswordPage from "../pages/AuthPages/CreatePasswordPage/CreatePasswordPage";
 import PrivateRoute from "./PrivateRoute";
+import VerifyForgotPage from "../pages/AuthPages/VerifyForgotPage/VerifyForgotPage";
 
 export const router = createBrowserRouter([
  {
@@ -64,17 +65,18 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/",
-    element: <AuthLayout />,
-    children: [
-      { index: true, element: <Navigate to="/login" replace /> },
-      { path: "login", element: <LoginPage /> },
-      { path: "register", element: <RegisterPage /> },
-      { path: "verify", element: <VerifyPage /> },
-      { path: "create-password", element: <CreatePasswordPage /> }, 
-      { path: "forgot-password", element: <ForgotPasswordPage /> },
-      { path: "reset-password", element: <ResetPasswordPage /> },
-    ],
-  },
+{
+  path: "/",
+  element: <AuthLayout />,
+  children: [
+    { index: true, element: <Navigate to="/login" replace /> },
+    { path: "login", element: <LoginPage /> },
+    { path: "register", element: <RegisterPage /> },
+    { path: "verify", element: <VerifyPage /> },
+    { path: "verify-reset", element: <VerifyForgotPage /> }, // ← вот эта строка добавлена
+    { path: "create-password", element: <CreatePasswordPage /> },
+    { path: "forgot-password", element: <ForgotPasswordPage /> },
+    { path: "reset-password", element: <ResetPasswordPage /> },
+  ],
+}
 ]);

@@ -42,7 +42,12 @@ export const verifySMS = async ({ phone_number, smsCode }) => {
 };
 
 // 3. Регистрация пользователя (имя + пароль)
-export const finalRegister = async ({ phone_number, first_name, last_name, password }) => {
+export const finalRegister = async ({
+  phone_number,
+  first_name,
+  last_name,
+  password,
+}) => {
   const response = await fetch(`${API_BASE}/auth/register`, {
     method: "POST",
     headers: {
@@ -78,4 +83,20 @@ export const loginUser = async ({ phone_number, password }) => {
   }
 
   return await response.json(); // ожидаем { token, first_name }
+};
+
+export const forgotPasswordRequest = async (phone_number) => {
+  const response = await fetch(`${API_BASE}/auth/forgot-password`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ phone_number }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Xatolik: Kodni yuborishda muammo yuz berdi");
+  }
+
+  return await response.json();
 };
