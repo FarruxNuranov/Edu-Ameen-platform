@@ -59,7 +59,7 @@ const ResetPasswordPage = () => {
         </button>
 
         <p className={styles.bottom}>
-          <Link to="/auth/login">Ortga qaytish</Link>
+          <Link to="/login">Ortga qaytish</Link>
         </p>
       </form>
     </div>
