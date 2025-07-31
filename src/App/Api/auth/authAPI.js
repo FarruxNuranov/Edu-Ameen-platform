@@ -6,7 +6,7 @@ const API_BASE = import.meta.env.VITE_API_URL;
 export const checkPhone = async (phone) => {
   console.log("req:", phone);
 
-  const response = await fetch(`${API_BASE}/auth/check-phone`, {
+  const response = await fetch(`${API_BASE}/auth/register/check-phone`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
